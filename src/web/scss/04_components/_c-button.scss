@@ -1,0 +1,34 @@
+.c-button {
+  background-color: getColors("verde", 1);
+  color: getColors("verde", 0);
+  text-decoration: none;
+  padding: getPadding(5) getPadding(7);
+  border-radius: getBorderRadius(4);
+  display: table;
+  text-align: center;
+
+  &__primary {
+    background-color: getColors("verde", 1);
+    color: getColors("verde", 0);
+    text-decoration: none;
+    padding: getPadding(5) getPadding(7);
+    border-radius: getBorderRadius(4);
+    display: table;
+    text-align: center;
+  }
+
+  &__resta {
+    background-color: getColors("verde", 1);
+    color: getColors("verde", 0);
+    text-decoration: none;
+    padding: getPadding(5) getPadding(7);
+    border-radius: getBorderRadius(4);
+    display: table;
+    text-align: center;
+  }
+
+  /*     color: getColors("rojo",5);
+    @include box-shadow(2);
+    //border-radius: getBorderRadius(2) ;
+    @include border-radius(5); */
+}

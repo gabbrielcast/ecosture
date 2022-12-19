@@ -1,0 +1,34 @@
+.c-icon {
+  width: 80px;
+
+  &__media {
+    width: 30px;
+  }
+
+  &__circulo {
+    border: 3px solid getColors("verde", 1);
+    border-radius: 50%;
+    padding: getPadding(3);
+
+    &--planeta {
+      background-image: url(../assets/img/iconos/icono1.png);
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+    }
+
+    &--bombilla {
+      background-image: url(../assets/img/iconos/icono4.png);
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+    }
+
+    &--hojas {
+      background-image: url(../assets/img/iconos/icono2.png);
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+    }
+  }
+}

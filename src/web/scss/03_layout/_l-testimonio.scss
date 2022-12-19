@@ -1,0 +1,31 @@
+.l-testimonio {
+  background-color: getColors("verde", 1);
+  color: getColors("verde", 0);
+  text-align: center;
+  padding: getPadding(10) getPadding(14);
+  font-family: getFontFamily("secundario");
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: getGap(7);
+  }
+
+  &__img {
+    background-image: url(../../assets/img/testimonio1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: getFontSize("2xl");
+    font-weight: getFontWeight(2);
+    line-height: getLineHeight("4xl");
+  }
+}

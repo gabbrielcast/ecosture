@@ -1,0 +1,41 @@
+.l-about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: getPadding(12) getPadding(14);
+  font-family: getFontFamily("principal");
+
+  &__info-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: getMargin(10);
+    gap: getGap(6);
+  }
+
+  &__title {
+    font-size: getFontSize("xl");
+    font-weight: bold;
+    color: getColors("verde", 1);
+  }
+
+  &__text {
+    line-height: getLineHeight("2xl");
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+    gap: getGap(8);
+  }
+}

@@ -1,0 +1,69 @@
+.c-login {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  width: 800px;
+  height: 400px;
+  top: 150px;
+  left: 350px;
+  background-color: getColors("verde", 0);
+  border: 2px solid getColors("verde", 1);
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+  }
+
+  &__left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: getGap(6);
+  }
+
+  &__textForm {
+    margin-top: getMargin(4);
+  }
+
+  &__right-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 50%;
+    background-color: getColors("verde", 1);
+    // background-image: url("../../assets/img/Ropa/mujer/pantalones/pantalon10.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__title {
+    font-size: getFontSize("3xl");
+    font-weight: bold;
+    text-align: center;
+    color: getColors("verde", 1);
+    color: #3a562e;
+    margin-bottom: getMargin(9);
+  }
+
+  &__logo {
+    width: 100px;
+    margin: getMargin(5) getMargin(0);
+  }
+
+  &__img {
+    width: 150px;
+  }
+}
