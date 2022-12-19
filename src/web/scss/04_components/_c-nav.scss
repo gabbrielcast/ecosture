@@ -1,32 +1,84 @@
 .c-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: sticky;
-	top: 0;
-	// right: 0;
-	padding: getPadding(6) getPadding(9);
-	background-color: getColors("verde", 0);
-	font-family: getFontFamily("principal");
-	width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  // right: 0;
+  padding: getPadding(6) getPadding(9);
+  background-color: getColors("verde", 0);
+  font-family: getFontFamily("principal");
+  width: 100%;
 
-	&__logo {
-		width: 150px;
-	}
+  transition-property: transform;
 
-	&__menu {
-		display: flex;
-		gap: getGap(12);
-	}
+  &__logo {
+    width: 150px;
+  }
 
-	&__item {
-		text-decoration: none;
-		color: getColors("verde", 1);
-		font-weight: 600;
-	}
+  &__menu {
+    display: flex;
+    gap: getGap(12);
 
-	&__iconos {
-		display: flex;
-		gap: getGap(8);
-	}
+    li a {
+      //   color: getColors("verde", 3);
+      transition: all 0.3s;
+
+      &:hover {
+        color: getColors("verde", 3);
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.8);
+      }
+    }
+  }
+
+  &__item {
+    text-decoration: none;
+    color: getColors("verde", 1);
+    font-weight: 600;
+    // transition: all 0.3s;
+
+    // &:hover {
+    //   color: getColors("verde", 3);
+    // }
+    // &:active {
+    //   transform: scale(0.8);
+    // }
+  }
+
+  //   li {
+  //     transition: all 0.3s;
+
+  // &a:active {
+  //   transform: scale(0.8);
+  // }
+  //   }
+
+  //   li:hover {
+  //     transform: scale(1.1);
+  //   }
+
+  &__iconos {
+    display: flex;
+    gap: getGap(8);
+    cursor: pointer;
+    transition: all 0.3s;
+    i {
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.3);
+        color: getColors("verde", 3);
+      }
+      &:active {
+        transform: scale(0.8);
+      }
+    }
+
+    // &i:hover {
+    //   transform: scale(1.1);
+    // }
+  }
 }

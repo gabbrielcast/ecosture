@@ -1,18 +1,18 @@
 let carrito = null;
 function cargaInicio() {
-	let contenedor = document.getElementById("contenedor");
+  let contenedor = document.getElementById("contenedor");
 
-	this.portada(contenedor);
-	this.about(contenedor);
-	this.testimonio(contenedor);
-	this.productos(contenedor);
+  this.portada(contenedor);
+  this.about(contenedor);
+  this.testimonio(contenedor);
+  this.productos(contenedor);
 }
 
 function portada(contenedor) {
-	let section = document.createElement("section");
-	section.id = "hero";
-	section.className = "c-hero";
-	section.innerHTML = `
+  let section = document.createElement("section");
+  section.id = "hero";
+  section.className = "c-hero";
+  section.innerHTML = `
         <h1 class="c-hero__titulo">Moda <span>sostenible</span></h1>
         <h2 class="c-hero__subtitulo">
             Ropa ecológica - marcas locales - comercio justo
@@ -29,15 +29,15 @@ function portada(contenedor) {
             <div class="c-icon__circulo--hojas"></div>
         </div>
     `;
-	contenedor.appendChild(section);
+  contenedor.appendChild(section);
 }
 
 function about(contenedor) {
-	let section = document.createElement("section");
-	section.id = "about";
-	section.className = "c-about";
+  let section = document.createElement("section");
+  section.id = "about";
+  section.className = "c-about";
 
-	section.innerHTML = `
+  section.innerHTML = `
     
         <div class="c-about__header">
             <h3 class="c-about__title">Lorem ipsum dolor sit amet</h3>
@@ -122,14 +122,14 @@ function about(contenedor) {
     
     `;
 
-	contenedor.appendChild(section);
+  contenedor.appendChild(section);
 }
 
 function testimonio(contenedor) {
-	let section = document.createElement("section");
-	section.id = "testimonio";
-	section.className = "c-testimonio";
-	section.innerHTML = `
+  let section = document.createElement("section");
+  section.id = "testimonio";
+  section.className = "c-testimonio";
+  section.innerHTML = `
         <!-- <div class="c-testimonio__img"></div> -->
         <i class="fas fa-quote-right fa-4x"></i>
         <p class="c-testimonio__text">
@@ -146,14 +146,14 @@ function testimonio(contenedor) {
     
     `;
 
-	contenedor.appendChild(section);
+  contenedor.appendChild(section);
 }
 
 function productos(contenedor) {
-	let section = document.createElement("section");
-	section.id = "productos";
+  let section = document.createElement("section");
+  section.id = "productos";
 
-	section.innerHTML = `
+  section.innerHTML = `
     <h1 class="g--seccion-productos-title">ARTÍCULOS</h1>
 					<div
 						class="l-grid l-grid--align-content l-grid--gap-6 g--padding-12 g--padding-14"
@@ -172,7 +172,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button__primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -190,7 +190,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button__primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -208,7 +208,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button__primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -226,7 +226,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button__primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -244,7 +244,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button__primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -262,7 +262,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button__primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -280,7 +280,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button__primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -298,18 +298,18 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button__primary" >Añadir</a>
 							</div>
 						</div>
 					</div>
     
     `;
 
-	contenedor.appendChild(section);
+  contenedor.appendChild(section);
 }
 
 window.onload = () => {
-	carrito = new Carrito();
-	this.cargaInicio();
-	setLogin();
+  carrito = new Carrito();
+  this.cargaInicio();
+  setLogin();
 };

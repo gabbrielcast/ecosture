@@ -6,6 +6,7 @@
   border-radius: getBorderRadius(4);
   display: table;
   text-align: center;
+  transition: all 0.5s;
 
   &__primary {
     background-color: getColors("verde", 1);
@@ -15,6 +16,15 @@
     border-radius: getBorderRadius(4);
     display: table;
     text-align: center;
+
+    &:active {
+      transform: scale(0.8);
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      background-color: getColors("verde", 3);
+    }
   }
 
   &__resta {
