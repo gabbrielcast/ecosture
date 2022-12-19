@@ -1,14 +1,14 @@
 class Carrito {
 	constructor() {
-		this.eventosCarrito();
+		this.animacionCarrito();
 	}
-	eventosCarrito() {
+	animacionCarrito() {
 		const modalCarrito = document.getElementById("carrito");
 
 		let botonCarrito = document.getElementById("btnCarrito");
 		botonCarrito.addEventListener("click", () => {
 			modalCarrito.style.display = "block";
-			modalCarrito.style.top = "150px";
+			modalCarrito.style.top = "120px";
 			modalCarrito.style.marginTop = "0px";
 			modalCarrito.style.visibility = "visible";
 		});

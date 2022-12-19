@@ -630,7 +630,6 @@ table {
 .c-carrito__container {
   display: flex;
   flex-direction: column;
-  height: 60%;
 }
 .c-carrito__title {
   display: flex;
@@ -641,7 +640,7 @@ table {
   text-align: center;
   color: #fff;
   background-color: #3a562e;
-  height: 100px;
+  height: 80px;
 }
 .c-carrito__item {
   padding: 20px 32px;
@@ -701,7 +700,7 @@ table {
   background: linear-gradient(90deg, rgb(245, 245, 245) 4%, rgb(216, 245, 193) 20%, rgb(190, 246, 153) 33%, rgb(129, 209, 77) 49%, rgb(64, 173, 18) 100%);
   margin-left: auto;
   width: 40%;
-  height: 90px;
+  height: 70px;
 }
 .c-carrito__cantidadTotal {
   color: #fff;

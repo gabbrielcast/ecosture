@@ -1,12 +1,8 @@
-function abrirLogin() {
-	console.log("click");
-}
-
 function setLogin() {
 	const modalLogin = document.getElementById("login");
 	const botonLogin = document.getElementById("btnLogin");
 	botonLogin.addEventListener("click", () => {
-		modalLogin.style.marginTop = "0px";
+		modalLogin.style.marginTop = "-40px";
 	});
 
 	const cancelar = document.getElementById("login-cancelar");
