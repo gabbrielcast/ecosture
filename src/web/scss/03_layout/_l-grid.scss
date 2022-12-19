@@ -1,7 +1,10 @@
 .l-grid {
 	display: grid;
 	gap: 30px;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+	&--auto-fill {
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	}
 
 	&--columns-4 {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -15,7 +18,8 @@
 	}
 
 	&--align-content {
-		align-content: center;
+		// align-items: center;
+		justify-content: center;
 	}
 
 	@each $key in getGapKeys() {

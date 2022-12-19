@@ -10,10 +10,12 @@ class Carrito {
 			modalCarrito.style.display = "block";
 			modalCarrito.style.top = "150px";
 			modalCarrito.style.marginTop = "0px";
+			modalCarrito.style.visibility = "visible";
 		});
 		let cerrar = document.getElementById("cerrarCarrito");
 		cerrar.onclick = () => {
 			modalCarrito.style.marginTop = "-1000px";
+			modalCarrito.style.visibility = "hidden";
 		};
 	}
 }

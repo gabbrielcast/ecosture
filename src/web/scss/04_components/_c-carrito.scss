@@ -2,8 +2,8 @@
 	display: block;
 	z-index: 1;
 	position: fixed;
-	width: 40%;
-	height: 60%;
+	width: 50%;
+	visibility: hidden;
 	margin-top: -1000px;
 	// left: 30%;
 	background-color: getColors("verde", 0);
@@ -15,15 +15,21 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
+		height: 60%;
 	}
 
 	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-size: getFontSize("3xl");
 		font-weight: bold;
 		text-align: center;
-		padding-top: getPadding(9);
-		margin: getMargin(6) getMargin(8);
-		color: getColors("verde", 1);
+		// padding-top: getPadding(9);
+		// margin: getMargin(6) getMargin(8);
+		color: getColors("blanco", 0);
+		background-color: getColors("verde", 1);
+		height: 100px;
 	}
 
 	&__item {
@@ -89,11 +95,22 @@
 		padding: getPadding(6) getPadding(9);
 		font-size: getFontSize("3xl");
 		font-weight: bold;
-		margin: getMargin(0) getMargin(10);
-		color: getColors("verde", 1);
+		// margin: getMargin(0) getMargin(10);
+		color: getColors("blanco", 0);
+		background: linear-gradient(
+			90deg,
+			rgba(245, 245, 245, 1) 4%,
+			rgba(216, 245, 193, 1) 20%,
+			rgba(190, 246, 153, 1) 33%,
+			rgb(129, 209, 77) 49%,
+			rgb(64, 173, 18) 100%
+		);
+		margin-left: auto;
+		width: 40%;
+		height: 90px;
 	}
 
 	&__cantidadTotal {
-		color: getColors("verde", 2);
+		color: getColors("blanco", 0);
 	}
 }
