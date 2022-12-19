@@ -1,0 +1,26 @@
+.l-grid {
+	display: grid;
+	gap: 30px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+	&--columns-4 {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	&--rows-2 {
+		grid-template-rows: 1fr 1fr;
+	}
+
+	&--justify-center {
+		justify-content: center;
+	}
+
+	&--align-content {
+		align-content: center;
+	}
+
+	@each $key in getGapKeys() {
+		&--gap-#{$key} {
+			gap: getGap($key);
+		}
+	}
+}
