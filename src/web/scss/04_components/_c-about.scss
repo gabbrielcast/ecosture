@@ -1,0 +1,31 @@
+.c-about {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: getPadding(15) getPadding(14);
+	font-family: getFontFamily("principal");
+
+	&__header {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		margin-bottom: getMargin(10);
+		gap: getGap(6);
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__title {
+		font-size: getFontSize("xl");
+		font-weight: bold;
+		color: getColors("verde", 1);
+	}
+
+	&__text {
+		line-height: getLineHeight("2xl");
+	}
+}

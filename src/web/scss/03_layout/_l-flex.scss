@@ -1,0 +1,42 @@
+.l-flex {
+	display: flex;
+
+	&--direction-column {
+		flex-direction: column;
+	}
+	&--direction-row {
+		flex-direction: row;
+	}
+	&--justify-center {
+		justify-content: center;
+	}
+	&--justify-end {
+		justify-content: end;
+	}
+	&--justify-initial {
+		justify-content: initial;
+	}
+	&--justify-space-around {
+		justify-content: space-around;
+	}
+	&--justify-space-between {
+		justify-content: space-between;
+	}
+	&__aling-items--center {
+		align-items: center;
+	}
+	&--espaciado {
+		margin-left: 180px;
+		margin-right: 180px;
+	}
+
+	&--wrap {
+		flex-wrap: wrap;
+	}
+
+	@each $key in getGapKeys() {
+		&--gap-#{$key} {
+			gap: getGap($key);
+		}
+	}
+}

@@ -1,0 +1,40 @@
+.c-hero {
+	height: 700px;
+	background-image: url(../assets/img/banner_web.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: getPadding(12) getPadding(10);
+	color: getColors("verde", 1);
+	text-transform: uppercase;
+	font-family: getFontFamily("secundario");
+
+	&__titulo {
+		font-size: getFontSize("6xl");
+		line-height: getLineHeight("8xl");
+		span {
+			display: block;
+			font-size: getFontSize("9xl");
+			margin-bottom: getMargin(9);
+			font-weight: bold;
+		}
+	}
+
+	&__subtitulo {
+		font-size: getFontSize("2xl");
+		line-height: getLineHeight("4xl");
+		margin-bottom: getMargin(6);
+	}
+
+	&__texto {
+		font-size: getFontSize("l");
+		line-height: getLineHeight("xl");
+		text-transform: initial;
+		width: 400px;
+		margin-bottom: getMargin(13);
+	}
+
+	&__iconos {
+		display: flex;
+		gap: getGap(13);
+	}
+}

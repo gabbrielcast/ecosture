@@ -1,491 +1,253 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto Ecosture</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="icon" type="image/jpg" href="./assets/img/logo2.svg" />
-    <script src="./js/index.js"></script>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Proyecto Ecosture</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="icon" type="image/jpg" href="./assets/img/logo2.svg" />
+		<script src="./js/login.js"></script>
+		<script src="./js/carrito.js"></script>
+		<script src="./js/index.js"></script>
+		<script src="./js/main.js"></script>
+	</head>
 
-  <body>
-    <!-- NAV -->
+	<body>
+		<!-- NAV -->
+		<div id="app">
+			<nav id="nav" class="c-nav">
+				<img
+					class="c-nav__logo"
+					src="./assets/img/logo2.svg"
+					alt="logo ecosture"
+				/>
+				<ul class="c-nav__menu">
+					<li>
+						<a href="#about" class="c-nav__item">¿Quiénes somos?</a>
+					</li>
+					<li>
+						<a href="#testimonio" class="c-nav__item">Opinión</a>
+					</li>
+					<li>
+						<a href="#productos" class="c-nav__item">Productos</a>
+					</li>
+					<li>
+						<a id="link-categorias" href="#" class="c-nav__item">Categorias</a>
+					</li>
+					<li>
+						<a href="#footer" class="c-nav__item">Contacto</a>
+					</li>
+				</ul>
+				<div class="c-nav__iconos">
+					<i class="fas fa-user" id="btnLogin"></i>
+					<i class="fas fa-shopping-cart" id="btnCarrito"></i>
+					<i class="far fa-chart-bar"></i>
+				</div>
+			</nav>
 
-    <nav class="l-nav">
-      <img
-        class="l-nav__logo"
-        src="./assets/img/logo2.svg"
-        alt="logo ecosture"
-      />
-      <ul class="l-nav__menu">
-        <li>
-          <a href="" class="l-nav__item-menu">¿Quiénes somos?</a>
-        </li>
-        <li>
-          <a href="" class="l-nav__item-menu">Opinión</a>
-        </li>
-        <li>
-          <a href="" class="l-nav__item-menu">Productos</a>
-        </li>
-        
-        <li>
-          <a href="" class="l-nav__item-menu">Contacto</a>
-        </li>
-      </ul>
-      <div class="l-nav__iconos">
-        <i class="fas fa-user" id="btnLogin"></i>
-        <i class="fas fa-shopping-cart" id="btnCarrito"></i>
-      </div>
-    </nav>
+			<main id="contenedor">
+				<!-- CONTACTO -->
+				<section class="c-section-contacto"></section>
+			</main>
 
-    <main>
-      <!-- INTRO -->
-      <section class="l-hero">
-        <h1 class="l-hero__titulo">Moda <span>sostenible</span></h1>
-        <h2 class="l-hero__subtitulo">
-          Ropa ecológica - marcas locales - comercio justo
-        </h2>
-        <p class="l-hero__texto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-          corrupti accusamus dolorum ipsa cupiditate perferendis esse atque
-          earum quis sequi culpa voluptatem sit, voluptas nemo laudantium
-          blanditiis eaque dicta architecto.
-        </p>
-        <div class="l-hero__iconos">
-          <div class="c-icon__circulo--planeta"></div>
-          <div class="c-icon__circulo--bombilla"></div>
-          <div class="c-icon__circulo--hojas"></div>
-        </div>
-      </section>
+			<footer id="footer" class="c-footer">
+				<div class="c-footer__info">
+					<img
+						class="c-footer__logo"
+						src="./assets/img/logo_blanco.png"
+						alt="Logo Ecosture"
+					/>
 
-      <!-- QUIENES SOMOS -->
-      <section class="l-about">
-        <div class="l-about__info-container">
-          <h3 class="l-about__title">Lorem ipsum dolor sit amet</h3>
-          <p class="l-about__text">
-            Quisque vulputate sem pulvinar nibh interdum dignissim. Vivamus id
-            arcu porttitor, lacinia ipsum sit amet, vulputate erat. Ut dictum
-            risus metus, et venenatis lectus efficitur quis. Sed placerat, erat
-            eu fermentum euismod, justo lectus molestie sem, sed dapibus eros
-            diam nec urna. Etiam magna ligula, eleifend a mi ac, maximus
-            vulputate nunc. Quisque ut sapien eu nunc pretium molestie ac ac
-            mauris. Fusce ultrices molestie justo id porta. Donec condimentum
-            semper eleifend. Phasellus eu tempor risus. Mauris in bibendum
-            purus. Donec justo quam, mollis vel leo nec, dignissim lacinia
-            justo. Ut tincidunt vel turpis ut placerat. Sed ut rutrum elit.
-          </p>
-        </div>
+					<ul class="c-footer__list">
+						<li><a class="c-footer__item" href="">Terms</a></li>
+						<li><a class="c-footer__item">|</a></li>
+						<li><a class="c-footer__item" href="">Policy</a></li>
+						<li><a class="c-footer__item">|</a></li>
+						<li><a class="c-footer__item" href="">Créditos</a></li>
+					</ul>
 
-        <div class="l-about__container">
-          <div class="l-about__info">
-            <img
-              class="c-icon"
-              src="./assets/img/iconos/salvar-plantas.png"
-              alt="icono comercio justo"
-            />
-            <h3 class="l-about__title">Comercio Justo</h3>
-            <p class="l-about__text-card">
-              Queremos, que cada ser humano tenga un salario justo por su
-              trabajo. Esto es fundamental para elegir las mejores marcas de
-              ropa ecologica.
-            </p>
-          </div>
+					<div class="c-footer__media">
+						<img
+							class="c-icon__media"
+							src="./assets/img/iconos/instagram.svg"
+							alt="icono instagram"
+						/>
+						<img
+							class="c-icon__media"
+							src="./assets/img/iconos/facebook.svg"
+							alt="icono facebook"
+						/>
+						<img
+							class="c-icon__media"
+							src="./assets/img/iconos/twitter.svg"
+							alt="icono twitter"
+						/>
+					</div>
+				</div>
 
-          <div class="l-about__info">
-            <img class="c-icon" src="./assets/img/iconos/ecologia.png" alt="" />
-            <h3 class="l-about__title">Organic</h3>
-            <p class="l-about__text-card">
-              Organic significa natural, ésta es la palabra clave para nuestra
-              selección de moda ecologica con los mejores materiales ecológicos.
-            </p>
-          </div>
+				<a class="c-footer__derechos" href="" target="_blank"
+					>Copyright Ecosture © 2023. All Right Reserved.</a
+				>
+			</footer>
+		</div>
 
-          <div class="l-about__info">
-            <img
-              class="c-icon"
-              src="./assets/img/iconos/el-planeta-tierra.png"
-              alt=""
-            />
-            <h3 class="l-about__title">Sostenible</h3>
-            <p class="l-about__text-card">
-              Significa para nosotros pensar y actuar a largo plazo, con
-              productos que duran por su calidad y diseño en tiempo. Todo es
-              uno, cuidar el medioambiente, el ser humano y los animales. Es
-              moda sostenible
-            </p>
-          </div>
-          <div class="l-about__info">
-            <img
-              class="c-icon"
-              src="./assets/img/iconos/vegano.png"
-              alt="icono vegano"
-            />
-            <h3 class="l-about__title">Vegan</h3>
-            <p class="l-about__text-card">
-              No queremos que se sacrifiquen animales o que éstos sean
-              maltratados.
-            </p>
-          </div>
+		<!-- CARRITO DE LA COMPRA -->
+		<div id="carrito" class="c-carrito">
+			<div class="c-carrito__container">
+				<h3 class="c-carrito__title">CARRITO DE LA COMPRA</h3>
 
-          <div class="l-about__info">
-            <img
-              class="c-icon"
-              src="./assets/img/iconos/reciclar-senal.png"
-              alt="icono reciclaje"
-            />
-            <h3 class="l-about__title">Upcycling</h3>
-            <p class="l-about__text-card">
-              En nuestra tienda encuentras productos que están fabricados con
-              materiales reciclados para generar una ideología sana.
-            </p>
-          </div>
-        </div>
-      </section>
+				<div class="c-carrito__item">
+					<img
+						class="c-carrito__icon"
+						src="./assets/img/iconos/close.png"
+						alt=""
+					/>
+					<img
+						class="c-carrito__img"
+						src="./assets/img/Ropa/hombre/camisetas/camiseta8.jpg"
+					/>
 
-       <!-- OPINIONES  -->
-       <section class="l-testimonio">
-        <div class="l-testimonio__container">
-          <!-- <div class="l-testimonio__img"></div> -->
-          <i class="fas fa-quote-right fa-4x"></i>
-          <p class="l-testimonio__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt labor et dolore magna aliqua ex commo
-            consequat irure. Maecenas nec libero porta, elementum erat eget,
-            pellentesque nulla. Curabitur sed sem quis metus vestibulum sodales
-            pulvinar eget tortor. Praesent non felis magna. Fusce egestas sapien
-            eu accumsan ultrices. Aliquam sed lacus mi. Aenean nisl tellus,
-            consequat pulvinar lorem sed, volutpat finibus sapien.
-          </p>
-          <p class="c-testimonio__name-person">Donec Hendrerit</p>
-        </div>
-      </section>
+					<div class="c-carrito__descripcion">
+						<span>Lorem Ipsum</span>
+						<span>Tempus Fugit</span>
+						<span>Lorem </span>
+					</div>
 
-      <!-- PRODUCTOS -->
-      <section class="l-productos">
-        <h1 class="l-productos__title">ARTÍCULOS</h1>
+					<div class="c-carrito__cantidad">
+						<img
+							class="c-carrito__icon"
+							src="./assets/img/iconos/minus.png"
+							alt=""
+						/>
 
-        <div class="l-productos__container">
-          <div class="l-productos__card">
-            <img
-              class="l-productos__img"
-              src="./assets/img/Ropa/mujer/camisetas/camiseta1.jpg"
-              alt=""
-            />
-            <div class="l-productos__card-info">
-              <h4 class="l-productos__name-product">LOREM IPSUM</h4>
-              <p class="l-productos__text">
-                Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-                scelerisque velit. Aliquam porta turpis sed tincidunt placerat.
-              </p>
-              <p class="l-productos__price">19.99€</p>
-              <a class="c-button__primary" href="#">Añadir</a>
-            </div>
-          </div>
+						<input class="c-carrito__input" type="text" name="name" value="1" />
 
-          <div class="l-productos__card">
-            <img
-              class="l-productos__img"
-              src="./assets/img/Ropa/mujer/camisetas/camiseta2.jpg"
-              alt=""
-            />
-            <div class="l-productos__card-info">
-              <h4 class="l-productos__name-product">LOREM IPSUM</h4>
-              <p class="l-productos__text">
-                Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-                scelerisque velit. Aliquam porta turpis sed tincidunt placerat.
-              </p>
-              <p class="l-productos__price">19.99€</p>
-              <a class="c-button__primary" href="#">Añadir</a>
-            </div>
-          </div>
+						<img
+							class="c-carrito__icon"
+							src="./assets/img/iconos/plus.png"
+							alt=""
+						/>
+					</div>
 
-          <div class="l-productos__card">
-            <img
-              class="l-productos__img"
-              src="./assets/img/Ropa/mujer/camisetas/camiseta3.jpg"
-              alt=""
-            />
-            <div class="l-productos__card-info">
-              <h4 class="l-productos__name-product">LOREM IPSUM</h4>
-              <p class="l-productos__text">
-                Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-                scelerisque velit. Aliquam porta turpis sed tincidunt placerat.
-              </p>
-              <p class="l-productos__price">19.99€</p>
-              <a class="c-button__primary" href="#">Añadir</a>
-            </div>
-          </div>
+					<div class="c-carrito__precio">19.90€</div>
+				</div>
 
-          <div class="l-productos__card">
-            <img
-              class="l-productos__img"
-              src="./assets/img/Ropa/hombre/camisetas/camiseta4.jpg"
-              alt=""
-            />
-            <div class="l-productos__card-info">
-              <h4 class="l-productos__name-product">LOREM IPSUM</h4>
-              <p class="l-productos__text">
-                Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-                scelerisque velit. Aliquam porta turpis sed tincidunt placerat.
-              </p>
-              <p class="l-productos__price">19.99€</p>
-              <a class="c-button__primary" href="#">Añadir</a>
-            </div>
-          </div>
+				<div class="c-carrito__item">
+					<img
+						class="c-carrito__icon"
+						src="./assets/img/iconos/close.png"
+						alt=""
+					/>
+					<img
+						class="c-carrito__img"
+						src="./assets/img/Ropa/hombre/camisetas/camiseta5.jpg"
+					/>
 
-          <div class="l-productos__card">
-            <img
-              class="l-productos__img"
-              src="./assets/img/Ropa/hombre/camisetas/camiseta6.jpg"
-              alt=""
-            />
-            <div class="l-productos__card-info">
-              <h4 class="l-productos__name-product">LOREM IPSUM</h4>
-              <p class="l-productos__text">
-                Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-                scelerisque velit. Aliquam porta turpis sed tincidunt placerat.
-              </p>
-              <p class="l-productos__price">19.99€</p>
-              <a class="c-button__primary" href="#">Añadir</a>
-            </div>
-          </div>
+					<div class="c-carrito__descripcion">
+						<span>Lorem Ipsum</span>
+						<span>Tempus Fugit</span>
+						<span>Lorem </span>
+					</div>
 
-          <div class="l-productos__card">
-            <img
-              class="l-productos__img"
-              src="./assets/img/Ropa/mujer/camisetas/camiseta7.jpg"
-              alt=""
-            />
-            <div class="l-productos__card-info">
-              <h4 class="l-productos__name-product">LOREM IPSUM</h4>
-              <p class="l-productos__text">
-                Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-                scelerisque velit. Aliquam porta turpis sed tincidunt placerat.
-              </p>
-              <p class="l-productos__price">19.99€</p>
-              <a class="c-button__primary" href="#">Añadir</a>
-            </div>
-          </div>
+					<div class="c-carrito__cantidad">
+						<img
+							class="c-carrito__icon"
+							src="./assets/img/iconos/minus.png"
+							alt=""
+						/>
 
-          <div class="l-productos__card">
-            <img
-              class="l-productos__img"
-              src="./assets/img/Ropa/mujer/camisetas/camiseta6.jpg"
-              alt=""
-            />
-            <div class="l-productos__card-info">
-              <h4 class="l-productos__name-product">LOREM IPSUM</h4>
-              <p class="l-productos__text">
-                Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-                scelerisque velit. Aliquam porta turpis sed tincidunt placerat.
-              </p>
-              <p class="l-productos__price">19.99€</p>
-              <a class="c-button__primary" href="#">Añadir</a>
-            </div>
-          </div>
+						<input class="c-carrito__input" type="text" name="name" value="1" />
 
-          <div class="l-productos__card">
-            <img
-              class="l-productos__img"
-              src="./assets/img/Ropa/hombre/camisetas/camiseta12.jpg"
-              alt=""
-            />
-            <div class="l-productos__card-info">
-              <h4 class="l-productos__name-product">LOREM IPSUM</h4>
-              <p class="l-productos__text">
-                Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-                scelerisque velit. Aliquam porta turpis sed tincidunt placerat.
-              </p>
-              <p class="l-productos__price">19.99€</p>
-              <a class="c-button__primary" href="#">Añadir</a>
-            </div>
-          </div>
-        </div>
-      </section>
+						<img
+							class="c-carrito__icon"
+							src="./assets/img/iconos/plus.png"
+							alt=""
+						/>
+					</div>
 
-     
+					<div class="c-carrito__precio">19.90€</div>
+				</div>
 
-      <!-- CONTACTO -->
-      <section class="c-section-contacto"></section>
-    </main>
+				<div class="c-carrito__item">
+					<img
+						class="c-carrito__icon"
+						src="./assets/img/iconos/close.png"
+						alt=""
+					/>
+					<img
+						class="c-carrito__img"
+						src="./assets/img/Ropa/hombre/camisetas/camiseta3.jpg"
+					/>
 
-    <footer class="l-footer">
-      <div class="l-footer__info">
-        <img
-          class="l-footer__logo"
-          src="./assets/img/logo_blanco.png"
-          alt="Logo Ecosture"
-        />
+					<div class="c-carrito__descripcion">
+						<span>Lorem Ipsum</span>
+						<span>Tempus Fugit</span>
+						<span>Lorem </span>
+					</div>
 
-        <ul class="l-footer__list">
-          <li><a class="l-footer__item" href="">Terms</a></li>
-          <li><a class="l-footer__item">|</a></li>
-          <li><a class="l-footer__item" href="">Policy</a></li>
-          <li><a class="l-footer__item">|</a></li>
-          <li><a class="l-footer__item" href="">Créditos</a></li>
-        </ul>
+					<div class="c-carrito__cantidad">
+						<img
+							class="c-carrito__icon"
+							src="./assets/img/iconos/minus.png"
+							alt=""
+						/>
 
-        <div class="l-footer__media">
-          <img
-            class="c-icon__media"
-            src="./assets/img/iconos/instagram.svg"
-            alt="icono instagram"
-          />
-          <img
-            class="c-icon__media"
-            src="./assets/img/iconos/facebook.svg"
-            alt="icono facebook"
-          />
-          <img
-            class="c-icon__media"
-            src="./assets/img/iconos/twitter.svg"
-            alt="icono twitter"
-          />
-        </div>
-      </div>
+						<input class="c-carrito__input" type="text" name="name" value="1" />
 
-      <a class="l-footer__derechos" href="" target="_blank"
-        >Copyright Ecosture © 2023. All Right Reserved.</a
-      >
-    </footer>
+						<img
+							class="c-carrito__icon"
+							src="./assets/img/iconos/plus.png"
+							alt=""
+						/>
+					</div>
 
+					<div class="c-carrito__precio">19.90€</div>
+				</div>
 
+				<div class="c-carrito__precioTotal">
+					<p class="c-carrito__textoTotal">TOTAL:</p>
+					<p class="c-carrito__cantidadTotal">89,90€</p>
+				</div>
 
+				<div class="c-carrito__botones">
+					<a class="c-button__primary" id="cerrarCarrito">Seguir Comprando</a>
+					<a class="c-button__primary" id="pagarCarrito">Pagar Carrito</a>
+				</div>
+			</div>
+		</div>
 
+		<!-- PAGO -->
 
-    <!-- CARRITO DE LA COMPRA -->
-    <div id="carrito" class="c-carrito">
-      <div class="c-carrito__container">
-      <h3 class="c-carrito__title">CARRITO DE LA COMPRA</h3>
+		<!-- LOGIN -->
 
-    <div class="c-carrito__item">
+		<div class="c-login" id="login">
+			<div class="c-login__left">
+				<h3 class="c-login__title">¡BIENVENIDO!</h3>
 
-      <img class="c-carrito__icon" src="./assets/img/iconos/close.png" alt="">
-      <img class="c-carrito__img" src="./assets/img/Ropa/hombre/camisetas/camiseta8.jpg"></img>
+				<form class="c-login__form" action="">
+					<input class="c-login__input" type="email" placeholder="Email" />
+					<input
+						class="c-login__input"
+						type="password"
+						placeholder="Contraseña"
+					/>
+					<a class="c-login__textForm">Has olvidado tu contraseña?</a>
+					<button id="login-cancelar" class="c-button">Cancelar</button>
+					<button class="c-button">Acceder</button>
+				</form>
+			</div>
 
-      <div class="c-carrito__descripcion">
-        <span>Lorem Ipsum</span>
-        <span>Tempus Fugit</span>
-        <span>Lorem </span>
-      </div>
-
-      <div class="c-carrito__cantidad">
-    
-        <img class="c-carrito__icon" src="./assets/img/iconos/minus.png" alt="">
-  
-        <input class="c-carrito__input" type="text" name="name" value="1">
-  
-        <img class="c-carrito__icon" src="./assets/img/iconos/plus.png" alt="">
-    
-      </div>
-
-      <div class="c-carrito__precio">19.90€</div>
-    </div>
-
-    <div class="c-carrito__item">
-
-      <img class="c-carrito__icon" src="./assets/img/iconos/close.png" alt="">
-      <img class="c-carrito__img" src="./assets/img/Ropa/hombre/camisetas/camiseta5.jpg"></img>
-
-      <div class="c-carrito__descripcion">
-        <span>Lorem Ipsum</span>
-        <span>Tempus Fugit</span>
-        <span>Lorem </span>
-      </div>
-
-      <div class="c-carrito__cantidad">
-    
-        <img class="c-carrito__icon" src="./assets/img/iconos/minus.png" alt="">
-  
-        <input class="c-carrito__input" type="text" name="name" value="1">
-  
-        <img class="c-carrito__icon" src="./assets/img/iconos/plus.png" alt="">
-    
-      </div>
-
-      <div class="c-carrito__precio">19.90€</div>
-    </div>
-
-    <div class="c-carrito__item">
-
-      <img class="c-carrito__icon" src="./assets/img/iconos/close.png" alt="">
-      <img class="c-carrito__img" src="./assets/img/Ropa/hombre/camisetas/camiseta3.jpg"></img>
-
-      <div class="c-carrito__descripcion">
-        <span>Lorem Ipsum</span>
-        <span>Tempus Fugit</span>
-        <span>Lorem </span>
-      </div>
-
-      <div class="c-carrito__cantidad">
-    
-        <img class="c-carrito__icon" src="./assets/img/iconos/minus.png" alt="">
-  
-       <input class="c-carrito__input" type="text" name="name" value="1">
-  
-        <img class="c-carrito__icon" src="./assets/img/iconos/plus.png" alt="">
-    
-      </div>
-
-      <div class="c-carrito__precio">19.90€</div>
-    </div>
-
-    <div class="c-carrito__precioTotal">
-     <p class="c-carrito__textoTotal">TOTAL:</p>
-     <p class="c-carrito__cantidadTotal">89,90€</p>
-    </div>
-
-    <div class="c-carrito__botones">
-      <a class="c-button__primary" href="#" id="cerrarCarrito">Seguir Comprando</a>
-      <a class="c-button__primary" href="#" id="pagarCarrito">Pagar Carrito</a>
-    </div>
-
-  </div>
-  </div>
-
-
-
-  <!-- PAGO -->
-
-  
-
-
-
-<!-- LOGIN -->
-
-<div class="c-login" id="login">
-	<div class="c-login__container">
-    <div class="c-login__left-container">
-      <h3 class="c-login__title">
-        ¡BIENVENIDO!
-      </h3>
-  
-      <form class="c-login__form" action="">
-        <input class="c-login__input" type="email" placeholder="Email" />
-        <input class="c-login__input" type="password" placeholder="Contraseña" />
-        <a class="c-login__textForm" href="#">Has olvidado tu contraseña?</a>
-        <button class="c-button">Acceder</button>
-      </form>
-    </div>
-
-    <div class="c-login__right-container">
-      <img class="c-login__img" src="./assets/img/logo_blanco.png" alt="">
-    </div>
-
-  </div>
-  
-
-</div>
-
-
-  </body>
+			<div class="c-login__right">
+				<img class="c-login__img" src="./assets/img/logo_blanco.png" alt="" />
+			</div>
+		</div>
+	</body>
 </html>
