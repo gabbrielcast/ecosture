@@ -629,7 +629,7 @@ table {
 }
 @media (max-height: 900px) {
   .c-carrito {
-    height: 400px;
+    height: 500px;
   }
 }
 .c-carrito__container {
@@ -1049,23 +1049,53 @@ c-pagar {
 }
 
 .c-pago {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  display: block;
+  z-index: 1;
+  top: -1120px;
+  position: fixed;
+  transition: all 0.5s;
+  width: 620px;
+  height: 490px;
+  box-shadow: 0 5px 15px darkgray;
+  background: #f5f5f5;
   justify-content: center;
   align-items: center;
-  width: 500px;
 }
-.c-pago__settings {
-  width: 90%;
-  text-align: center;
-  font-size: 50px;
+.c-pago label {
+  font-size: 20px;
+  font-weight: 500;
+}
+.c-pago__titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 40px;
   font-weight: bold;
+  height: 80px;
+  background-color: #3a562e;
+}
+.c-pago__subgrupo {
+  display: flex;
+  gap: 20px;
+}
+.c-pago__subgrupo label {
+  font-size: 20px;
+}
+.c-pago__subgrupo input {
+  width: 90px;
+}
+.c-pago__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.c-pago__grupo--junto {
+  display: flex;
+  gap: 20px;
 }
 .c-pago__metodo {
-  width: 90%;
   display: flex;
-  justify-content: center;
   gap: 30px;
   list-style: none;
 }
@@ -1073,15 +1103,20 @@ c-pagar {
   text-decoration: none;
   color: black;
 }
-.c-pago form {
-  width: 90%;
+.c-pago__btns {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
   gap: 20px;
 }
-.c-pago form input {
-  width: 80%;
-  height: 60px;
+.c-pago__form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+}
+.c-pago__input {
+  width: 100%;
+  height: 40px;
   outline: none;
   font-size: 1rem;
   font-weight: 600;

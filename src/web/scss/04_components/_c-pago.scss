@@ -1,24 +1,58 @@
 .c-pago {
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
+	display: block;
+	z-index: 1;
+	top: -1120px;
+	position: fixed;
+	transition: all 0.5s;
+	width: 620px;
+	height: 490px;
+	box-shadow: getShadow(2);
+	background: getColors("verde", 0);
 	justify-content: center;
 	align-items: center;
-	width: 500px;
-	// background-color: red;
-	&__settings {
-		width: 90%;
-		text-align: center;
 
-		font-size: 50px;
+	label {
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	&__titulo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: getColors("blanco", 0);
+		font-size: 40px;
 		font-weight: bold;
+		height: 80px;
+		background-color: getColors("verde", 1);
+	}
+
+	&__subgrupo {
+		display: flex;
+		gap: 20px;
+		// padding: 10px 20px;
+		label {
+			font-size: 20px;
+		}
+		input {
+			width: 90px;
+		}
+	}
+
+	&__grupo {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		// padding: 10px 20px;
+		&--junto {
+			display: flex;
+			gap: 20px;
+		}
 	}
 
 	&__metodo {
-		width: 90%;
-
 		display: flex;
-		justify-content: center;
+		// justify-content: center;
 		gap: 30px;
 		list-style: none;
 		a {
@@ -27,22 +61,28 @@
 		}
 	}
 
-	form {
-		width: 90%;
+	&__btns {
+		margin-top: 20px;
+		display: flex;
+		gap: 20px;
+	}
+
+	&__form {
 		display: flex;
 		flex-direction: column;
+		padding: 40px;
 		gap: 20px;
+	}
 
-		input {
-			width: 80%;
-			height: 60px;
-			outline: none;
-			font-size: 1rem;
-			font-weight: 600;
-			color: #000;
-			min-width: unset;
-			margin: 0;
-		}
+	&__input {
+		width: 100%;
+		height: 40px;
+		outline: none;
+		font-size: 1rem;
+		font-weight: 600;
+		color: #000;
+		min-width: unset;
+		margin: 0;
 	}
 
 	&__header {
