@@ -10,4 +10,8 @@ function botonPago() {
 	console.log("entra en boton");
 }
 
-function setPago() {}
+function setPago() {
+	const botonCarrito = document.getElementById("btnCarrito");
+	botonCarrito.addEventListener("click", abrirCarrito);
+	console.log("entra en boton");
+}

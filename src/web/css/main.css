@@ -623,14 +623,31 @@ table {
   margin-top: -1000px;
   background-color: #f5f5f5;
   border: 2px solid #3a562e;
-  overflow-y: scroll;
+  overflow-y: auto;
   box-shadow: 0 5px 15px darkgray;
   transition: all 0.5s;
+}
+@media (max-height: 900px) {
+  .c-carrito {
+    height: 400px;
+  }
 }
 .c-carrito__container {
   display: flex;
   flex-direction: column;
-  height: 60%;
+}
+.c-carrito::-webkit-scrollbar {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+  width: 14px;
+}
+.c-carrito::-webkit-scrollbar-track {
+  background: white; /* color of the tracking area */
+}
+.c-carrito::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background: rgb(122, 122, 121); /* color of the tracking area */
 }
 .c-carrito__title {
   display: flex;
@@ -676,8 +693,8 @@ table {
   gap: 16px;
 }
 .c-carrito__icon {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .c-carrito__input {
   width: 50px;
@@ -688,6 +705,7 @@ table {
   align-items: center;
   margin: 24px 40px;
   gap: 16px;
+  padding-bottom: 30px;
 }
 .c-carrito__precioTotal {
   display: flex;
@@ -700,7 +718,7 @@ table {
   color: #fff;
   background: linear-gradient(90deg, rgb(245, 245, 245) 4%, rgb(216, 245, 193) 20%, rgb(190, 246, 153) 33%, rgb(129, 209, 77) 49%, rgb(64, 173, 18) 100%);
   margin-left: auto;
-  width: 40%;
+  width: 60%;
   height: 90px;
 }
 .c-carrito__cantidadTotal {
@@ -733,6 +751,11 @@ c-pagar {
   justify-content: center;
   align-items: center;
   transition: all 0.5s;
+}
+@media (max-height: 900px) {
+  .c-login {
+    height: 400px;
+  }
 }
 .c-login__left {
   display: flex;
@@ -1023,6 +1046,52 @@ c-pagar {
 }
 .c-detalle__precio {
   font-size: 40px;
+}
+
+.c-pago {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+.c-pago__settings {
+  width: 90%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+.c-pago__metodo {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+.c-pago__metodo a {
+  text-decoration: none;
+  color: black;
+}
+.c-pago form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.c-pago form input {
+  width: 80%;
+  height: 60px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  min-width: unset;
+  margin: 0;
+}
+.c-pago__header {
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .g--clear-list {
