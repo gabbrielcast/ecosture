@@ -1,8 +1,8 @@
 class Carrito {
 	constructor() {
-		this.eventosCarrito();
+		this.animacionCarrito();
 	}
-	eventosCarrito() {
+	animacionCarrito() {
 		const modalCarrito = document.getElementById("carrito");
 
 		let botonCarrito = document.getElementById("btnCarrito");

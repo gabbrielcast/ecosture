@@ -3,6 +3,7 @@
 	z-index: 1;
 	position: fixed;
 	width: 50%;
+	// height: 65%;
 	visibility: hidden;
 	margin-top: -1000px;
 	// left: 30%;
@@ -46,7 +47,7 @@
 		// margin: getMargin(6) getMargin(8);
 		color: getColors("blanco", 0);
 		background-color: getColors("verde", 1);
-		height: 100px;
+		height: 80px;
 	}
 
 	&__item {

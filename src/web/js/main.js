@@ -1,7 +1,7 @@
 let carrito = null;
 function cargaInicio() {
 	let contenedor = document.getElementById("contenedor");
-
+	contenedor.innerHTML = "";
 	this.portada(contenedor);
 	this.about(contenedor);
 	this.testimonio(contenedor);
@@ -457,4 +457,9 @@ window.onload = () => {
 	carrito = new Carrito();
 	this.cargaInicio();
 	setLogin();
+
+	let btnInicio = document.getElementById("nav-inicio");
+	btnInicio.onclick = () => {
+		this.cargaInicio();
+	};
 };

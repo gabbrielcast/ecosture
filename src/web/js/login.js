@@ -1,7 +1,3 @@
-function abrirLogin() {
-	console.log("click");
-}
-
 function setLogin() {
 	const modalLogin = document.getElementById("login");
 
