@@ -6,39 +6,44 @@
   border-radius: getBorderRadius(4);
   display: table;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 2px solid rgb(28, 28, 28);
 
-  &__primary {
-    background-color: getColors("verde", 1);
-    color: getColors("verde", 0);
-    text-decoration: none;
-    padding: getPadding(5) getPadding(7);
-    border-radius: getBorderRadius(4);
-    display: table;
-    text-align: center;
-
-    &:active {
-      transform: scale(0.8);
-    }
-
-    &:hover {
-      transform: scale(1.2);
-      background-color: getColors("verde", 3);
-    }
+  &--big {
+    font-size: 30px;
+    padding: getPadding(6) getPadding(14);
   }
 
-  &__resta {
-    background-color: getColors("verde", 1);
-    color: getColors("verde", 0);
-    text-decoration: none;
-    padding: getPadding(5) getPadding(7);
-    border-radius: getBorderRadius(4);
-    display: table;
-    text-align: center;
-  }
+  // &--primary {
+  // 	background-color: getColors("verde", 1);
+  // 	color: getColors("verde", 0);
+  // 	text-decoration: none;
+  // 	padding: getPadding(5) getPadding(7);
+  // 	border-radius: getBorderRadius(4);
+  // 	display: table;
+  // 	text-align: center;
+  // 	&:hover {
+  // 		transform: scale(1.1);
+  // 	}
+  // 	&:active {
+  // 		transform: scale(0.9);
+  // 	}
+  // }
 
-  /*     color: getColors("rojo",5);
-    @include box-shadow(2);
-    //border-radius: getBorderRadius(2) ;
-    @include border-radius(5); */
+  // &--resta {
+  // 	background-color: getColors("verde", 1);
+  // 	color: getColors("verde", 0);
+  // 	text-decoration: none;
+  // 	padding: getPadding(5) getPadding(7);
+  // 	border-radius: getBorderRadius(4);
+  // 	display: table;
+  // 	text-align: center;
+  // 	&:hover {
+  // 		transform: scale(1.2);
+  // 	}
+  // 	&:active {
+  // 		transform: scale(0.8);
+  // 	}
+  // }
 }
