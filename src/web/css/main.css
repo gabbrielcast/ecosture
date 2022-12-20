@@ -360,6 +360,8 @@ table {
 .l-grid {
   display: grid;
   gap: 30px;
+}
+.l-grid--auto-fill {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .l-grid--columns-4 {
@@ -372,7 +374,7 @@ table {
   justify-content: center;
 }
 .l-grid--align-content {
-  align-content: center;
+  justify-content: center;
 }
 .l-grid--gap-0 {
   gap: 0px;
@@ -468,7 +470,7 @@ table {
 .l-flex--justify-space-between {
   justify-content: space-between;
 }
-.l-flex__aling-items--center {
+.l-flex--aling-items--center {
   align-items: center;
 }
 .l-flex--espaciado {
@@ -556,28 +558,13 @@ table {
   border-radius: 8px;
   display: table;
   text-align: center;
-  /*     color: getColors("rojo",5);
-    @include box-shadow(2);
-    //border-radius: getBorderRadius(2) ;
-    @include border-radius(5); */
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 2px solid rgb(28, 28, 28);
 }
-.c-button__primary {
-  background-color: #3a562e;
-  color: #f5f5f5;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: table;
-  text-align: center;
-}
-.c-button__resta {
-  background-color: #3a562e;
-  color: #f5f5f5;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: table;
-  text-align: center;
+.c-button--big {
+  font-size: 30px;
+  padding: 16px 96px;
 }
 
 .c-icon {
@@ -631,26 +618,47 @@ table {
   display: block;
   z-index: 1;
   position: fixed;
-  width: 40%;
-  height: 60%;
+  width: 50%;
+  visibility: hidden;
   margin-top: -1000px;
   background-color: #f5f5f5;
   border: 2px solid #3a562e;
-  overflow-y: scroll;
+  overflow-y: auto;
   box-shadow: 0 5px 15px darkgray;
   transition: all 0.5s;
+}
+@media (max-height: 900px) {
+  .c-carrito {
+    height: 500px;
+  }
 }
 .c-carrito__container {
   display: flex;
   flex-direction: column;
 }
+.c-carrito::-webkit-scrollbar {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+  width: 14px;
+}
+.c-carrito::-webkit-scrollbar-track {
+  background: white; /* color of the tracking area */
+}
+.c-carrito::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background: rgb(122, 122, 121); /* color of the tracking area */
+}
 .c-carrito__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  padding-top: 32px;
-  margin: 16px 24px;
-  color: #3a562e;
+  color: #fff;
+  background-color: #3a562e;
+  height: 80px;
 }
 .c-carrito__item {
   padding: 20px 32px;
@@ -685,8 +693,8 @@ table {
   gap: 16px;
 }
 .c-carrito__icon {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .c-carrito__input {
   width: 50px;
@@ -697,6 +705,7 @@ table {
   align-items: center;
   margin: 24px 40px;
   gap: 16px;
+  padding-bottom: 30px;
 }
 .c-carrito__precioTotal {
   display: flex;
@@ -706,11 +715,14 @@ table {
   padding: 16px 32px;
   font-size: 30px;
   font-weight: bold;
-  margin: 0px 40px;
-  color: #3a562e;
+  color: #fff;
+  background: linear-gradient(90deg, rgb(245, 245, 245) 4%, rgb(216, 245, 193) 20%, rgb(190, 246, 153) 33%, rgb(129, 209, 77) 49%, rgb(64, 173, 18) 100%);
+  margin-left: auto;
+  width: 60%;
+  height: 90px;
 }
 .c-carrito__cantidadTotal {
-  color: #01190d;
+  color: #fff;
 }
 
 c-pagar {
@@ -739,6 +751,11 @@ c-pagar {
   justify-content: center;
   align-items: center;
   transition: all 0.5s;
+}
+@media (max-height: 900px) {
+  .c-login {
+    height: 400px;
+  }
 }
 .c-login__left {
   display: flex;
@@ -835,6 +852,7 @@ c-pagar {
   background-color: #f5f5f5;
   font-family:  'Montserrat', sans-serif;
   width: 100%;
+  transition: all 0.5s;
 }
 .c-nav__logo {
   width: 150px;
@@ -843,10 +861,18 @@ c-pagar {
   display: flex;
   gap: 64px;
 }
+.c-nav__menu li {
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.c-nav__menu li:hover {
+  transform: scale(1.2);
+}
 .c-nav__item {
   text-decoration: none;
   color: #3a562e;
   font-weight: 600;
+  transition: all 0.5s;
 }
 .c-nav__iconos {
   display: flex;
@@ -985,6 +1011,122 @@ c-pagar {
   justify-content: center;
   text-align: justify;
   padding-bottom: 32px;
+}
+
+.c-detalle {
+  display: flex;
+  gap: 30px;
+  padding: 90px;
+  height: 900px;
+  width: 80%;
+  overflow-x: hidden;
+}
+.c-detalle__img {
+  width: 900px;
+  height: 650px;
+}
+.c-detalle__info {
+  padding: 60px;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.c-detalle__titulo {
+  font-size: 40px;
+  color: green;
+}
+.c-detalle__subtitulo {
+  font-size: 25px;
+}
+.c-detalle__descripcion {
+  font-size: 20px;
+  width: 700px;
+}
+.c-detalle__precio {
+  font-size: 40px;
+}
+
+.c-pago {
+  display: block;
+  z-index: 1;
+  top: -1120px;
+  position: fixed;
+  transition: all 0.5s;
+  width: 620px;
+  height: 490px;
+  box-shadow: 0 5px 15px darkgray;
+  background: #f5f5f5;
+  justify-content: center;
+  align-items: center;
+}
+.c-pago label {
+  font-size: 20px;
+  font-weight: 500;
+}
+.c-pago__titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  height: 80px;
+  background-color: #3a562e;
+}
+.c-pago__subgrupo {
+  display: flex;
+  gap: 20px;
+}
+.c-pago__subgrupo label {
+  font-size: 20px;
+}
+.c-pago__subgrupo input {
+  width: 90px;
+}
+.c-pago__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.c-pago__grupo--junto {
+  display: flex;
+  gap: 20px;
+}
+.c-pago__metodo {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.c-pago__metodo a {
+  text-decoration: none;
+  color: black;
+}
+.c-pago__btns {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.c-pago__form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+}
+.c-pago__input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  min-width: unset;
+  margin: 0;
+}
+.c-pago__header {
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .g--clear-list {
@@ -1698,6 +1840,10 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+#app {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

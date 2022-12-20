@@ -1,7 +1,7 @@
 let carrito = null;
 function cargaInicio() {
 	let contenedor = document.getElementById("contenedor");
-
+	contenedor.innerHTML = "";
 	this.portada(contenedor);
 	this.about(contenedor);
 	this.testimonio(contenedor);
@@ -154,9 +154,9 @@ function productos(contenedor) {
 	section.id = "productos";
 
 	section.innerHTML = `
-    <h1 class="g--seccion-productos-title">ARTÍCULOS</h1>
+    <h1 class="g--seccion-productos-title">CATEGORÍAS</h1>
 					<div
-						class="l-grid l-grid--align-content l-grid--gap-6 g--padding-12 g--padding-14"
+						class="l-grid l-grid--columns-4 l-grid--gap-6 g--padding-12 g--padding-14"
 					>
 						<div class="c-producto">
 							<img
@@ -172,7 +172,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button c-button--primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -190,7 +190,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button c-button--primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -208,7 +208,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button c-button--primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -226,7 +226,105 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button c-button--primary" >Añadir</a>
+							</div>
+						</div>
+					</div>
+    
+    `;
+
+	let btns = Array.from(section.getElementsByTagName("a"));
+	btns.forEach((b) => {
+		if (b.className.includes("c-button")) {
+			b.onclick = () => {
+				this.listProductos();
+			};
+		}
+	});
+
+	contenedor.appendChild(section);
+}
+
+function listProductos() {
+	let contenedor = document.getElementById("contenedor");
+	contenedor.innerHTML = "";
+	let section = document.createElement("section");
+	section.id = "productos";
+
+	section.innerHTML = `
+    <h1 class="g--seccion-productos-title">PRODUCTOS</h1>
+					<div
+						class="l-grid l-grid--auto-fill l-grid--gap-6 g--padding-12 g--padding-14"
+					>
+						<div class="c-producto">
+							<img
+								class="c-producto__img"
+								src="./assets/img/Ropa/mujer/camisetas/camiseta1.jpg"
+								alt=""
+							/>
+							<div class="c-producto__info">
+								<h4 class="c-producto__title">LOREM IPSUM</h4>
+								<p class="c-producto__text">
+									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
+									scelerisque velit. Aliquam porta turpis sed tincidunt
+									placerat.
+								</p>
+								<p class="c-producto__price">19.99€</p>
+								<a class="c-button c-button--primary" >Añadir</a>
+							</div>
+						</div>
+
+						<div class="c-producto">
+							<img
+								class="c-producto__img"
+								src="./assets/img/Ropa/mujer/camisetas/camiseta2.jpg"
+								alt=""
+							/>
+							<div class="c-producto__info">
+								<h4 class="c-producto__title">LOREM IPSUM</h4>
+								<p class="c-producto__text">
+									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
+									scelerisque velit. Aliquam porta turpis sed tincidunt
+									placerat.
+								</p>
+								<p class="c-producto__price">19.99€</p>
+								<a class="c-button c-button--primary" >Añadir</a>
+							</div>
+						</div>
+
+						<div class="c-producto">
+							<img
+								class="c-producto__img"
+								src="./assets/img/Ropa/mujer/camisetas/camiseta3.jpg"
+								alt=""
+							/>
+							<div class="c-producto__info">
+								<h4 class="c-producto__title">LOREM IPSUM</h4>
+								<p class="c-producto__text">
+									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
+									scelerisque velit. Aliquam porta turpis sed tincidunt
+									placerat.
+								</p>
+								<p class="c-producto__price">19.99€</p>
+								<a class="c-button c-button--primary" >Añadir</a>
+							</div>
+						</div>
+
+						<div class="c-producto">
+							<img
+								class="c-producto__img"
+								src="./assets/img/Ropa/hombre/camisetas/camiseta4.jpg"
+								alt=""
+							/>
+							<div class="c-producto__info">
+								<h4 class="c-producto__title">LOREM IPSUM</h4>
+								<p class="c-producto__text">
+									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
+									scelerisque velit. Aliquam porta turpis sed tincidunt
+									placerat.
+								</p>
+								<p class="c-producto__price">19.99€</p>
+								<a class="c-button c-button--primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -244,7 +342,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button c-button--primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -262,7 +360,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button c-button--primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -280,7 +378,7 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button c-button--primary" >Añadir</a>
 							</div>
 						</div>
 
@@ -298,18 +396,70 @@ function productos(contenedor) {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button__primary" href="#">Añadir</a>
+								<a class="c-button c-button--primary" >Añadir</a>
 							</div>
 						</div>
 					</div>
     
     `;
 
+	let btns = Array.from(section.getElementsByTagName("a"));
+	btns.forEach((b) => {
+		if (b.className.includes("c-button")) {
+			b.onclick = () => {
+				this.detalleProducto();
+			};
+		}
+	});
+
 	contenedor.appendChild(section);
+	window.scroll({
+		top: 0,
+		behavior: "smooth",
+	});
+}
+
+function detalleProducto() {
+	let contenedor = document.getElementById("contenedor");
+	contenedor.innerHTML = "";
+	let section = document.createElement("section");
+	section.className =
+		"l-flex l-flex--direction-column l-flex--aling-items--center";
+	section.innerHTML = `
+		<div class="c-detalle">
+			
+			<img class="c-detalle__img" src="./assets/img/Ropa/hombre/camisetas/camiseta1.jpg"></img>
+			<div class="c-detalle__info">
+				<h2 class="c-detalle__titulo">TITUTUTUTUTU</h2>	
+				<span class="c-detalle__subtitulo">fdsfdsf</span>
+				<p class="c-detalle__descripcion">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+				<p class="c-detalle__precio"><del>500€</del> 300€</p>
+				<div> 
+					<button class="c-button c-button--big">Añadir al Carrito</button>
+				</div>
+			
+			</div>
+		
+		</div>
+		
+		
+	
+	
+	`;
+	contenedor.appendChild(section);
+	window.scroll({
+		top: 0,
+		behavior: "smooth",
+	});
 }
 
 window.onload = () => {
 	carrito = new Carrito();
 	this.cargaInicio();
 	setLogin();
+
+	let btnInicio = document.getElementById("nav-inicio");
+	btnInicio.onclick = () => {
+		this.cargaInicio();
+	};
 };

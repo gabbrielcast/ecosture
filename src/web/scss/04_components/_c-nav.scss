@@ -9,6 +9,7 @@
 	background-color: getColors("verde", 0);
 	font-family: getFontFamily("principal");
 	width: 100%;
+	transition: all 0.5s;
 
 	&__logo {
 		width: 150px;
@@ -17,12 +18,20 @@
 	&__menu {
 		display: flex;
 		gap: getGap(12);
+		li {
+			cursor: pointer;
+			transition: all 0.4s;
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
 	}
 
 	&__item {
 		text-decoration: none;
 		color: getColors("verde", 1);
 		font-weight: 600;
+		transition: all 0.5s;
 	}
 
 	&__iconos {

@@ -1,13 +1,19 @@
-function abrirPago() {
-	const modalPago = document.getElementById("pagarCarrito");
-	modalPago.style.display = "block";
-	console.log("click");
-}
+class Pago {
+	constructor() {
+		this.cerrarPago();
+	}
+	abrirPago() {
+		let modalPago = document.getElementById("pago");
+		// modalPago.style.display = "block";
+		modalPago.style.top = "120px";
+	}
 
-function botonPago() {
-	const botonCarrito = document.getElementById("btnCarrito");
-	botonCarrito.addEventListener("click", abrirCarrito);
-	console.log("entra en boton");
+	cerrarPago() {
+		let modalPago = document.getElementById("pago");
+		let btnCancelar = document.getElementById("btnCancelarPago");
+		btnCancelar.onclick = () => {
+			modalPago.style.top = "-1200px";
+		};
+		// modalPago.style.display = "block";
+	}
 }
-
-function setPago() {}

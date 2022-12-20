@@ -2,28 +2,52 @@
 	display: block;
 	z-index: 1;
 	position: fixed;
-	width: 40%;
-	height: 60%;
+	width: 50%;
+	// height: 65%;
+	visibility: hidden;
 	margin-top: -1000px;
 	// left: 30%;
 	background-color: getColors("verde", 0);
 	border: 2px solid getColors("verde", 1);
-	overflow-y: scroll;
+	overflow-y: auto;
 	box-shadow: getShadow(2);
 	transition: all 0.5s;
+
+	@media (max-height: 900px) {
+		height: 500px;
+	}
 
 	&__container {
 		display: flex;
 		flex-direction: column;
 	}
+	// height: 60%;
+	&::-webkit-scrollbar {
+		background-color: #797979;
+		border-radius: 20px;
+		border: 2px solid #f1f2f3;
+		width: 14px;
+	}
+	&::-webkit-scrollbar-track {
+		background: white; /* color of the tracking area */
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 12px;
+		background: rgb(122, 122, 121); /* color of the tracking area */
+	}
 
 	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-size: getFontSize("3xl");
 		font-weight: bold;
 		text-align: center;
-		padding-top: getPadding(9);
-		margin: getMargin(6) getMargin(8);
-		color: getColors("verde", 1);
+		// padding-top: getPadding(9);
+		// margin: getMargin(6) getMargin(8);
+		color: getColors("blanco", 0);
+		background-color: getColors("verde", 1);
+		height: 80px;
 	}
 
 	&__item {
@@ -65,8 +89,8 @@
 	}
 
 	&__icon {
-		width: 30px;
-		height: 30px;
+		width: 20px;
+		height: 20px;
 	}
 
 	&__input {
@@ -79,6 +103,7 @@
 		align-items: center;
 		margin: getMargin(8) getMargin(10);
 		gap: getGap(6);
+		padding-bottom: 30px;
 	}
 
 	&__precioTotal {
@@ -89,11 +114,22 @@
 		padding: getPadding(6) getPadding(9);
 		font-size: getFontSize("3xl");
 		font-weight: bold;
-		margin: getMargin(0) getMargin(10);
-		color: getColors("verde", 1);
+		// margin: getMargin(0) getMargin(10);
+		color: getColors("blanco", 0);
+		background: linear-gradient(
+			90deg,
+			rgba(245, 245, 245, 1) 4%,
+			rgba(216, 245, 193, 1) 20%,
+			rgba(190, 246, 153, 1) 33%,
+			rgb(129, 209, 77) 49%,
+			rgb(64, 173, 18) 100%
+		);
+		margin-left: auto;
+		width: 60%;
+		height: 90px;
 	}
 
 	&__cantidadTotal {
-		color: getColors("verde", 2);
+		color: getColors("blanco", 0);
 	}
 }
