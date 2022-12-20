@@ -31,39 +31,24 @@
 				/>
 				<ul class="c-nav__menu">
 					<li>
-						<a href="#inicio" id="nav-inicio" class="c-nav__item">Inicio</a>
-					</li>
-					<li>
 						<a href="#about" class="c-nav__item">¿Quiénes somos?</a>
 					</li>
 					<li>
 						<a href="#testimonio" class="c-nav__item">Opinión</a>
 					</li>
-
 					<li>
 						<a href="#productos" class="c-nav__item">Productos</a>
 					</li>
 					<li>
-						<a href="#categorias" id="link-categorias" class="c-nav__item"
-							>Categorias</a
-						>
+						<a id="link-categorias" href="#" class="c-nav__item">Categorias</a>
 					</li>
-
 					<li>
 						<a href="#footer" class="c-nav__item">Contacto</a>
 					</li>
 				</ul>
 				<div class="c-nav__iconos">
-					<button
-						style="border: none"
-						class="fas fa-user"
-						id="btnLogin"
-					></button>
-					<button
-						style="border: none"
-						class="fas fa-shopping-cart"
-						id="btnCarrito"
-					></button>
+					<i class="fas fa-user" id="btnLogin"></i>
+					<i class="fas fa-shopping-cart" id="btnCarrito"></i>
 					<i class="far fa-chart-bar"></i>
 				</div>
 			</nav>
@@ -233,8 +218,8 @@
 				</div>
 
 				<div class="c-carrito__botones">
-					<a class="c-button" id="cerrarCarrito">Seguir Comprando</a>
-					<a class="c-button" id="pagarCarrito">Pagar Carrito</a>
+					<a class="c-button__primary" id="cerrarCarrito">Seguir Comprando</a>
+					<a class="c-button__primary" id="pagarCarrito">Pagar Carrito</a>
 				</div>
 			</div>
 		</div>
@@ -281,8 +266,8 @@
 						placeholder="Contraseña"
 					/>
 					<a class="c-login__textForm">Has olvidado tu contraseña?</a>
-					<a id="login-cancelar" class="c-button">Cancelar</a>
-					<a class="c-button">Acceder</a>
+					<button id="login-cancelar" class="c-button">Cancelar</button>
+					<button class="c-button">Acceder</button>
 				</form>
 			</div>
 
