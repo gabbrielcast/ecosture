@@ -4,12 +4,17 @@ class Carrito {
 	}
 	animacionCarrito() {
 		const modalCarrito = document.getElementById("carrito");
+		let btnLogin = document.getElementById("btnLogin");
+
+		// let cerrar = document.getElementById("cerrarCarrito");
+		// cerrar.onclick = quitarCarrito;
+
 		let btnPagarCarrito = document.getElementById("pagarCarrito");
 		let cerrar = document.getElementById("cerrarCarrito");
 
 		cerrar.onclick = () => {
 			quitarCarrito();
-			activarBtnsNav("carrito");
+			// activarBtnsNav("carrito");
 		};
 
 		btnPagarCarrito.onclick = () => {
@@ -19,6 +24,7 @@ class Carrito {
 		};
 
 		function quitarCarrito() {
+			activarBtnsNav("carrito");
 			modalCarrito.style.top = "-1000px";
 		}
 	}
