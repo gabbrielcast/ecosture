@@ -1,11 +1,13 @@
 let btnLogin = null;
 let btnCarrito = null;
 let btnHistorial = null;
+let btnIncio = null;
 
 function setNav() {
 	btnLogin = document.getElementById("btnLogin");
 	btnCarrito = document.getElementById("btnCarrito");
 	btnHistorial = document.getElementById("btnHistorial");
+	btnInicio = document.getElementById("btn-nav-Inicio");
 
 	const modalLogin = document.getElementById("login");
 	const modalCarrito = document.getElementById("carrito");
@@ -33,6 +35,10 @@ function setNav() {
 		// modalHistorial.style.marginTop = "0px";
 		modalHistorial.style.top = "150px";
 		desactivarBtnsNav("historial");
+	};
+
+	btnInicio.onclick = () => {
+		cargaInicio();
 	};
 }
 
