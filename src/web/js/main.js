@@ -64,18 +64,17 @@ function about(contenedor) {
 				/>
 				<h3 class="c-icon__title">Comercio Justo</h3>
 				<p class="c-icon__text">
-					Queremos, que cada ser humano tenga un salario justo por su
-					trabajo. Esto es fundamental para elegir las mejores marcas de
-					ropa ecologica.
+				Integer rutrum lacinia nibh, ut porttitor justo vehicula at. Praesent aliquam ante augue, 
+				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
 				</p>
 			</div>
 
 			<div class="c-icon">
 				<img class="c-icon__img" src="./assets/img/iconos/ecologia.png" alt="" />
 				<h3 class="c-icon__title">Organic</h3>
-				<p class="c-icon__text-card">
-					Organic significa natural, ésta es la palabra clave para nuestra
-					selección de moda ecologica con los mejores materiales ecológicos.
+				<p class="c-icon__text">
+				Integer rutrum lacinia nibh, ut porttitor justo vehicula at. Praesent aliquam ante augue, 
+				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
 				</p>
 			</div>
 
@@ -87,10 +86,8 @@ function about(contenedor) {
 				/>
 				<h3 class="c-icon__title">Sostenible</h3>
 				<p class="c-icon__text">
-					Significa para nosotros pensar y actuar a largo plazo, con
-					productos que duran por su calidad y diseño en tiempo. Todo es
-					uno, cuidar el medioambiente, el ser humano y los animales. Es
-					moda sostenible
+				Integer rutrum lacinia nibh, ut porttitor justo vehicula at. Praesent aliquam ante augue, 
+				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
 				</p>
 			</div>
 			<div class="c-icon">
@@ -101,8 +98,8 @@ function about(contenedor) {
 				/>
 				<h3 class="c-icon__title">Vegan</h3>
 				<p class="c-icon__text">
-					No queremos que se sacrifiquen animales o que éstos sean
-					maltratados.
+				Integer rutrum lacinia nibh, ut porttitor justo vehicula at. Praesent aliquam ante augue, 
+				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
 				</p>
 			</div>
 
@@ -114,8 +111,8 @@ function about(contenedor) {
 				/>
 				<h3 class="c-icon__title">Upcycling</h3>
 				<p class="c-icon__text">
-					En nuestra tienda encuentras productos que están fabricados con
-					materiales reciclados para generar una ideología sana.
+				Integer rutrum lacinia nibh, ut porttitor justo vehicula at. Praesent aliquam ante augue, 
+				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
 				</p>
 			</div>
 		</div>
@@ -156,7 +153,7 @@ function productos(contenedor) {
   section.innerHTML = `
     <h1 class="g--seccion-productos-title">CATEGORÍAS</h1>
 					<div
-						class="l-grid l-grid--columns-4 l-grid--gap-6 g--padding-12 g--padding-14"
+						class="l-grid l-grid--columns-4 l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12"
 					>
 						<div class="c-producto">
 							<img
@@ -166,67 +163,48 @@ function productos(contenedor) {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
-								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+							
+								<a class="c-button c-button--primary" >Ver Categoria</a>
 							</div>
 						</div>
 
 						<div class="c-producto">
 							<img
 								class="c-producto__img"
-								src="./assets/img/Ropa/mujer/camisetas/camiseta2.jpg"
+								src="./assets/img/Ropa/hombre/camisetas/camiseta3.jpg"
 								alt=""
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
-								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+								
+								<a class="c-button c-button--primary" >Ver Categoria</a>
 							</div>
 						</div>
 
 						<div class="c-producto">
 							<img
 								class="c-producto__img"
-								src="./assets/img/Ropa/mujer/camisetas/camiseta3.jpg"
+								src="./assets/img/Ropa/mujer/vestidos/vestido1.jpg"
 								alt=""
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
-								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+								
+								
+								<a class="c-button c-button--primary" >Ver Categoria</a>
 							</div>
 						</div>
 
 						<div class="c-producto">
 							<img
 								class="c-producto__img"
-								src="./assets/img/Ropa/hombre/camisetas/camiseta4.jpg"
+								src="./assets/img/Ropa/hombre/chaquetas/chaqueta4.jpg"
 								alt=""
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
-								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+								
+								<a class="c-button c-button--primary" >Ver Categoria</a>
 							</div>
 						</div>
 					</div>
@@ -252,14 +230,14 @@ function listProductos() {
   section.id = "productos";
 
   section.innerHTML = `
-    <h1 class="g--seccion-productos-title">PRODUCTOS</h1>
+    <h1 class="g--seccion-productos-title">LOREM IPSUM</h1>
 					<div
-						class="l-grid l-grid--auto-fill l-grid--gap-6 g--padding-12 g--padding-14"
+						class="l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8"
 					>
 						<div class="c-producto">
 							<img
 								class="c-producto__img"
-								src="./assets/img/Ropa/mujer/camisetas/camiseta1.jpg"
+								src="./assets/img/Ropa/mujer/faldas/falda2.jpg"
 								alt=""
 							/>
 							<div class="c-producto__info">
@@ -270,7 +248,22 @@ function listProductos() {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+
+								<div class="c-producto__botones">
+									<div class="c-producto__anyade">
+										
+										<a class="c-button c-button--products" >
+											<i class="fas fa-cart-plus"></i>
+											Añadir
+										 </a>
+									</div>
+									<div class="c-producto__ver">
+										<a class="c-button c-button--products" >
+										<i class="fas fa-search"></i>
+											Ver producto
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -288,7 +281,21 @@ function listProductos() {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+								<div class="c-producto__botones">
+									<div class="c-producto__anyade">
+									
+									<a class="c-button c-button--products" >
+									<i class="fas fa-cart-plus"></i>
+									Añadir
+								 </a>
+							</div>
+							<div class="c-producto__ver">
+								<a class="c-button c-button--products" >
+								<i class="fas fa-search"></i>
+									Ver producto
+								</a>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -306,7 +313,22 @@ function listProductos() {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+								<div class="c-producto__botones">
+									<div class="c-producto__anyade">
+										
+									
+									<a class="c-button c-button--products" >
+									<i class="fas fa-cart-plus"></i>
+									Añadir
+								 </a>
+							</div>
+							<div class="c-producto__ver">
+								<a class="c-button c-button--products" >
+								<i class="fas fa-search"></i>
+									Ver producto
+								</a>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -324,7 +346,21 @@ function listProductos() {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+								<div class="c-producto__botones">
+									<div class="c-producto__anyade">
+									
+									<a class="c-button c-button--products" >
+									<i class="fas fa-cart-plus"></i>
+									Añadir
+								 </a>
+							</div>
+							<div class="c-producto__ver">
+								<a class="c-button c-button--products" >
+								<i class="fas fa-search"></i>
+									Ver producto
+								</a>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -342,7 +378,22 @@ function listProductos() {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+								<div class="c-producto__botones">
+									<div class="c-producto__anyade">
+										
+									
+									<a class="c-button c-button--products" >
+									<i class="fas fa-cart-plus"></i>
+									Añadir
+								 </a>
+							</div>
+							<div class="c-producto__ver">
+								<a class="c-button c-button--products" >
+								<i class="fas fa-search"></i>
+									Ver producto
+								</a>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -360,7 +411,22 @@ function listProductos() {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+								<div class="c-producto__botones">
+									<div class="c-producto__anyade">
+										
+									
+									<a class="c-button c-button--products" >
+									<i class="fas fa-cart-plus"></i>
+									Añadir
+								 </a>
+							</div>
+							<div class="c-producto__ver">
+								<a class="c-button c-button--products" >
+								<i class="fas fa-search"></i>
+									Ver producto
+								</a>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -378,7 +444,22 @@ function listProductos() {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+								<div class="c-producto__botones">
+									<div class="c-producto__anyade">
+										
+								
+									<a class="c-button c-button--products" >
+									<i class="fas fa-cart-plus"></i>
+									Añadir
+								 </a>
+							</div>
+							<div class="c-producto__ver">
+								<a class="c-button c-button--products" >
+								<i class="fas fa-search"></i>
+									Ver producto
+								</a>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -396,7 +477,22 @@ function listProductos() {
 									placerat.
 								</p>
 								<p class="c-producto__price">19.99€</p>
-								<a class="c-button c-button--primary" >Añadir</a>
+								<div class="c-producto__botones">
+									<div class="c-producto__anyade">
+										
+									
+									<a class="c-button c-button--products" >
+									<i class="fas fa-cart-plus"></i>
+									Añadir
+								 </a>
+							</div>
+							<div class="c-producto__ver">
+								<a class="c-button c-button--products" >
+								<i class="fas fa-search"></i>
+									Ver producto
+								</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -430,12 +526,15 @@ function detalleProducto() {
 			
 			<img class="c-detalle__img" src="./assets/img/Ropa/hombre/camisetas/camiseta1.jpg"></img>
 			<div class="c-detalle__info">
-				<h2 class="c-detalle__titulo">TITUTUTUTUTU</h2>	
-				<span class="c-detalle__subtitulo">fdsfdsf</span>
-				<p class="c-detalle__descripcion">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-				<p class="c-detalle__precio"><del>500€</del> 300€</p>
-				<div> 
-					<button class="c-button c-button--big">Añadir al Carrito</button>
+				<h2 class="c-detalle__titulo">Fusce eleifend diam</h2>	
+				<span class="c-detalle__subtitulo">Phasellus tristique</span>
+				<p class="c-detalle__descripcion">Vivamus volutpat euismod nibh vel volutpat. Maecenas vitae odio massa. Donec pharetra convallis neque at molestie. Aliquam eu sodales arcu. Morbi quis laoreet dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eleifend diam non vestibulum volutpat. Maecenas maximus placerat velit sed auctor.</p>
+				<p class="c-detalle__precio"><del>500€</del> <span>300€</span></p>
+				<div class="c-detalle__botones">
+					<a class="c-button c-button--big">
+						<i class="fas fa-cart-plus"></i>
+						Añadir al Carrito</a>
+					<a class="c-button c-button--medium">Volver</a>
 				</div>
 			
 			</div>

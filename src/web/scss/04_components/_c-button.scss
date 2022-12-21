@@ -1,4 +1,9 @@
 .c-button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
   background-color: getColors("verde", 1);
   color: getColors("verde", 0);
   text-decoration: none;
@@ -8,11 +13,29 @@
   text-align: center;
   transition: all 0.3s;
   cursor: pointer;
-  border: 2px solid rgb(28, 28, 28);
+  // border: 2px solid rgb(28, 28, 28);
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.1);
+    background-color: getColors("verde", 3);
+  }
 
   &--big {
-    font-size: 30px;
+    font-size: getFontSize("xl");
     padding: getPadding(6) getPadding(14);
+    width: 500px;
+  }
+
+  &--medium {
+    font-size: getFontSize("m");
+    padding: getPadding(3) getPadding(14);
+    width: 500px;
+  }
+
+  &--products {
+    font-size: getFontSize("m");
+    padding: getPadding(3) getPadding(4);
+    width: 250px;
   }
 
   // &--primary {

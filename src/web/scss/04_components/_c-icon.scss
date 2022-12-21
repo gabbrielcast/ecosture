@@ -1,53 +1,59 @@
 .c-icon {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	gap: getGap(8);
-	width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: getGap(8);
+  width: 200px;
 
-	&__img {
-		width: 80px;
-	}
-	&__title {
-		font-size: getFontSize("xl");
-		font-weight: bold;
-		color: getColors("verde", 1);
-	}
+  &__img {
+    width: 65px;
+  }
+  &__title {
+    font-size: getFontSize("xl");
+    font-weight: bold;
+    color: getColors("verde", 1);
+  }
 
-	&__text {
-		line-height: getLineHeight("2xl");
-	}
+  &__text {
+    line-height: getLineHeight("2xl");
+  }
 
-	&__media {
-		width: 30px;
-	}
+  &__media {
+    width: 25px;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+      color: getColors("verde", 3);
+    }
+  }
 
-	&__circulo {
-		border: 3px solid getColors("verde", 1);
-		border-radius: 50%;
-		padding: getPadding(3);
+  &__circulo {
+    border: 3px solid getColors("verde", 1);
+    border-radius: 50%;
+    padding: getPadding(3);
 
-		&--planeta {
-			background-image: url(../assets/img/iconos/icono1.png);
-			width: 60px;
-			height: 60px;
-			background-size: cover;
-		}
+    &--planeta {
+      background-image: url(../assets/img/iconos/icono1.png);
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+    }
 
-		&--bombilla {
-			background-image: url(../assets/img/iconos/icono4.png);
-			width: 60px;
-			height: 60px;
-			background-size: cover;
-		}
+    &--bombilla {
+      background-image: url(../assets/img/iconos/icono4.png);
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+    }
 
-		&--hojas {
-			background-image: url(../assets/img/iconos/icono2.png);
-			width: 60px;
-			height: 60px;
-			background-size: cover;
-		}
-	}
+    &--hojas {
+      background-image: url(../assets/img/iconos/icono2.png);
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+    }
+  }
 }
