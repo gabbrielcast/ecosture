@@ -1,70 +1,70 @@
 .c-footer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: getGap(12);
-  background-color: getColors("verde", 2);
-  padding: getPadding(12) getPadding(10);
-  font-family: getFontFamily("principal");
-  font-size: getFontSize("s");
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	gap: getGap(12);
+	background-color: getColors("verde", 2);
+	padding: getPadding(12) getPadding(10);
+	font-family: getFontFamily("principal");
+	font-size: getFontSize("s");
+	margin-bottom: 0px;
+	&__logo {
+		width: 150px;
+	}
 
-  &__logo {
-    width: 150px;
-  }
+	&__media {
+		display: flex;
+		justify-content: space-around;
+		gap: getGap(8);
+	}
 
-  &__media {
-    display: flex;
-    justify-content: space-around;
-    gap: getGap(8);
-  }
+	&__info {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: getGap(16);
+	}
 
-  &__info {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: getGap(16);
-  }
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: getGap(8);
+		list-style: none;
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: getGap(8);
-    list-style: none;
+		li:first-child {
+			font-weight: bold;
+			color: getColors("verde", 0);
+		}
+	}
 
-    li:first-child {
-      font-weight: bold;
-      color: getColors("verde", 0);
-    }
-  }
+	&__item {
+		color: getColors("verde", 0);
+		text-decoration: none;
+		transition: all 0.3s;
+		&:hover {
+			transform: scale(1.2);
+			color: getColors("verde", 3);
+		}
+	}
 
-  &__item {
-    color: getColors("verde", 0);
-    text-decoration: none;
-    transition: all 0.3s;
-    &:hover {
-      transform: scale(1.2);
-      color: getColors("verde", 3);
-    }
-  }
+	&__derechos {
+		color: getColors("verde", 0);
+		text-decoration: none;
 
-  &__derechos {
-    color: getColors("verde", 0);
-    text-decoration: none;
+		span {
+			font-weight: bold;
+		}
+	}
 
-    span {
-      font-weight: bold;
-    }
-  }
-
-  &__box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: getGap(8);
-  }
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: getGap(8);
+	}
 }

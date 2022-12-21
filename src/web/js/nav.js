@@ -17,21 +17,18 @@ function setNav() {
 		// btnCarrito.disabled = true;
 		// btnHistorial.disabled = true;
 		// modalLogin.style.marginTop = "150px";
-		console.log("login");
 		modalLogin.style.top = "150px";
 		desactivarBtnsNav("login");
 	};
 
 	btnCarrito.onclick = () => {
 		// modalCarrito.style.marginTop = "0px";
-		console.log("carrito");
 
 		modalCarrito.style.top = "150px";
 		desactivarBtnsNav("carrito");
 	};
 
 	btnHistorial.onclick = () => {
-		console.log("historial");
 		// modalHistorial.style.marginTop = "0px";
 		modalHistorial.style.top = "150px";
 		desactivarBtnsNav("historial");
@@ -67,9 +64,10 @@ function activarBtnsNav(btn) {
 			btnCarrito.disabled = false;
 			btnHistorial.disabled = false;
 			break;
-		case "carrrito":
+		case "carrito":
 			btnLogin.disabled = false;
 			btnHistorial.disabled = false;
+			console.log("activar");
 			break;
 
 		case "historial":

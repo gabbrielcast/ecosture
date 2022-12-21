@@ -5,6 +5,6 @@ function setLogin() {
 	cancelar.onclick = () => {
 		activarBtnsNav("login");
 
-		modalLogin.style.top = "-2000px";
+		modalLogin.style.top = "-1000px";
 	};
 }
