@@ -6,10 +6,17 @@ class Carrito {
 		const modalCarrito = document.getElementById("carrito");
 		let btnLogin = document.getElementById("btnLogin");
 
-		let cerrar = document.getElementById("cerrarCarrito");
-		cerrar.onclick = quitarCarrito;
+		// let cerrar = document.getElementById("cerrarCarrito");
+		// cerrar.onclick = quitarCarrito;
 
 		let btnPagarCarrito = document.getElementById("pagarCarrito");
+		let cerrar = document.getElementById("cerrarCarrito");
+
+		cerrar.onclick = () => {
+			quitarCarrito();
+			// activarBtnsNav("carrito");
+		};
+
 		btnPagarCarrito.onclick = () => {
 			quitarCarrito();
 			let pago = new Pago();
@@ -17,7 +24,7 @@ class Carrito {
 		};
 
 		function quitarCarrito() {
-			activarBtnsNav("historial");
+			activarBtnsNav("carrito");
 			modalCarrito.style.top = "-1000px";
 		}
 	}

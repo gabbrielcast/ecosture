@@ -13,6 +13,7 @@
 	justify-content: center;
 	align-items: center;
 	transition: ease 1.2s;
+	font-family: getFontFamily("principal");
 
 	@media (max-height: 900px) {
 		height: 400px;
@@ -24,6 +25,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 50%;
+		font-size: getFontSize("s");
 	}
 
 	&__form {
@@ -32,6 +34,14 @@
 		justify-content: center;
 		align-items: stretch;
 		gap: getGap(6);
+	}
+
+	&__textForm {
+		font-size: getFontSize("xs");
+	}
+
+	&__input {
+		height: 30px;
 	}
 
 	&__textForm {

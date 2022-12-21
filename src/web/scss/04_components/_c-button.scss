@@ -33,9 +33,17 @@
   }
 
   &--products {
-    font-size: getFontSize("m");
+    font-size: getFontSize("s");
     padding: getPadding(3) getPadding(4);
     width: 250px;
+    font-family: getFontFamily("principal");
+  }
+
+  &--categoria {
+    font-size: getFontSize("s");
+    padding: getPadding(5) getPadding(7);
+    text-align: center;
+    font-family: getFontFamily("principal");
   }
 
   // &--primary {

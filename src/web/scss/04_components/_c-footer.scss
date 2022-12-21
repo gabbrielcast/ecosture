@@ -5,7 +5,7 @@
   align-items: center;
   gap: getGap(8);
   background-color: getColors("verde", 2);
-  padding: getPadding(10) getPadding(10);
+  padding: getPadding(12) getPadding(10);
   font-family: getFontFamily("principal");
   font-size: getFontSize("s");
 
@@ -25,14 +25,22 @@
     justify-content: center;
     align-items: center;
     gap: getGap(16);
+    margin-bottom: getMargin(8);
   }
 
   &__list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: getGap(8);
     list-style: none;
+
+    li:first-child {
+      font-weight: bold;
+      font-size: getFontSize("m");
+      color: getColors("verde", 0);
+    }
   }
 
   &__item {
@@ -48,5 +56,23 @@
   &__derechos {
     color: getColors("verde", 0);
     text-decoration: none;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: getGap(8);
+  }
+
+  &__line {
+    background-color: getColors("blanco", 0);
+    height: 0.1px;
+    width: 1200px;
   }
 }

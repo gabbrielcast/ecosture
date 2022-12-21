@@ -1,108 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Proyecto Ecosture</title>
-		<link rel="stylesheet" href="./css/main.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<link rel="icon" type="image/jpg" href="./assets/img/logo2.svg" />
-		<script src="./js/pago.js"></script>
-		<script src="./js/nav.js"></script>
-		<script src="./js/login.js"></script>
-		<script src="./js/historialCarrito.js"></script>
-		<script src="./js/carrito.js"></script>
-		<script src="./js/main.js"></script>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Ecosture</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/jpg" href="./assets/img/logo2.svg" />
+    <script src="./js/pago.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/historialCarrito.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/main.js"></script>
+  </head>
 
-	<body>
-		<!-- NAV -->
-		<div id="app">
-			<nav id="nav" class="c-nav">
-				<img
-					class="c-nav__logo"
-					src="./assets/img/logo2.svg"
-					alt="logo ecosture"
-				/>
-				<ul class="c-nav__menu">
-					<li>
-						<a id="btn-nav-Inicio" href="#hero" class="c-nav__item">Inicio</a>
-					</li>
-					<li>
-						<a href="#about" class="c-nav__item">¿Quiénes somos?</a>
-					</li>
-					<li>
-						<a href="#testimonio" class="c-nav__item">Opinión</a>
-					</li>
-					<li>
-						<a href="#productos" class="c-nav__item">Categorías</a>
-					</li>
-					<!-- <li>
+  <body>
+    <!-- NAV -->
+    <div id="app">
+      <nav id="nav" class="c-nav">
+        <img
+          class="c-nav__logo"
+          src="./assets/img/logo2.svg"
+          alt="logo ecosture"
+        />
+        <ul class="c-nav__menu">
+          <li>
+            <a id="btn-nav-Inicio" href="#app" class="c-nav__item">Inicio</a>
+          </li>
+          <li>
+            <a href="#about" class="c-nav__item">¿Quiénes somos?</a>
+          </li>
+          <li>
+            <a href="#testimonio" class="c-nav__item">Opinión</a>
+          </li>
+          <li>
+            <a href="#productos" class="c-nav__item">Categorías</a>
+          </li>
+          <!-- <li>
             <a id="link-categorias" href="#" class="c-nav__item">Categorias</a>
           </li> -->
-					<li>
-						<a href="#footer" class="c-nav__item">Contacto</a>
-					</li>
-				</ul>
-				<div class="c-nav__iconos">
-					<button id="btnLogin"><i class="fas fa-user"></i></button>
-					<button id="btnCarrito"><i class="fas fa-shopping-cart"></i></button>
-					<button id="btnHistorial"><i class="far fa-chart-bar"></i></button>
-				</div>
-			</nav>
+          <li>
+            <a href="#footer" class="c-nav__item">Contacto</a>
+          </li>
+        </ul>
+        <div class="c-nav__iconos">
+          <button id="btnLogin"><i class="fas fa-user"></i></button>
+          <button id="btnCarrito"><i class="fas fa-shopping-cart"></i></button>
+          <button id="btnHistorial"><i class="far fa-chart-bar"></i></button>
+        </div>
+      </nav>
 
 			<main id="contenedor">
 				<!-- CONTACTO -->
 				<section class="c-section-contacto"></section>
 			</main>
 
-			<footer id="footer" class="c-footer">
-				<div class="c-footer__info">
-					<img
-						class="c-footer__logo"
-						src="./assets/img/logo_blanco.png"
-						alt="Logo Ecosture"
-					/>
+      <footer id="footer" class="c-footer">
+        <div class="c-footer__info">
+          <div class="c-footer__box">
+            <img
+              class="c-footer__logo"
+              src="./assets/img/logo_blanco.png"
+              alt="Logo Ecosture"
+            />
 
-					<ul class="c-footer__list">
-						<li><a class="c-footer__item" href="">Terminos</a></li>
-						<li><a class="c-footer__item">|</a></li>
-						<li><a class="c-footer__item" href="">Condiciones</a></li>
-						<li><a class="c-footer__item">|</a></li>
-						<li><a class="c-footer__item" href="">Créditos</a></li>
-					</ul>
+          <div class="c-footer__media">
+            <img
+              class="c-icon__media"
+              src="./assets/img/iconos/instagram.png"
+              alt="icono instagram"
+            />
+            <img
+              class="c-icon__media"
+              src="./assets/img/iconos/facebook.png"
+              alt="icono facebook"
+            />
+            <img
+              class="c-icon__media"
+              src="./assets/img/iconos/twitter.png"
+              alt="icono twitter"
+            />
+          </div>
+        </div>
 
-					<div class="c-footer__media">
-						<img
-							class="c-icon c-icon--media"
-							src="./assets/img/iconos/instagram.png"
-							alt="icono instagram"
-						/>
-						<img
-							class="c-icon c-icon--media"
-							src="./assets/img/iconos/facebook.png"
-							alt="icono facebook"
-						/>
-						<img
-							class="c-icon c-icon--media"
-							src="./assets/img/iconos/twitter.png"
-							alt="icono twitter"
-						/>
-					</div>
-				</div>
+        <div class="c-footer__line"></div>
+        <a class="c-footer__derechos" href="" target="_blank"
+          >Copyright <span>Ecosture</span> © 2023. All Right Reserved.</a
+        >
+      </footer>
+    </div>
 
-				<a class="c-footer__derechos" href="" target="_blank"
-					>Copyright Ecosture © 2023. All Right Reserved.</a
-				>
-			</footer>
-		</div>
+    <!-- CARRITO DE LA COMPRA
+    <div id="carrito" class="c-carrito">
+      <div class="c-carrito__container">
+        <h3 class="c-carrito__title">CARRITO DE LA COMPRA</h3>
+
+        <div class="c-carrito__item">
+          <img
+            class="c-carrito__close"
+            src="./assets/img/iconos/close.png"
+            alt=""
+          />
+          <img
+            class="c-carrito__img"
+            src="./assets/img/Ropa/hombre/camisetas/camiseta8.jpg"
+          />
+
+          <div class="c-carrito__descripcion">
+            <span>Lorem Ipsum</span>
+            <span>Tempus Fugit</span>
+            <span>Lorem </span>
+          </div>
+
+          <div class="c-carrito__cantidad">
+            <img
+              class="c-carrito__icon"
+              src="./assets/img/iconos/minus.png"
+              alt=""
+            />
+
+            <input class="c-carrito__input" type="text" name="name" value="1" />
+
+            <img
+              class="c-carrito__icon"
+              src="./assets/img/iconos/plus.png"
+              alt=""
+            />
+          </div>
+
+          <div class="c-carrito__precio">19.90€</div>
+        </div>
+
+        <div class="c-carrito__item">
+          <img
+            class="c-carrito__close"
+            src="./assets/img/iconos/close.png"
+            alt=""
+          />
+          <img
+            class="c-carrito__img"
+            src="./assets/img/Ropa/hombre/camisetas/camiseta5.jpg"
+          />
+
+          <div class="c-carrito__descripcion">
+            <span>Lorem Ipsum</span>
+            <span>Tempus Fugit</span>
+            <span>Lorem </span>
+          </div>
+
+          <div class="c-carrito__cantidad">
+            <img
+              class="c-carrito__icon"
+              src="./assets/img/iconos/minus.png"
+              alt=""
+            />
+
+            <input class="c-carrito__input" type="text" name="name" value="1" />
+
+            <img
+              class="c-carrito__icon"
+              src="./assets/img/iconos/plus.png"
+              alt=""
+            />
+          </div>
+
+          <div class="c-carrito__precio">19.90€</div>
+        </div>
+
+        <div class="c-carrito__item">
+          <img
+            class="c-carrito__close"
+            src="./assets/img/iconos/close.png"
+            alt=""
+          />
+          <img
+            class="c-carrito__img"
+            src="./assets/img/Ropa/hombre/camisetas/camiseta3.jpg"
+          />
+
+          <div class="c-carrito__descripcion">
+            <span>Lorem Ipsum</span>
+            <span>Tempus Fugit</span>
+            <span>Lorem </span>
+          </div>
+
+          <div class="c-carrito__cantidad">
+            <img
+              class="c-carrito__icon"
+              src="./assets/img/iconos/minus.png"
+              alt=""
+            />
+
+            <input class="c-carrito__input" type="text" name="name" value="1" />
+
+            <img
+              class="c-carrito__icon"
+              src="./assets/img/iconos/plus.png"
+              alt=""
+            />
+          </div>
+
+          <div class="c-carrito__precio">19.90€</div>
+        </div>
+
+        <div class="c-carrito__precioTotal">
+          <p class="c-carrito__textoTotal">TOTAL:</p>
+          <p class="c-carrito__cantidadTotal">89,90€</p>
+        </div>
+
+        <div class="c-carrito__botones">
+          <a class="c-button" id="cerrarCarrito">Seguir Comprando</a>
+          <a class="c-button" id="pagarCarrito">Pagar Carrito</a>
+        </div>
+      </div>
+    </div> -->
 
 		<!-- CARRITO DE LA COMPRA -->
 		<div id="carrito" class="c-carrito">
@@ -301,17 +420,20 @@
 		<div id="pago" class="c-pago">
 			<div class="c-pago__titulo">PASARELA DE PAGO</div>
 			<div class="c-pago__form">
+        <div class="c-pago__icon">
+          <img src="../web/assets/img/iconos/pago.png" alt="" />
+        </div>
 				<div class="c-pago__grupo">
-					<label for="">Numero de Tarjeta</label>
+					<label for="">Número de Tarjeta</label>
 					<input type="text" class="c-pago__input" />
 				</div>
 				<div class="c-pago__grupo c-pago__grupo--junto">
 					<div class="c-pago__subgrupo">
-						<label for="">Fecha de Expiracion</label>
+						<label for="">Fecha de Caducidad</label>
 						<input type="text" class="c-pago__input" />
 					</div>
 					<div class="c-pago__subgrupo">
-						<label for="">Código CVC</label>
+						<label for="">CVC</label>
 						<input type="text" class="c-pago__input" />
 					</div>
 				</div>

@@ -42,8 +42,11 @@
 	&__iconos {
 		display: flex;
 		gap: getGap(8);
-		cursor: pointer;
+
 		transition: all 0.3s;
+		button {
+			cursor: pointer;
+		}
 		i {
 			transition: all 0.3s;
 			&:hover {
@@ -56,6 +59,7 @@
 		}
 		button {
 			border: none;
+			background-color: getColors("verde", 0);
 		}
 
 		// &i:hover {

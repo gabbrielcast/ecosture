@@ -5,7 +5,7 @@
 	position: fixed;
 	transition: ease 1.2s;
 	width: 620px;
-	height: 400px;
+	height: 420px;
 	box-shadow: getShadow(2);
 	background: getColors("verde", 0);
 	justify-content: center;
@@ -21,7 +21,7 @@
 		align-items: center;
 		justify-content: center;
 		color: getColors("blanco", 0);
-		font-size: getFontSize("3xl");
+		font-size: getFontSize("2xl");
 		font-weight: bold;
 		height: 80px;
 		background-color: getColors("verde", 1);
@@ -30,10 +30,10 @@
 	&__subgrupo {
 		display: flex;
 		align-items: center;
-		gap: getGap(8);
+		gap: 20px;
 		// padding: 10px 20px;
 		label {
-			font-size: getFontSize("l");
+			font-size: getFontSize("s");
 		}
 		input {
 			width: 90px;
@@ -45,14 +45,14 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		gap: getGap(8);
+		gap: 20px;
 		label {
-			font-size: getFontSize("l");
+			font-size: getFontSize("s");
 		}
 		// padding: 10px 20px;
 		&--junto {
 			display: flex;
-			gap: getGap(8);
+			gap: 20px;
 		}
 	}
 
@@ -68,32 +68,41 @@
 	}
 
 	&__btns {
-		margin-top: getMargin(8);
+		margin-top: getMargin(5);
 		display: flex;
 		justify-content: center;
-		gap: getGap(8);
+		gap: 20px;
 	}
 
 	&__form {
 		display: flex;
 		flex-direction: column;
-		padding: getMargin(11);
+		padding: 40px;
 		gap: 20px;
+		font-family: getFontFamily("principal");
+		font-size: getFontSize("s");
 	}
 
 	&__input {
-		width: 70%;
-		height: 40px;
+		width: 66%;
+		height: 30px;
 		outline: none;
 		font-size: 1rem;
-		font-weight: getFontWeight(8);
+		font-weight: 600;
 		color: #000;
 		min-width: unset;
-		margin: getMargin(0);
+		margin: 0;
+		margin-right: getMargin(6);
 	}
 
 	&__header {
 		font-weight: bold;
-		font-size: getFontSize("2xl");
+		font-size: 25px;
+	}
+
+	&__icon {
+		img {
+			width: 80px;
+		}
 	}
 }

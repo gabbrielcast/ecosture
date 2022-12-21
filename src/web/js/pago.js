@@ -13,6 +13,7 @@ class Pago {
 		let btnCancelar = document.getElementById("btnCancelarPago");
 		btnCancelar.onclick = () => {
 			modalPago.style.top = "-1200px";
+			activarBtnsNav("carrito");
 		};
 		// modalPago.style.display = "block";
 	}

@@ -165,7 +165,7 @@ function categorias(contenedor) {
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
 							
-								<a class="c-button c-button--primary" >Ver Categoria</a>
+								<a class="c-button c-button--categoria" >Ver Categoria</a>
 							</div>
 						</div>
 
@@ -178,7 +178,7 @@ function categorias(contenedor) {
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
 								
-								<a class="c-button c-button--primary" >Ver Categoria</a>
+								<a class="c-button c-button--categoria" >Ver Categoria</a>
 							</div>
 						</div>
 
@@ -192,7 +192,7 @@ function categorias(contenedor) {
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
 								
 								
-								<a class="c-button c-button--primary" >Ver Categoria</a>
+								<a class="c-button c-button--categoria" >Ver Categoria</a>
 							</div>
 						</div>
 
@@ -205,7 +205,7 @@ function categorias(contenedor) {
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
 								
-								<a class="c-button c-button--primary" >Ver Categoria</a>
+								<a class="c-button c-button--categoria" >Ver Categoria</a>
 							</div>
 						</div>
 					</div>
@@ -223,6 +223,8 @@ function categorias(contenedor) {
 
 	contenedor.appendChild(section);
 }
+
+//PRODUCTOS
 
 function listProductos() {
 	let contenedor = document.getElementById("contenedor");
@@ -243,11 +245,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 
 								<div class="c-producto__botones">
@@ -276,11 +274,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -308,11 +302,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -341,11 +331,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -373,11 +359,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -406,11 +388,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -439,11 +417,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -472,11 +446,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -554,9 +524,17 @@ function detalleProducto() {
 }
 
 window.onload = () => {
+<<<<<<< HEAD
 	historial = new Historial();
 	setNav();
 	carrito = new Carrito();
 	this.cargaInicio();
 	setLogin();
+=======
+  historial = new Historial();
+  setNav();
+  carrito = new Carrito();
+  this.cargaInicio();
+  setLogin();
+>>>>>>> develop
 };

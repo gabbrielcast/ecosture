@@ -67,7 +67,7 @@ function activarBtnsNav(btn) {
 			btnCarrito.disabled = false;
 			btnHistorial.disabled = false;
 			break;
-		case "carrrito":
+		case "carrito":
 			btnLogin.disabled = false;
 			btnHistorial.disabled = false;
 			break;
