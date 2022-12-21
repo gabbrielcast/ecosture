@@ -25,9 +25,9 @@ function portada(contenedor) {
             blanditiis eaque dicta architecto.
         </p>
         <div class="c-hero__iconos">
-            <div class="c-icon__circulo--planeta"></div>
-            <div class="c-icon__circulo--bombilla"></div>
-            <div class="c-icon__circulo--hojas"></div>
+            <div class="c-icon c-icon--planeta"></div>
+            <div class="c-icon c-icon--bombilla"></div>
+            <div class="c-icon c-icon--hojas"></div>
         </div>
     `;
 	contenedor.appendChild(section);
