@@ -524,17 +524,9 @@ function detalleProducto() {
 }
 
 window.onload = () => {
-<<<<<<< HEAD
 	historial = new Historial();
 	setNav();
 	carrito = new Carrito();
 	this.cargaInicio();
 	setLogin();
-=======
-  historial = new Historial();
-  setNav();
-  carrito = new Carrito();
-  this.cargaInicio();
-  setLogin();
->>>>>>> develop
 };
