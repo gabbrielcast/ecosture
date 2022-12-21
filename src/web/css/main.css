@@ -645,8 +645,7 @@ table {
   z-index: 1;
   position: fixed;
   width: 50%;
-  visibility: hidden;
-  margin-top: -1000px;
+  top: -1000px;
   background-color: #f5f5f5;
   border: 2px solid #3a562e;
   overflow-y: auto;
@@ -791,8 +790,7 @@ c-pagar {
   position: fixed;
   width: 900px;
   height: 500px;
-  top: 150px;
-  margin-top: -2000px;
+  top: -1000px;
   background-color: #f5f5f5;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -949,6 +947,9 @@ c-pagar {
 }
 .c-nav__iconos i:active {
   transform: scale(0.8);
+}
+.c-nav__iconos button {
+  border: none;
 }
 
 .c-hero {
@@ -1236,6 +1237,106 @@ c-pagar {
 .c-pago__header {
   font-weight: bold;
   font-size: 25px;
+}
+
+.c-historialCarrito {
+  display: block;
+  z-index: 1;
+  position: fixed;
+  width: 50%;
+  top: -1000px;
+  background-color: #f5f5f5;
+  border: 2px solid #3a562e;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px darkgray;
+  transition: ease 1.2s;
+  flex-direction: column;
+}
+@media (max-height: 900px) {
+  .c-historialCarrito {
+    height: 500px;
+  }
+}
+.c-historialCarrito::-webkit-scrollbar {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+  width: 14px;
+}
+.c-historialCarrito::-webkit-scrollbar-track {
+  background: white; /* color of the tracking area */
+}
+.c-historialCarrito::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background: rgb(122, 122, 121); /* color of the tracking area */
+}
+.c-historialCarrito__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #3a562e;
+  height: 80px;
+  margin-bottom: 16px;
+}
+.c-historialCarrito__item {
+  padding: 20px 32px;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.c-historialCarrito__item:nth-child(3) {
+  border-top: 1px solid #3a562e;
+  border-bottom: 1px solid #3a562e;
+}
+.c-historialCarrito__img {
+  width: 75px;
+}
+.c-historialCarrito__descripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.c-historialCarrito__descripcion span {
+  color: #3a562e;
+  font-weight: 300px;
+}
+.c-historialCarrito__descripcion span:nth-child(1) {
+  color: #3a562e;
+  font-weight: bold;
+}
+.c-historialCarrito__icon {
+  width: 20px;
+  height: 20px;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+.c-historialCarrito__icon:hover {
+  transform: scale(1.2);
+}
+.c-historialCarrito__close {
+  width: 20px;
+  height: 20px;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+.c-historialCarrito__close:hover {
+  transform: scale(1.2);
+}
+.c-historialCarrito__input {
+  width: 50px;
+}
+.c-historialCarrito__botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 40px;
+  gap: 16px;
+  padding-bottom: 30px;
 }
 
 .g--clear-list {
