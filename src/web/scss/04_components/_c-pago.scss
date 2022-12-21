@@ -1,108 +1,108 @@
 .c-pago {
-  display: block;
-  z-index: 1;
-  top: -1120px;
-  position: fixed;
-  transition: ease 1.2s;
-  width: 620px;
-  height: 420px;
-  box-shadow: getShadow(2);
-  background: getColors("verde", 0);
-  justify-content: center;
-  align-items: center;
+	display: block;
+	z-index: 1;
+	top: -1120px;
+	position: fixed;
+	transition: ease 1.2s;
+	width: 620px;
+	height: 420px;
+	box-shadow: getShadow(2);
+	background: getColors("verde", 0);
+	justify-content: center;
+	align-items: center;
 
-  label {
-    font-size: 20px;
-    font-weight: 500;
-  }
+	label {
+		font-size: getFontSize("xl");
+		font-weight: getFontWeight(7);
+	}
 
-  &__titulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: getColors("blanco", 0);
-    font-size: getFontSize("2xl");
-    font-weight: bold;
-    height: 80px;
-    background-color: getColors("verde", 1);
-  }
+	&__titulo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: getColors("blanco", 0);
+		font-size: getFontSize("2xl");
+		font-weight: bold;
+		height: 80px;
+		background-color: getColors("verde", 1);
+	}
 
-  &__subgrupo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    // padding: 10px 20px;
-    label {
-      font-size: getFontSize("s");
-    }
-    input {
-      width: 90px;
-    }
-  }
+	&__subgrupo {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		// padding: 10px 20px;
+		label {
+			font-size: getFontSize("s");
+		}
+		input {
+			width: 90px;
+		}
+	}
 
-  &__grupo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    label {
-      font-size: getFontSize("s");
-    }
-    // padding: 10px 20px;
-    &--junto {
-      display: flex;
-      gap: 20px;
-    }
-  }
+	&__grupo {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		label {
+			font-size: getFontSize("s");
+		}
+		// padding: 10px 20px;
+		&--junto {
+			display: flex;
+			gap: 20px;
+		}
+	}
 
-  &__metodo {
-    display: flex;
-    // justify-content: center;
-    gap: 30px;
-    list-style: none;
-    a {
-      text-decoration: none;
-      color: black;
-    }
-  }
+	&__metodo {
+		display: flex;
+		// justify-content: center;
+		gap: getGap(10);
+		list-style: none;
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	}
 
-  &__btns {
-    margin-top: getMargin(5);
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
+	&__btns {
+		margin-top: getMargin(5);
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+	}
 
-  &__form {
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    gap: 20px;
-    font-family: getFontFamily("principal");
-    font-size: getFontSize("s");
-  }
+	&__form {
+		display: flex;
+		flex-direction: column;
+		padding: 40px;
+		gap: 20px;
+		font-family: getFontFamily("principal");
+		font-size: getFontSize("s");
+	}
 
-  &__input {
-    width: 66%;
-    height: 30px;
-    outline: none;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #000;
-    min-width: unset;
-    margin: 0;
-    margin-right: getMargin(6);
-  }
+	&__input {
+		width: 66%;
+		height: 30px;
+		outline: none;
+		font-size: 1rem;
+		font-weight: 600;
+		color: #000;
+		min-width: unset;
+		margin: 0;
+		margin-right: getMargin(6);
+	}
 
-  &__header {
-    font-weight: bold;
-    font-size: 25px;
-  }
+	&__header {
+		font-weight: bold;
+		font-size: 25px;
+	}
 
-  &__icon {
-    img {
-      width: 80px;
-    }
-  }
+	&__icon {
+		img {
+			width: 80px;
+		}
+	}
 }
