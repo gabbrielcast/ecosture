@@ -1,114 +1,113 @@
 .c-historialCarrito {
-	display: block;
-	z-index: 1;
-	position: fixed;
-	width: 50%;
-	// height: 65%;
-	// visibility: hidden;
-	top: -1000px;
-	// left: 30%;
-	background-color: getColors("verde", 0);
-	border: 2px solid getColors("verde", 1);
-	overflow-y: auto;
-	box-shadow: getShadow(2);
-	transition: ease 1.2s;
-	flex-direction: column;
+  display: block;
+  z-index: 1;
+  position: fixed;
+  width: 50%;
+  // height: 65%;
+  // visibility: hidden;
+  top: -1000px;
+  // left: 30%;
+  background-color: getColors("verde", 0);
+  border: 2px solid getColors("verde", 1);
+  overflow-y: auto;
+  box-shadow: getShadow(2);
+  transition: ease 1.2s;
+  flex-direction: column;
+  font-family: getFontFamily("principal");
 
-	@media (max-height: 900px) {
-		height: 500px;
-	}
-	// height: 60%;
-	&::-webkit-scrollbar {
-		background-color: #797979;
-		border-radius: 20px;
-		border: 2px solid #f1f2f3;
-		width: 14px;
-	}
-	&::-webkit-scrollbar-track {
-		background: white; /* color of the tracking area */
-	}
-	&::-webkit-scrollbar-thumb {
-		border-radius: 12px;
-		background: rgb(122, 122, 121); /* color of the tracking area */
-	}
+  @media (max-height: 900px) {
+    height: 500px;
+  }
+  // height: 60%;
+  &::-webkit-scrollbar {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+    width: 14px;
+  }
+  &::-webkit-scrollbar-track {
+    background: white; /* color of the tracking area */
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: rgb(122, 122, 121); /* color of the tracking area */
+  }
 
-	&__title {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: getFontSize("3xl");
-		font-weight: bold;
-		text-align: center;
-		// padding-top: getPadding(9);
-		// margin: getMargin(6) getMargin(8);
-		color: getColors("blanco", 0);
-		background-color: getColors("verde", 1);
-		height: 80px;
-		margin-bottom: getMargin(6);
-	}
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: getFontSize("xl");
+    font-weight: bold;
+    text-align: center;
+    color: getColors("blanco", 0);
+    background-color: getColors("verde", 1);
+    height: 80px;
+    margin-bottom: getMargin(9);
+  }
 
-	&__item {
-		padding: getPadding(7) getPadding(9);
-		height: 120px;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	}
+  &__item {
+    padding: getPadding(7) getPadding(8);
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-	&__item:nth-child(3) {
-		border-top: 1px solid getColors("verde", 1);
-		border-bottom: 1px solid getColors("verde", 1);
-	}
+  &__item:nth-child(3) {
+    border-top: 1px solid getColors("verde", 1);
+    border-bottom: 1px solid getColors("verde", 1);
+  }
 
-	&__img {
-		width: 75px;
-	}
+  &__img {
+    width: 75px;
+  }
 
-	&__descripcion {
-		display: flex;
-		flex-direction: column;
-		gap: getGap(5);
+  &__descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: getGap(5);
 
-		span {
-			color: getColors("verde", 1);
-			font-weight: getFontWeight(4);
-		}
-		span:nth-child(1) {
-			color: getColors("verde", 1);
-			font-weight: bold;
-		}
-	}
+    span {
+      color: getColors("verde", 1);
+      font-weight: getFontWeight(4);
+    }
+    span:nth-child(1) {
+      color: getColors("verde", 1);
+      font-weight: bold;
+    }
+  }
 
-	&__icon {
-		width: 20px;
-		height: 20px;
-		transition: ease 0.3s;
-		cursor: pointer;
-		&:hover {
-			transform: scale(1.2);
-		}
-	}
+  &__icon {
+    width: 20px;
+    height: 20px;
+    transition: ease 0.3s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 
-	&__close {
-		width: 20px;
-		height: 20px;
-		transition: ease 0.3s;
-		cursor: pointer;
-		&:hover {
-			transform: scale(1.2);
-		}
-	}
+  &__close {
+    width: 20px;
+    height: 20px;
+    transition: ease 0.3s;
+    cursor: pointer;
+    &:hover {
+      transform: rotate(90deg) scale(1.2);
+    }
+  }
 
-	&__input {
-		width: 50px;
-	}
+  &__input {
+    width: 50px;
+  }
 
-	&__botones {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: getMargin(8) getMargin(10);
-		gap: getGap(6);
-		padding-bottom: 30px;
-	}
+  &__botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: getMargin(9) getMargin(10) getMargin(10);
+    // gap: getGap(6);
+    font-size: getFontSize("s");
+  }
 }

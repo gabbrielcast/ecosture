@@ -1,19 +1,19 @@
 let carrito = null;
 let historial = null;
 function cargaInicio() {
-	let contenedor = document.getElementById("contenedor");
-	contenedor.innerHTML = "";
-	this.portada(contenedor);
-	this.about(contenedor);
-	this.testimonio(contenedor);
-	this.categorias(contenedor);
+  let contenedor = document.getElementById("contenedor");
+  contenedor.innerHTML = "";
+  this.portada(contenedor);
+  this.about(contenedor);
+  this.testimonio(contenedor);
+  this.categorias(contenedor);
 }
 
 function portada(contenedor) {
-	let section = document.createElement("section");
-	section.id = "hero";
-	section.className = "c-hero";
-	section.innerHTML = `
+  let section = document.createElement("section");
+  section.id = "hero";
+  section.className = "c-hero";
+  section.innerHTML = `
         <h1 class="c-hero__titulo">Moda <span>sostenible</span></h1>
         <h2 class="c-hero__subtitulo">
             Ropa ecológica - marcas locales - comercio justo
@@ -30,15 +30,15 @@ function portada(contenedor) {
             <div class="c-icon__circulo--hojas"></div>
         </div>
     `;
-	contenedor.appendChild(section);
+  contenedor.appendChild(section);
 }
 
 function about(contenedor) {
-	let section = document.createElement("section");
-	section.id = "about";
-	section.className = "c-about";
+  let section = document.createElement("section");
+  section.id = "about";
+  section.className = "c-about";
 
-	section.innerHTML = `
+  section.innerHTML = `
     
         <div class="c-about__header">
             <h3 class="c-about__title">Lorem ipsum dolor sit amet</h3>
@@ -120,14 +120,14 @@ function about(contenedor) {
     
     `;
 
-	contenedor.appendChild(section);
+  contenedor.appendChild(section);
 }
 
 function testimonio(contenedor) {
-	let section = document.createElement("section");
-	section.id = "testimonio";
-	section.className = "c-testimonio";
-	section.innerHTML = `
+  let section = document.createElement("section");
+  section.id = "testimonio";
+  section.className = "c-testimonio";
+  section.innerHTML = `
         <!-- <div class="c-testimonio__img"></div> -->
         <i class="fas fa-quote-right fa-4x"></i>
         <p class="c-testimonio__text">
@@ -144,14 +144,15 @@ function testimonio(contenedor) {
     
     `;
 
-	contenedor.appendChild(section);
+  contenedor.appendChild(section);
 }
 
+//CATEGORIAS
 function categorias(contenedor) {
-	let section = document.createElement("section");
-	section.id = "productos";
+  let section = document.createElement("section");
+  section.id = "productos";
 
-	section.innerHTML = `
+  section.innerHTML = `
     <h1 class="g--seccion-productos-title">CATEGORÍAS</h1>
 					<div
 						class="l-grid l-grid--columns-4 l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12"
@@ -165,7 +166,7 @@ function categorias(contenedor) {
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
 							
-								<a class="c-button c-button--primary" >Ver Categoria</a>
+								<a class="c-button c-button--categoria" >Ver Categoria</a>
 							</div>
 						</div>
 
@@ -178,7 +179,7 @@ function categorias(contenedor) {
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
 								
-								<a class="c-button c-button--primary" >Ver Categoria</a>
+								<a class="c-button c-button--categoria" >Ver Categoria</a>
 							</div>
 						</div>
 
@@ -192,7 +193,7 @@ function categorias(contenedor) {
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
 								
 								
-								<a class="c-button c-button--primary" >Ver Categoria</a>
+								<a class="c-button c-button--categoria" >Ver Categoria</a>
 							</div>
 						</div>
 
@@ -205,32 +206,34 @@ function categorias(contenedor) {
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
 								
-								<a class="c-button c-button--primary" >Ver Categoria</a>
+								<a class="c-button c-button--categoria" >Ver Categoria</a>
 							</div>
 						</div>
 					</div>
     
     `;
 
-	let btns = Array.from(section.getElementsByTagName("a"));
-	btns.forEach((b) => {
-		if (b.className.includes("c-button")) {
-			b.onclick = () => {
-				this.listProductos();
-			};
-		}
-	});
+  let btns = Array.from(section.getElementsByTagName("a"));
+  btns.forEach((b) => {
+    if (b.className.includes("c-button")) {
+      b.onclick = () => {
+        this.listProductos();
+      };
+    }
+  });
 
-	contenedor.appendChild(section);
+  contenedor.appendChild(section);
 }
 
-function listProductos() {
-	let contenedor = document.getElementById("contenedor");
-	contenedor.innerHTML = "";
-	let section = document.createElement("section");
-	section.id = "productos";
+//PRODUCTOS
 
-	section.innerHTML = `
+function listProductos() {
+  let contenedor = document.getElementById("contenedor");
+  contenedor.innerHTML = "";
+  let section = document.createElement("section");
+  section.id = "productos";
+
+  section.innerHTML = `
     <h1 class="g--seccion-productos-title">LOREM IPSUM</h1>
 					<div
 						class="l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8"
@@ -243,11 +246,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 
 								<div class="c-producto__botones">
@@ -276,11 +275,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -308,11 +303,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -341,11 +332,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -373,11 +360,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -406,11 +389,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -439,11 +418,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -472,11 +447,7 @@ function listProductos() {
 							/>
 							<div class="c-producto__info">
 								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								<p class="c-producto__text">
-									Nam sit amet ipsum eget ipsum tincidunt pretium sit amet
-									scelerisque velit. Aliquam porta turpis sed tincidunt
-									placerat.
-								</p>
+								
 								<p class="c-producto__price">19.99€</p>
 								<div class="c-producto__botones">
 									<div class="c-producto__anyade">
@@ -500,29 +471,29 @@ function listProductos() {
     
     `;
 
-	let btns = Array.from(section.getElementsByTagName("a"));
-	btns.forEach((b) => {
-		if (b.className.includes("c-button")) {
-			b.onclick = () => {
-				this.detalleProducto();
-			};
-		}
-	});
+  let btns = Array.from(section.getElementsByTagName("a"));
+  btns.forEach((b) => {
+    if (b.className.includes("c-button")) {
+      b.onclick = () => {
+        this.detalleProducto();
+      };
+    }
+  });
 
-	contenedor.appendChild(section);
-	window.scroll({
-		top: 0,
-		behavior: "smooth",
-	});
+  contenedor.appendChild(section);
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 
 function detalleProducto() {
-	let contenedor = document.getElementById("contenedor");
-	contenedor.innerHTML = "";
-	let section = document.createElement("section");
-	section.className =
-		"l-flex l-flex--direction-column l-flex--aling-items--center";
-	section.innerHTML = `
+  let contenedor = document.getElementById("contenedor");
+  contenedor.innerHTML = "";
+  let section = document.createElement("section");
+  section.className =
+    "l-flex l-flex--direction-column l-flex--aling-items--center";
+  section.innerHTML = `
 		<div class="c-detalle">
 			
 			<img class="c-detalle__img" src="./assets/img/Ropa/hombre/camisetas/camiseta1.jpg"></img>
@@ -546,17 +517,17 @@ function detalleProducto() {
 	
 	
 	`;
-	contenedor.appendChild(section);
-	window.scroll({
-		top: 0,
-		behavior: "smooth",
-	});
+  contenedor.appendChild(section);
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 
 window.onload = () => {
-	historial = new Historial();
-	setNav();
-	carrito = new Carrito();
-	this.cargaInicio();
-	setLogin();
+  historial = new Historial();
+  setNav();
+  carrito = new Carrito();
+  this.cargaInicio();
+  setLogin();
 };

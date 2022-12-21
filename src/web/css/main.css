@@ -582,9 +582,16 @@ table {
   width: 500px;
 }
 .c-button--products {
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px 10px;
   width: 250px;
+  font-family:  'Montserrat', sans-serif;
+}
+.c-button--categoria {
+  font-size: 14px;
+  padding: 12px 20px;
+  text-align: center;
+  font-family:  'Montserrat', sans-serif;
 }
 
 .c-icon {
@@ -651,6 +658,7 @@ table {
   overflow-y: auto;
   box-shadow: 0 5px 15px darkgray;
   transition: ease 1.2s;
+  font-family:  'Montserrat', sans-serif;
 }
 @media (max-height: 900px) {
   .c-carrito {
@@ -678,9 +686,10 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
+  font-family:  'Montserrat', sans-serif;
   color: #fff;
   background-color: #3a562e;
   height: 80px;
@@ -704,6 +713,7 @@ table {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  font-size: 12px;
 }
 .c-carrito__descripcion span {
   color: #3a562e;
@@ -725,7 +735,7 @@ table {
   cursor: pointer;
 }
 .c-carrito__icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotate(180deg);
 }
 .c-carrito__close {
   width: 20px;
@@ -734,7 +744,7 @@ table {
   cursor: pointer;
 }
 .c-carrito__close:hover {
-  transform: scale(1.2);
+  transform: rotate(90deg) scale(1.2);
 }
 .c-carrito__input {
   width: 50px;
@@ -746,6 +756,7 @@ table {
   margin: 24px 40px;
   gap: 16px;
   padding-bottom: 30px;
+  font-size: 14px;
 }
 .c-carrito__precioTotal {
   display: flex;
@@ -753,23 +764,29 @@ table {
   align-items: center;
   gap: 16px;
   padding: 16px 32px;
-  margin-top: 24px;
+  margin-top: 6px;
   margin-bottom: 16px;
-  font-size: 30px;
   font-weight: bold;
-  color: #f1ff93;
-  background: rgb(58, 86, 46);
-  background: linear-gradient(90deg, rgba(58, 86, 46, 0) 0%, rgba(58, 86, 46, 0.1940126392) 22%, rgba(58, 86, 46, 0.4741246841) 38%, rgba(58, 86, 46, 0.8774860286) 57%, rgb(58, 86, 46) 100%);
   margin-left: auto;
   width: 100%;
 }
+.c-carrito__line {
+  background-color: #01190d;
+  height: 1.5px;
+  width: 80%;
+  text-align: left;
+  margin-top: 24px;
+  margin-right: 0%;
+  margin-left: 20%;
+}
 .c-carrito__textoTotal {
-  font-size: 24px;
-  font-weight: 200;
-  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  color: #3a562e;
 }
 .c-carrito__cantidadTotal {
-  color: #f1ff93;
+  font-size: 30px;
+  color: #8cc63f;
 }
 
 c-pagar {
@@ -797,6 +814,7 @@ c-pagar {
   justify-content: center;
   align-items: center;
   transition: ease 1.2s;
+  font-family:  'Montserrat', sans-serif;
 }
 @media (max-height: 900px) {
   .c-login {
@@ -809,6 +827,7 @@ c-pagar {
   justify-content: center;
   align-items: center;
   width: 50%;
+  font-size: 14px;
 }
 .c-login__form {
   display: flex;
@@ -816,6 +835,12 @@ c-pagar {
   justify-content: center;
   align-items: stretch;
   gap: 16px;
+}
+.c-login__textForm {
+  font-size: 12px;
+}
+.c-login__input {
+  height: 30px;
 }
 .c-login__textForm {
   margin-bottom: 10px;
@@ -853,7 +878,7 @@ c-pagar {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 64px;
+  gap: 24px;
   background-color: #01190d;
   padding: 64px 40px;
   font-family:  'Montserrat', sans-serif;
@@ -874,6 +899,7 @@ c-pagar {
   justify-content: center;
   align-items: center;
   gap: 160px;
+  margin-bottom: 24px;
 }
 .c-footer__list {
   display: flex;
@@ -885,6 +911,7 @@ c-pagar {
 }
 .c-footer__list li:first-child {
   font-weight: bold;
+  font-size: 16px;
   color: #f5f5f5;
 }
 .c-footer__item {
@@ -909,6 +936,11 @@ c-pagar {
   justify-content: center;
   align-items: center;
   gap: 24px;
+}
+.c-footer__line {
+  background-color: #fff;
+  height: 0.1px;
+  width: 1200px;
 }
 
 .c-nav {
@@ -951,8 +983,10 @@ c-pagar {
 .c-nav__iconos {
   display: flex;
   gap: 24px;
-  cursor: pointer;
   transition: all 0.3s;
+}
+.c-nav__iconos button {
+  cursor: pointer;
 }
 .c-nav__iconos i {
   transition: all 0.3s;
@@ -966,6 +1000,7 @@ c-pagar {
 }
 .c-nav__iconos button {
   border: none;
+  background-color: #f5f5f5;
 }
 
 .c-hero {
@@ -1064,7 +1099,7 @@ c-pagar {
 .c-producto {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  gap: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
   margin: 20px 6px;
@@ -1078,10 +1113,13 @@ c-pagar {
 }
 .c-producto__title {
   font-size: 18px;
-  margin: 20px 6px;
+  margin: 10px 6px;
   font-weight: bold;
   line-height: 24px;
   color: #3a562e;
+  font-family:  'Montserrat', sans-serif;
+  margin-bottom: 16px;
+  margin-top: 16px;
 }
 .c-producto__text {
   font-size: 16px;
@@ -1174,7 +1212,7 @@ c-pagar {
   position: fixed;
   transition: ease 1.2s;
   width: 620px;
-  height: 400px;
+  height: 420px;
   box-shadow: 0 5px 15px darkgray;
   background: #f5f5f5;
   justify-content: center;
@@ -1189,7 +1227,7 @@ c-pagar {
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   height: 80px;
   background-color: #3a562e;
@@ -1200,7 +1238,7 @@ c-pagar {
   gap: 20px;
 }
 .c-pago__subgrupo label {
-  font-size: 18px;
+  font-size: 14px;
 }
 .c-pago__subgrupo input {
   width: 90px;
@@ -1213,7 +1251,7 @@ c-pagar {
   gap: 20px;
 }
 .c-pago__grupo label {
-  font-size: 18px;
+  font-size: 14px;
 }
 .c-pago__grupo--junto {
   display: flex;
@@ -1229,7 +1267,7 @@ c-pagar {
   color: black;
 }
 .c-pago__btns {
-  margin-top: 20px;
+  margin-top: 12px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -1239,20 +1277,26 @@ c-pagar {
   flex-direction: column;
   padding: 40px;
   gap: 20px;
+  font-family:  'Montserrat', sans-serif;
+  font-size: 14px;
 }
 .c-pago__input {
-  width: 70%;
-  height: 40px;
+  width: 66%;
+  height: 30px;
   outline: none;
   font-size: 1rem;
   font-weight: 600;
   color: #000;
   min-width: unset;
   margin: 0;
+  margin-right: 16px;
 }
 .c-pago__header {
   font-weight: bold;
   font-size: 25px;
+}
+.c-pago__icon img {
+  width: 80px;
 }
 
 .c-historialCarrito {
@@ -1267,6 +1311,7 @@ c-pagar {
   box-shadow: 0 5px 15px darkgray;
   transition: ease 1.2s;
   flex-direction: column;
+  font-family:  'Montserrat', sans-serif;
 }
 @media (max-height: 900px) {
   .c-historialCarrito {
@@ -1290,16 +1335,16 @@ c-pagar {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   color: #fff;
   background-color: #3a562e;
   height: 80px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 .c-historialCarrito__item {
-  padding: 20px 32px;
+  padding: 20px 24px;
   height: 120px;
   display: flex;
   justify-content: space-around;
@@ -1341,7 +1386,7 @@ c-pagar {
   cursor: pointer;
 }
 .c-historialCarrito__close:hover {
-  transform: scale(1.2);
+  transform: rotate(90deg) scale(1.2);
 }
 .c-historialCarrito__input {
   width: 50px;
@@ -1350,9 +1395,8 @@ c-pagar {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 24px 40px;
-  gap: 16px;
-  padding-bottom: 30px;
+  margin: 32px 40px 40px;
+  font-size: 14px;
 }
 
 .g--clear-list {
@@ -2055,6 +2099,7 @@ c-pagar {
   font-weight: bold;
   padding-top: 40px;
   color: #3a562e;
+  font-family:  'Montserrat', sans-serif;
 }
 
 body {
