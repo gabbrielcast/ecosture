@@ -3,9 +3,9 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: getGap(8);
+  gap: getGap(12);
   background-color: getColors("verde", 2);
-  padding: getPadding(10) getPadding(10);
+  padding: getPadding(12) getPadding(10);
   font-family: getFontFamily("principal");
   font-size: getFontSize("s");
 
@@ -29,10 +29,16 @@
 
   &__list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: getGap(8);
     list-style: none;
+
+    li:first-child {
+      font-weight: bold;
+      color: getColors("verde", 0);
+    }
   }
 
   &__item {
@@ -48,5 +54,17 @@
   &__derechos {
     color: getColors("verde", 0);
     text-decoration: none;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: getGap(8);
   }
 }

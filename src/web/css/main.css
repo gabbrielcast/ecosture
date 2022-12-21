@@ -855,9 +855,9 @@ c-pagar {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 64px;
   background-color: #01190d;
-  padding: 40px 40px;
+  padding: 64px 40px;
   font-family:  'Montserrat', sans-serif;
   font-size: 14px;
 }
@@ -878,10 +878,15 @@ c-pagar {
 }
 .c-footer__list {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 24px;
   list-style: none;
+}
+.c-footer__list li:first-child {
+  font-weight: bold;
+  color: #f5f5f5;
 }
 .c-footer__item {
   color: #f5f5f5;
@@ -895,6 +900,16 @@ c-pagar {
 .c-footer__derechos {
   color: #f5f5f5;
   text-decoration: none;
+}
+.c-footer__derechos span {
+  font-weight: bold;
+}
+.c-footer__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
 
 .c-nav {
