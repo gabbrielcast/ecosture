@@ -1,4 +1,5 @@
-class Historial {
+import { toggleBtnsNav } from "./nav.js";
+export class Historial {
 	constructor() {
 		this.setHistorial();
 	}
@@ -8,7 +9,7 @@ class Historial {
 
 		let btnCerrar = document.getElementById("cerrarHistorial");
 		btnCerrar.onclick = () => {
-			activarBtnsNav("historial");
+			toggleBtnsNav("historial");
 			historial.style.top = "-1000px";
 		};
 	}

@@ -1,9 +1,11 @@
+import { cargaInicio } from "./main.js";
+
 let btnLogin = null;
 let btnCarrito = null;
 let btnHistorial = null;
-let btnIncio = null;
+let btnInicio = null;
 
-function setNav() {
+export function setNav() {
 	btnLogin = document.getElementById("btnLogin");
 	btnCarrito = document.getElementById("btnCarrito");
 	btnHistorial = document.getElementById("btnHistorial");
@@ -19,7 +21,7 @@ function setNav() {
 		// modalLogin.style.marginTop = "150px";
 		console.log("login");
 		modalLogin.style.top = "150px";
-		desactivarBtnsNav("login");
+		toggleBtnsNav("login");
 	};
 
 	btnCarrito.onclick = () => {
@@ -27,14 +29,14 @@ function setNav() {
 		console.log("carrito");
 
 		modalCarrito.style.top = "150px";
-		desactivarBtnsNav("carrito");
+		toggleBtnsNav("carrito");
 	};
 
 	btnHistorial.onclick = () => {
 		console.log("historial");
 		// modalHistorial.style.marginTop = "0px";
 		modalHistorial.style.top = "150px";
-		desactivarBtnsNav("historial");
+		toggleBtnsNav("historial");
 	};
 
 	btnInicio.onclick = () => {
@@ -42,38 +44,21 @@ function setNav() {
 	};
 }
 
-function desactivarBtnsNav(btn) {
+export function toggleBtnsNav(btn) {
 	switch (btn) {
 		case "login":
-			btnCarrito.disabled = true;
-			btnHistorial.disabled = true;
+			btnCarrito.disabled = !btnCarrito.disabled;
+			btnHistorial.disabled = !btnHistorial.disabled;
 			break;
 		case "carrito":
 			console.log("bueno");
-			btnLogin.disabled = true;
-			btnHistorial.disabled = true;
+			btnLogin.disabled = !btnLogin.disabled;
+			btnHistorial.disabled = !btnHistorial.disabled;
 			break;
 
 		case "historial":
-			btnLogin.disabled = true;
-			btnCarrito.disabled = true;
+			btnLogin.disabled = !btnLogin.disabled;
+			btnCarrito.disabled = !btnCarrito.disabled;
 			break;
-	}
-}
-
-function activarBtnsNav(btn) {
-	switch (btn) {
-		case "login":
-			btnCarrito.disabled = false;
-			btnHistorial.disabled = false;
-			break;
-		case "carrito":
-			btnLogin.disabled = false;
-			btnHistorial.disabled = false;
-			break;
-
-		case "historial":
-			btnLogin.disabled = false;
-			btnCarrito.disabled = false;
 	}
 }

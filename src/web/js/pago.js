@@ -1,4 +1,5 @@
-class Pago {
+import { toggleBtnsNav } from "./nav.js";
+export class Pago {
 	constructor() {
 		this.cerrarPago();
 	}
@@ -13,7 +14,7 @@ class Pago {
 		let btnCancelar = document.getElementById("btnCancelarPago");
 		btnCancelar.onclick = () => {
 			modalPago.style.top = "-1200px";
-			activarBtnsNav("carrito");
+			toggleBtnsNav("carrito");
 		};
 		// modalPago.style.display = "block";
 	}

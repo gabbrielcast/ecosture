@@ -1,4 +1,5 @@
-class Carrito {
+import { toggleBtnsNav } from "./nav.js";
+export class Carrito {
 	constructor() {
 		this.animacionCarrito();
 	}
@@ -24,7 +25,7 @@ class Carrito {
 		};
 
 		function quitarCarrito() {
-			activarBtnsNav("carrito");
+			toggleBtnsNav("carrito");
 			modalCarrito.style.top = "-1000px";
 		}
 	}

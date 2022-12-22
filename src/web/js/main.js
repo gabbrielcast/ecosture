@@ -1,12 +1,17 @@
+import { setNav } from "./nav.js";
+import { Historial } from "./historialCarrito.js";
+import { Carrito } from "./carrito.js";
+import { setLogin } from "./login.js";
+
 let carrito = null;
 let historial = null;
-function cargaInicio() {
+export function cargaInicio() {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
-	this.portada(contenedor);
-	this.about(contenedor);
-	this.testimonio(contenedor);
-	this.categorias(contenedor);
+	portada(contenedor);
+	about(contenedor);
+	testimonio(contenedor);
+	categorias(contenedor);
 }
 
 function portada(contenedor) {
@@ -149,12 +154,12 @@ function testimonio(contenedor) {
 
 function categorias(contenedor) {
 	let section = document.createElement("section");
-	section.id = "productos";
+	section.id = "categorias";
 
 	section.innerHTML = `
     <h1 class="g--seccion-productos-title">CATEGORÍAS</h1>
 					<div
-						class="l-grid l-grid--columns-4 l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12"
+						class="l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12"
 					>
 						<div class="c-producto">
 							<img
@@ -216,7 +221,7 @@ function categorias(contenedor) {
 	btns.forEach((b) => {
 		if (b.className.includes("c-button")) {
 			b.onclick = () => {
-				this.listProductos();
+				listProductos();
 			};
 		}
 	});
@@ -474,7 +479,7 @@ function listProductos() {
 	btns.forEach((b) => {
 		if (b.className.includes("c-button")) {
 			b.onclick = () => {
-				this.detalleProducto();
+				detalleProducto();
 			};
 		}
 	});
@@ -527,6 +532,6 @@ window.onload = () => {
 	historial = new Historial();
 	setNav();
 	carrito = new Carrito();
-	this.cargaInicio();
+	cargaInicio();
 	setLogin();
 };
