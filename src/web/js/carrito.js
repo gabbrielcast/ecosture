@@ -1,4 +1,5 @@
 import { toggleBtnsNav } from "./nav.js";
+import { Pago } from "./pago.js";
 export class Carrito {
 	constructor() {
 		this.animacionCarrito();
