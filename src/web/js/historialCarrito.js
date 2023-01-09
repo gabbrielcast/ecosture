@@ -9,7 +9,7 @@ export class Historial {
 
 		let btnCerrar = document.getElementById("cerrarHistorial");
 		btnCerrar.onclick = () => {
-			toggleBtnsNav("historial");
+			toggleBtnsNav();
 			historial.style.top = "-1000px";
 		};
 	}

@@ -1,7 +1,10 @@
 import { setNav } from "./nav.js";
 import { Historial } from "./historialCarrito.js";
 import { Carrito } from "./carrito.js";
-import { setLogin } from "./login.js";
+import { setLogin, Login } from "./login.js";
+import { peticion } from "./peticion.js";
+import { User, Auth } from "./auth.js";
+import { textos } from "./textos.js";
 
 let carrito = null;
 let historial = null;
@@ -19,16 +22,9 @@ function portada(contenedor) {
 	section.id = "hero";
 	section.className = "c-hero";
 	section.innerHTML = `
-        <h1 class="c-hero__titulo">Moda <span>sostenible</span></h1>
-        <h2 class="c-hero__subtitulo">
-            Ropa ecológica - marcas locales - comercio justo
-        </h2>
-        <p class="c-hero__texto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            corrupti accusamus dolorum ipsa cupiditate perferendis esse atque
-            earum quis sequi culpa voluptatem sit, voluptas nemo laudantium
-            blanditiis eaque dicta architecto.
-        </p>
+        <h1 class="c-hero__titulo">${textos.hero.titulo}</h1>
+        <h2 class="c-hero__subtitulo">${textos.hero.subtitulo}</h2>
+        <p class="c-hero__texto">${textos.hero.descripcion}</p>
         <div class="c-hero__iconos">
             <div class="c-icon c-icon--planeta"></div>
             <div class="c-icon c-icon--bombilla"></div>
@@ -534,4 +530,13 @@ window.onload = () => {
 	carrito = new Carrito();
 	cargaInicio();
 	setLogin();
+	// Login();
+
+	// let authLocal = JSON.parse(localStorage.getItem("Auth")).r;
+	// Auth.accessToken = authLocal.TokenAcceso;
+	// Auth.refreshToken = authLocal.TokenRefresco;
+
+	peticion("GET", "http://localhost/ecosture/api/peliculas", true)
+		.then((r) => console.log(r))
+		.catch((r) => console.log(r));
 };

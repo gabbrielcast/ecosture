@@ -16,6 +16,7 @@ export class Carrito {
 
 		cerrar.onclick = () => {
 			quitarCarrito();
+			toggleBtnsNav();
 			// activarBtnsNav("carrito");
 		};
 
@@ -26,7 +27,6 @@ export class Carrito {
 		};
 
 		function quitarCarrito() {
-			toggleBtnsNav("carrito");
 			modalCarrito.style.top = "-1000px";
 		}
 	}

@@ -5,7 +5,6 @@ export class Pago {
 	}
 	abrirPago() {
 		let modalPago = document.getElementById("pago");
-		// modalPago.style.display = "block";
 		modalPago.style.top = "120px";
 	}
 
@@ -14,8 +13,7 @@ export class Pago {
 		let btnCancelar = document.getElementById("btnCancelarPago");
 		btnCancelar.onclick = () => {
 			modalPago.style.top = "-1200px";
-			toggleBtnsNav("carrito");
+			toggleBtnsNav();
 		};
-		// modalPago.style.display = "block";
 	}
 }
