@@ -30,6 +30,14 @@
 			color: getColors("verde", 3);
 		}
 	}
+	&__loading {
+		width: 20%;
+		text-align: center;
+		visibility: hidden;
+		svg rect {
+			fill: white;
+		}
+	}
 
 	&--cantidad {
 		width: 20px;

@@ -2,6 +2,7 @@
 	display: block;
 	z-index: 1;
 	top: -1120px;
+	left: calc(50vw - (620px / 2));
 	position: fixed;
 	transition: ease 1.2s;
 	width: 620px;
@@ -12,8 +13,8 @@
 	align-items: center;
 
 	label {
-		font-size: getFontSize("xl");
-		font-weight: getFontWeight(7);
+		font-size: 20px;
+		font-weight: 500;
 	}
 
 	&__titulo {
@@ -59,7 +60,7 @@
 	&__metodo {
 		display: flex;
 		// justify-content: center;
-		gap: getGap(10);
+		gap: 30px;
 		list-style: none;
 		a {
 			text-decoration: none;

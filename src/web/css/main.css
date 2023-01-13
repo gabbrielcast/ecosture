@@ -624,6 +624,14 @@ table {
   transform: scale(1.2);
   color: #8cc63f;
 }
+.c-icon__loading {
+  width: 20%;
+  text-align: center;
+  visibility: hidden;
+}
+.c-icon__loading svg rect {
+  fill: white;
+}
 .c-icon--cantidad {
   width: 20px;
   height: 20px;
@@ -665,6 +673,7 @@ table {
   position: fixed;
   width: 50%;
   top: -1000px;
+  left: 25vw;
   background-color: #f5f5f5;
   border: 2px solid #3a562e;
   overflow-y: auto;
@@ -680,6 +689,7 @@ table {
 .c-carrito__container {
   display: flex;
   flex-direction: column;
+  padding: 30px;
 }
 .c-carrito::-webkit-scrollbar {
   background-color: #797979;
@@ -820,6 +830,7 @@ c-pagar {
   width: 900px;
   height: 500px;
   top: -1000px;
+  left: calc(50vw - 450px);
   background-color: #f5f5f5;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -832,6 +843,10 @@ c-pagar {
   .c-login {
     height: 400px;
   }
+}
+.c-login__error {
+  color: rgb(190, 31, 31);
+  height: 15px;
 }
 .c-login__left {
   display: flex;
@@ -860,12 +875,13 @@ c-pagar {
 }
 .c-login__right {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 50%;
   background-color: #3a562e;
-  background-image: url("../assets/img/login.png");
+  background-image: url("../assets/img/bg_login.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -878,7 +894,7 @@ c-pagar {
   margin-bottom: 32px;
 }
 .c-login__logo {
-  width: 100px;
+  width: 150px;
   margin: 12px 0px;
 }
 .c-login__img {
@@ -963,7 +979,7 @@ c-pagar {
   padding: 16px 32px;
   background-color: #f5f5f5;
   font-family:  'Montserrat', sans-serif;
-  width: 100%;
+  width: 100vw;
   transition: all 0.5s;
   z-index: 1;
 }
@@ -1167,20 +1183,20 @@ c-pagar {
 
 .c-detalle {
   display: flex;
+  justify-content: center;
   gap: 30px;
-  padding: 90px;
-  width: 80%;
+  padding: 70px 0px;
+  width: 90%;
   overflow-x: hidden;
   font-family:  'Montserrat', sans-serif;
 }
 .c-detalle__img {
-  width: 600px;
-  height: 500px;
+  width: 400px;
+  height: 450px;
 }
 .c-detalle__info {
   padding: 12px 40px;
-  width: 100%;
-  height: 650px;
+  height: 470px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
@@ -1220,6 +1236,7 @@ c-pagar {
   display: block;
   z-index: 1;
   top: -1120px;
+  left: calc(50vw - 310px);
   position: fixed;
   transition: ease 1.2s;
   width: 620px;
@@ -1231,7 +1248,7 @@ c-pagar {
 }
 .c-pago label {
   font-size: 20px;
-  font-weight: 600px;
+  font-weight: 500;
 }
 .c-pago__titulo {
   display: flex;
@@ -1270,7 +1287,7 @@ c-pagar {
 }
 .c-pago__metodo {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   list-style: none;
 }
 .c-pago__metodo a {
@@ -1316,6 +1333,7 @@ c-pagar {
   position: fixed;
   width: 50%;
   top: -1000px;
+  left: 25vw;
   background-color: #f5f5f5;
   border: 2px solid #3a562e;
   overflow-y: auto;
@@ -1345,16 +1363,16 @@ c-pagar {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   color: #fff;
   background-color: #3a562e;
   height: 80px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 .c-historialCarrito__item {
-  padding: 20px 32px;
+  padding: 20px 24px;
   height: 120px;
   display: flex;
   justify-content: space-around;
@@ -1367,6 +1385,28 @@ c-pagar {
 .c-historialCarrito__img {
   width: 75px;
 }
+.c-historialCarrito__descripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.c-historialCarrito__descripcion span {
+  color: #3a562e;
+  font-weight: 300px;
+}
+.c-historialCarrito__descripcion span:nth-child(1) {
+  color: #3a562e;
+  font-weight: bold;
+}
+.c-historialCarrito__icon {
+  width: 20px;
+  height: 20px;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+.c-historialCarrito__icon:hover {
+  transform: scale(1.2);
+}
 .c-historialCarrito__close {
   width: 20px;
   height: 20px;
@@ -1374,7 +1414,7 @@ c-pagar {
   cursor: pointer;
 }
 .c-historialCarrito__close:hover {
-  transform: scale(1.2);
+  transform: rotate(90deg) scale(1.2);
 }
 .c-historialCarrito__input {
   width: 50px;
@@ -1383,9 +1423,8 @@ c-pagar {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 24px 40px;
-  gap: 16px;
-  padding-bottom: 30px;
+  margin: 32px 40px 40px;
+  font-size: 14px;
 }
 
 .g--clear-list {
@@ -2091,25 +2130,25 @@ c-pagar {
   font-family:  'Montserrat', sans-serif;
 }
 
-body {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 html {
   scroll-behavior: smooth;
+  position: absolute;
+  min-width: 100vw;
+  overflow-x: hidden;
+  min-width: 100vw;
+}
+
+body {
+  width: 100vw;
 }
 
 #contenedor {
-  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-#app {
-  width: 100%;
-  min-height: 100%;
+#contenedor-detalle {
+  min-height: 80vh;
 }
 
 /*# sourceMappingURL=main.css.map */

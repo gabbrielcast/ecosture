@@ -1,4 +1,6 @@
 import { cargaInicio } from "./main.js";
+import { CARRITO } from "./main.js";
+import { User } from "./auth.js";
 
 let btnLogin = null;
 let btnCarrito = null;
@@ -10,23 +12,30 @@ function setNav() {
 	btnCarrito = document.getElementById("btnCarrito");
 	btnHistorial = document.getElementById("btnHistorial");
 	btnInicio = document.getElementById("btn-nav-Inicio");
+	let spanError = document.getElementById("login-error");
 
 	const modalLogin = document.getElementById("login");
 	const modalCarrito = document.getElementById("carrito");
 	const modalHistorial = document.getElementById("historialCarrito");
 
 	btnLogin.onclick = () => {
-		modalLogin.style.top = "150px";
-		toggleBtnsNav("login");
+		if (!User.active) {
+			modalLogin.style.top = "calc(50vh - (200px))";
+			toggleBtnsNav("login");
+			spanError.innerHTML = "";
+		}
 	};
 
 	btnCarrito.onclick = () => {
-		modalCarrito.style.top = "150px";
-		toggleBtnsNav("carrito");
+		if (CARRITO.hayProductos() == true) {
+			modalCarrito.style.top = "calc(50vh - (250px))";
+			toggleBtnsNav("carrito");
+			CARRITO.pintaProductos();
+		}
 	};
 
 	btnHistorial.onclick = () => {
-		modalHistorial.style.top = "150px";
+		modalHistorial.style.top = "calc(50vh - (250px))";
 		toggleBtnsNav("historial");
 	};
 
@@ -35,10 +44,14 @@ function setNav() {
 	};
 }
 
+function setUsername() {
+	btnLogin.innerHTML = User.username;
+}
+
 function toggleBtnsNav() {
 	btnCarrito.disabled = !btnCarrito.disabled;
 	btnHistorial.disabled = !btnHistorial.disabled;
 	btnLogin.disabled = !btnLogin.disabled;
 }
 
-export { toggleBtnsNav, setNav };
+export { toggleBtnsNav, setNav, setUsername };

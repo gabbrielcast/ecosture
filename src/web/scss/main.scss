@@ -14,23 +14,24 @@
 @import "06_global/g--clear-list", "06_global/_g--padding",
 	"06_global/g--seccion-productos-title";
 
-body {
-	// min-width: 100vh;
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
 html {
 	scroll-behavior: smooth;
+	position: absolute;
+	min-width: 100vw;
+	overflow-x: hidden;
+	min-width: 100vw;
+}
+
+body {
+	width: 100vw;
 }
 
 #contenedor {
-	min-height: 100vh;
+	width: 100%;
+	overflow-x: hidden;
+	// min-height: 100vh;
 }
 
-#app {
-	width: 100%;
-	min-height: 100%;
+#contenedor-detalle {
+	min-height: 80vh;
 }

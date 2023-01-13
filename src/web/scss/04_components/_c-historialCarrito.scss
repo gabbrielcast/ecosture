@@ -6,7 +6,7 @@
 	// height: 65%;
 	// visibility: hidden;
 	top: -1000px;
-	// left: 30%;
+	left: 25vw;
 	background-color: getColors("verde", 0);
 	border: 2px solid getColors("verde", 1);
 	overflow-y: auto;
@@ -36,19 +36,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: getFontSize("3xl");
+		font-size: getFontSize("xl");
 		font-weight: bold;
 		text-align: center;
-		// padding-top: getPadding(9);
-		// margin: getMargin(6) getMargin(8);
 		color: getColors("blanco", 0);
 		background-color: getColors("verde", 1);
 		height: 80px;
-		margin-bottom: getMargin(6);
+		margin-bottom: getMargin(9);
 	}
 
 	&__item {
-		padding: getPadding(7) getPadding(9);
+		padding: getPadding(7) getPadding(8);
 		height: 120px;
 		display: flex;
 		justify-content: space-around;
@@ -64,30 +62,30 @@
 		width: 75px;
 	}
 
-	// &__descripcion {
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	gap: getGap(5);
+	&__descripcion {
+		display: flex;
+		flex-direction: column;
+		gap: getGap(5);
 
-	// 	span {
-	// 		color: getColors("verde", 1);
-	// 		font-weight: getFontWeight(4);
-	// 	}
-	// 	span:nth-child(1) {
-	// 		color: getColors("verde", 1);
-	// 		font-weight: bold;
-	// 	}
-	// }
+		span {
+			color: getColors("verde", 1);
+			font-weight: getFontWeight(4);
+		}
+		span:nth-child(1) {
+			color: getColors("verde", 1);
+			font-weight: bold;
+		}
+	}
 
-	// &__icon {
-	// 	width: 20px;
-	// 	height: 20px;
-	// 	transition: ease 0.3s;
-	// 	cursor: pointer;
-	// 	&:hover {
-	// 		transform: scale(1.2);
-	// 	}
-	// }
+	&__icon {
+		width: 20px;
+		height: 20px;
+		transition: ease 0.3s;
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
 
 	&__close {
 		width: 20px;
@@ -95,7 +93,7 @@
 		transition: ease 0.3s;
 		cursor: pointer;
 		&:hover {
-			transform: scale(1.2);
+			transform: rotate(90deg) scale(1.2);
 		}
 	}
 
@@ -107,8 +105,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: getMargin(8) getMargin(10);
-		gap: getGap(6);
-		padding-bottom: 30px;
+		margin: getMargin(9) getMargin(10) getMargin(10);
+		// gap: getGap(6);
+		font-size: getFontSize("s");
 	}
 }

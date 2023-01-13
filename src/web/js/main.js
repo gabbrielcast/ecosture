@@ -6,9 +6,9 @@ import { peticion } from "./peticion.js";
 import { User, Auth } from "./auth.js";
 import { textos } from "./textos.js";
 
-let carrito = null;
-let historial = null;
-export function cargaInicio() {
+let CARRITO = null;
+let HISTORIAL = null;
+function cargaInicio() {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
 	portada(contenedor);
@@ -26,9 +26,9 @@ function portada(contenedor) {
         <h2 class="c-hero__subtitulo">${textos.hero.subtitulo}</h2>
         <p class="c-hero__texto">${textos.hero.descripcion}</p>
         <div class="c-hero__iconos">
-            <div class="c-icon c-icon--planeta"></div>
-            <div class="c-icon c-icon--bombilla"></div>
-            <div class="c-icon c-icon--hojas"></div>
+            <div class="c-icon c-icon__circulo--planeta"></div>
+            <div class="c-icon c-icon__circulo--bombilla"></div>
+            <div class="c-icon c-icon__circulo--hojas"></div>
         </div>
     `;
 	contenedor.appendChild(section);
@@ -153,7 +153,7 @@ function categorias(contenedor) {
 	section.id = "categorias";
 
 	section.innerHTML = `
-    <h1 class="g--seccion-productos-title">CATEGORÍAS</h1>
+    <h1 class="g--seccion-productos-title" >CATEGORÍAS</h1>
 					<div
 						class="l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12"
 					>
@@ -226,7 +226,6 @@ function categorias(contenedor) {
 }
 
 //PRODUCTOS
-
 function listProductos() {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
@@ -235,239 +234,239 @@ function listProductos() {
 
 	section.innerHTML = `
     <h1 class="g--seccion-productos-title">LOREM IPSUM</h1>
-					<div
-						class="l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8"
-					>
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/mujer/faldas/falda2.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								<p class="c-producto__price">19.99€</p>
+		<div
+			class="l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8"
+		>
+			<div class="c-producto">
+				<img
+					class="c-producto__img"
+					src="./assets/img/Ropa/mujer/faldas/falda2.jpg"
+					alt=""
+				/>
+				<div class="c-producto__info">
+					<h4 class="c-producto__title">LOREM IPSUM</h4>
+					
+					<p class="c-producto__price">19.99€</p>
 
-								<div class="c-producto__botones">
-									<div class="c-producto__anyade">
-										
-										<a class="c-button c-button--products" >
-											<i class="fas fa-cart-plus"></i>
-											Añadir
-										 </a>
-									</div>
-									<div class="c-producto__ver">
-										<a class="c-button c-button--products" >
-										<i class="fas fa-search"></i>
-											Ver producto
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/mujer/camisetas/camiseta2.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								<p class="c-producto__price">19.99€</p>
-								<div class="c-producto__botones">
-									<div class="c-producto__anyade">
-									
-									<a class="c-button c-button--products" >
-									<i class="fas fa-cart-plus"></i>
-									Añadir
-								 </a>
-							</div>
-							<div class="c-producto__ver">
-								<a class="c-button c-button--products" >
-								<i class="fas fa-search"></i>
-									Ver producto
+					<div class="c-producto__botones">
+						<div class="c-producto__anyade">
+							
+							<a class="c-button c-button--products" >
+								<i class="fas fa-cart-plus"></i>
+								Añadir
 								</a>
-									</div>
-								</div>
-							</div>
 						</div>
-
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/mujer/camisetas/camiseta3.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								<p class="c-producto__price">19.99€</p>
-								<div class="c-producto__botones">
-									<div class="c-producto__anyade">
-										
-									
-									<a class="c-button c-button--products" >
-									<i class="fas fa-cart-plus"></i>
-									Añadir
-								 </a>
-							</div>
-							<div class="c-producto__ver">
-								<a class="c-button c-button--products" >
-								<i class="fas fa-search"></i>
-									Ver producto
-								</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/hombre/camisetas/camiseta4.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								<p class="c-producto__price">19.99€</p>
-								<div class="c-producto__botones">
-									<div class="c-producto__anyade">
-									
-									<a class="c-button c-button--products" >
-									<i class="fas fa-cart-plus"></i>
-									Añadir
-								 </a>
-							</div>
-							<div class="c-producto__ver">
-								<a class="c-button c-button--products" >
-								<i class="fas fa-search"></i>
-									Ver producto
-								</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/hombre/camisetas/camiseta6.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								<p class="c-producto__price">19.99€</p>
-								<div class="c-producto__botones">
-									<div class="c-producto__anyade">
-										
-									
-									<a class="c-button c-button--products" >
-									<i class="fas fa-cart-plus"></i>
-									Añadir
-								 </a>
-							</div>
-							<div class="c-producto__ver">
-								<a class="c-button c-button--products" >
-								<i class="fas fa-search"></i>
-									Ver producto
-								</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/mujer/camisetas/camiseta7.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								<p class="c-producto__price">19.99€</p>
-								<div class="c-producto__botones">
-									<div class="c-producto__anyade">
-										
-									
-									<a class="c-button c-button--products" >
-									<i class="fas fa-cart-plus"></i>
-									Añadir
-								 </a>
-							</div>
-							<div class="c-producto__ver">
-								<a class="c-button c-button--products" >
-								<i class="fas fa-search"></i>
-									Ver producto
-								</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/mujer/camisetas/camiseta6.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								<p class="c-producto__price">19.99€</p>
-								<div class="c-producto__botones">
-									<div class="c-producto__anyade">
-										
-								
-									<a class="c-button c-button--products" >
-									<i class="fas fa-cart-plus"></i>
-									Añadir
-								 </a>
-							</div>
-							<div class="c-producto__ver">
-								<a class="c-button c-button--products" >
-								<i class="fas fa-search"></i>
-									Ver producto
-								</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/hombre/camisetas/camiseta12.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								<p class="c-producto__price">19.99€</p>
-								<div class="c-producto__botones">
-									<div class="c-producto__anyade">
-										
-									
-									<a class="c-button c-button--products" >
-									<i class="fas fa-cart-plus"></i>
-									Añadir
-								 </a>
-							</div>
-							<div class="c-producto__ver">
-								<a class="c-button c-button--products" >
-								<i class="fas fa-search"></i>
-									Ver producto
-								</a>
-									</div>
-								</div>
-							</div>
+						<div class="c-producto__ver">
+							<a class="c-button c-button--products" >
+							<i class="fas fa-search"></i>
+								Ver producto
+							</a>
 						</div>
 					</div>
+				</div>
+			</div>
+
+			<div class="c-producto">
+				<img
+					class="c-producto__img"
+					src="./assets/img/Ropa/mujer/camisetas/camiseta2.jpg"
+					alt=""
+				/>
+				<div class="c-producto__info">
+					<h4 class="c-producto__title">LOREM IPSUM</h4>
+					
+					<p class="c-producto__price">19.99€</p>
+					<div class="c-producto__botones">
+						<div class="c-producto__anyade">
+						
+						<a class="c-button c-button--products" >
+						<i class="fas fa-cart-plus"></i>
+						Añadir
+						</a>
+				</div>
+				<div class="c-producto__ver">
+					<a class="c-button c-button--products" >
+					<i class="fas fa-search"></i>
+						Ver producto
+					</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="c-producto">
+				<img
+					class="c-producto__img"
+					src="./assets/img/Ropa/mujer/camisetas/camiseta3.jpg"
+					alt=""
+				/>
+				<div class="c-producto__info">
+					<h4 class="c-producto__title">LOREM IPSUM</h4>
+					
+					<p class="c-producto__price">19.99€</p>
+					<div class="c-producto__botones">
+						<div class="c-producto__anyade">
+							
+						
+						<a class="c-button c-button--products" >
+						<i class="fas fa-cart-plus"></i>
+						Añadir
+						</a>
+				</div>
+				<div class="c-producto__ver">
+					<a class="c-button c-button--products" >
+					<i class="fas fa-search"></i>
+						Ver producto
+					</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="c-producto">
+				<img
+					class="c-producto__img"
+					src="./assets/img/Ropa/hombre/camisetas/camiseta4.jpg"
+					alt=""
+				/>
+				<div class="c-producto__info">
+					<h4 class="c-producto__title">LOREM IPSUM</h4>
+					
+					<p class="c-producto__price">19.99€</p>
+					<div class="c-producto__botones">
+						<div class="c-producto__anyade">
+						
+						<a class="c-button c-button--products" >
+						<i class="fas fa-cart-plus"></i>
+						Añadir
+						</a>
+				</div>
+				<div class="c-producto__ver">
+					<a class="c-button c-button--products" >
+					<i class="fas fa-search"></i>
+						Ver producto
+					</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="c-producto">
+				<img
+					class="c-producto__img"
+					src="./assets/img/Ropa/hombre/camisetas/camiseta6.jpg"
+					alt=""
+				/>
+				<div class="c-producto__info">
+					<h4 class="c-producto__title">LOREM IPSUM</h4>
+					
+					<p class="c-producto__price">19.99€</p>
+					<div class="c-producto__botones">
+						<div class="c-producto__anyade">
+							
+						
+						<a class="c-button c-button--products" >
+						<i class="fas fa-cart-plus"></i>
+						Añadir
+						</a>
+				</div>
+				<div class="c-producto__ver">
+					<a class="c-button c-button--products" >
+					<i class="fas fa-search"></i>
+						Ver producto
+					</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="c-producto">
+				<img
+					class="c-producto__img"
+					src="./assets/img/Ropa/mujer/camisetas/camiseta7.jpg"
+					alt=""
+				/>
+				<div class="c-producto__info">
+					<h4 class="c-producto__title">LOREM IPSUM</h4>
+					
+					<p class="c-producto__price">19.99€</p>
+					<div class="c-producto__botones">
+						<div class="c-producto__anyade">
+							
+						
+						<a class="c-button c-button--products" >
+						<i class="fas fa-cart-plus"></i>
+						Añadir
+						</a>
+				</div>
+				<div class="c-producto__ver">
+					<a class="c-button c-button--products" >
+					<i class="fas fa-search"></i>
+						Ver producto
+					</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="c-producto">
+				<img
+					class="c-producto__img"
+					src="./assets/img/Ropa/mujer/camisetas/camiseta6.jpg"
+					alt=""
+				/>
+				<div class="c-producto__info">
+					<h4 class="c-producto__title">LOREM IPSUM</h4>
+					
+					<p class="c-producto__price">19.99€</p>
+					<div class="c-producto__botones">
+						<div class="c-producto__anyade">
+							
+					
+						<a class="c-button c-button--products" >
+						<i class="fas fa-cart-plus"></i>
+						Añadir
+						</a>
+				</div>
+				<div class="c-producto__ver">
+					<a class="c-button c-button--products" >
+					<i class="fas fa-search"></i>
+						Ver producto
+					</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="c-producto">
+				<img
+					class="c-producto__img"
+					src="./assets/img/Ropa/hombre/camisetas/camiseta12.jpg"
+					alt=""
+				/>
+				<div class="c-producto__info">
+					<h4 class="c-producto__title">LOREM IPSUM</h4>
+					
+					<p class="c-producto__price">19.99€</p>
+					<div class="c-producto__botones">
+						<div class="c-producto__anyade">
+							
+						
+						<a class="c-button c-button--products" >
+						<i class="fas fa-cart-plus"></i>
+						Añadir
+						</a>
+				</div>
+				<div class="c-producto__ver">
+					<a class="c-button c-button--products" >
+					<i class="fas fa-search"></i>
+						Ver producto
+					</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     
     `;
 
@@ -481,19 +480,17 @@ function listProductos() {
 	});
 
 	contenedor.appendChild(section);
-	window.scroll({
-		top: 0,
-		behavior: "smooth",
-	});
+	doScroll();
 }
 
 function detalleProducto() {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
-	let section = document.createElement("section");
-	section.className =
-		"l-flex l-flex--direction-column l-flex--aling-items--center";
-	section.innerHTML = `
+	let detalle = document.createElement("section");
+	detalle.id = "contenedor-detalle";
+	detalle.className =
+		"l-flex l-flex--direction-column l-flex--aling-items--center l-flex--justify-center";
+	detalle.innerHTML = `
 		<div class="c-detalle">
 			
 			<img class="c-detalle__img" src="./assets/img/Ropa/hombre/camisetas/camiseta1.jpg"></img>
@@ -503,7 +500,7 @@ function detalleProducto() {
 				<p class="c-detalle__descripcion">Vivamus volutpat euismod nibh vel volutpat. Maecenas vitae odio massa. Donec pharetra convallis neque at molestie. Aliquam eu sodales arcu. Morbi quis laoreet dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eleifend diam non vestibulum volutpat. Maecenas maximus placerat velit sed auctor.</p>
 				<p class="c-detalle__precio"><del>500€</del> <span>300€</span></p>
 				<div class="c-detalle__botones">
-					<a class="c-button c-button--big">
+					<a id="anyadirProducto" class="c-button c-button--big">
 						<i class="fas fa-cart-plus"></i>
 						Añadir al Carrito</a>
 					<a class="c-button c-button--medium">Volver</a>
@@ -512,22 +509,39 @@ function detalleProducto() {
 			</div>
 		
 		</div>
-		
-		
-	
-	
 	`;
-	contenedor.appendChild(section);
-	window.scroll({
-		top: 0,
+
+	contenedor.appendChild(detalle);
+	let btnAnyadir = document.getElementById("anyadirProducto");
+	btnAnyadir.onclick = () => {
+		let num = Math.floor(Math.random() * 10);
+
+		CARRITO.anyadeProducto({
+			codigo: num,
+			nombre: "prueba" + num,
+			descripcion: "desc" + num,
+			precio: 22,
+			unidades: 1,
+		});
+	};
+	doScroll({
+		top: 20,
 		behavior: "smooth",
 	});
 }
 
+function doScroll(conf = null) {
+	let scroll = conf ?? {
+		top: 0,
+		behavior: "smooth",
+	};
+	window.scroll(scroll);
+}
+
 window.onload = () => {
-	historial = new Historial();
+	HISTORIAL = new Historial();
+	CARRITO = new Carrito();
 	setNav();
-	carrito = new Carrito();
 	cargaInicio();
 	setLogin();
 	// Login();
@@ -536,7 +550,8 @@ window.onload = () => {
 	// Auth.accessToken = authLocal.TokenAcceso;
 	// Auth.refreshToken = authLocal.TokenRefresco;
 
-	peticion("GET", "http://localhost/ecosture/api/peliculas", true)
-		.then((r) => console.log(r))
-		.catch((r) => console.log(r));
+	// peticion("GET", "http://localhost/ecosture/api/peliculas", true)
+	// 	.then((r) => console.log(r))
+	// 	.catch((r) => console.log(r));
 };
+export { CARRITO, HISTORIAL, cargaInicio };

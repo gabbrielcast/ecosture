@@ -1,0 +1,255 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"username": "ecosture",
+			"password": "ecosture"
+		}
+	],
+	"categorias": [
+		{
+			"id": "1",
+			"nombre": "pantalones"
+		},
+		{
+			"id": "2",
+			"nombre": "camisetas"
+		},
+		{
+			"id": "3",
+			"nombre": "gorros"
+		},
+		{
+			"id": "4",
+			"nombre": "bufandas"
+		}
+	],
+	"productos": [
+		{
+			"id": "p1",
+			"nombre": "producto1",
+			"descripcion": "descripcion p1",
+			"precio": 1,
+			"idCategoria": "1"
+		},
+		{
+			"id": "p2",
+			"nombre": "producto2",
+			"descripcion": "descripcion p2",
+			"precio": 2,
+			"idCategoria": "1"
+		},
+		{
+			"id": "p3",
+			"nombre": "producto3",
+			"descripcion": "descripcion p3",
+			"precio": 3,
+			"idCategoria": "1"
+		},
+		{
+			"id": "p4",
+			"nombre": "producto4",
+			"descripcion": "descripcion p4",
+			"precio": 4,
+			"idCategoria": "1"
+		},
+		{
+			"id": "p5",
+			"nombre": "producto6",
+			"descripcion": "descripcion p6",
+			"precio": 5,
+			"idCategoria": "1"
+		},
+		{
+			"id": "p6",
+			"nombre": "producto6",
+			"descripcion": "descripcion p6",
+			"precio": 6,
+			"idCategoria": "1"
+		},
+		{
+			"id": "p7",
+			"nombre": "producto7",
+			"descripcion": "descripcion p7",
+			"precio": 1,
+			"idCategoria": "1"
+		},
+		{
+			"id": "p8",
+			"nombre": "producto8",
+			"descripcion": "descripcion p8",
+			"precio": 1,
+			"idCategoria": "1"
+		},
+		{
+			"id": "p9",
+			"nombre": "producto9",
+			"descripcion": "descripcion p9",
+			"precio": 1,
+			"idCategoria": "2"
+		},
+		{
+			"id": "p10",
+			"nombre": "producto10",
+			"descripcion": "descripcion p10",
+			"precio": 2,
+			"idCategoria": "2"
+		},
+		{
+			"id": "p11",
+			"nombre": "producto11",
+			"descripcion": "descripcion p11",
+			"precio": 3,
+			"idCategoria": "2"
+		},
+		{
+			"id": "p12",
+			"nombre": "producto12",
+			"descripcion": "descripcion p12",
+			"precio": 4,
+			"idCategoria": "2"
+		},
+		{
+			"id": "p13",
+			"nombre": "producto13",
+			"descripcion": "descripcion p13",
+			"precio": 5,
+			"idCategoria": "2"
+		},
+		{
+			"id": "p14",
+			"nombre": "producto14",
+			"descripcion": "descripcion p14",
+			"precio": 6,
+			"idCategoria": "2"
+		},
+		{
+			"id": "p15",
+			"nombre": "producto15",
+			"descripcion": "descripcion p7",
+			"precio": 1,
+			"idCategoria": "2"
+		},
+		{
+			"id": "p16",
+			"nombre": "producto16",
+			"descripcion": "descripcion p16",
+			"precio": 1,
+			"idCategoria": "2"
+		},
+		{
+			"id": "p17",
+			"nombre": "producto17",
+			"descripcion": "descripcion p17",
+			"precio": 1,
+			"idCategoria": "3"
+		},
+		{
+			"id": "p18",
+			"nombre": "producto18",
+			"descripcion": "descripcion p18",
+			"precio": 2,
+			"idCategoria": "3"
+		},
+		{
+			"id": "p19",
+			"nombre": "producto19",
+			"descripcion": "descripcion p19",
+			"precio": 3,
+			"idCategoria": "3"
+		},
+		{
+			"id": "p20",
+			"nombre": "producto20",
+			"descripcion": "descripcion p20",
+			"precio": 4,
+			"idCategoria": "3"
+		},
+		{
+			"id": "p21",
+			"nombre": "producto21",
+			"descripcion": "descripcion p21",
+			"precio": 5,
+			"idCategoria": "3"
+		},
+		{
+			"id": "p22",
+			"nombre": "producto22",
+			"descripcion": "descripcion p22",
+			"precio": 6,
+			"idCategoria": "3"
+		},
+		{
+			"id": "p23",
+			"nombre": "producto23",
+			"descripcion": "descripcion p23",
+			"precio": 1,
+			"idCategoria": "3"
+		},
+		{
+			"id": "p24",
+			"nombre": "producto24",
+			"descripcion": "descripcion p24",
+			"precio": 1,
+			"idCategoria": "3"
+		},
+		{
+			"id": "p25",
+			"nombre": "producto25",
+			"descripcion": "descripcion p25",
+			"precio": 1,
+			"idCategoria": "4"
+		},
+		{
+			"id": "p26",
+			"nombre": "producto26",
+			"descripcion": "descripcion p26",
+			"precio": 1,
+			"idCategoria": "4"
+		},
+		{
+			"id": "p27",
+			"nombre": "producto27",
+			"descripcion": "descripcion p27",
+			"precio": 2,
+			"idCategoria": "4"
+		},
+		{
+			"id": "p28",
+			"nombre": "producto28",
+			"descripcion": "descripcion p28",
+			"precio": 2,
+			"idCategoria": "4"
+		},
+		{
+			"id": "p29",
+			"nombre": "producto29",
+			"descripcion": "descripcion p29",
+			"precio": 3,
+			"idCategoria": "4"
+		},
+		{
+			"id": "p30",
+			"nombre": "producto30",
+			"descripcion": "descripcion p30",
+			"precio": 4,
+			"idCategoria": "4"
+		},
+		{
+			"id": "p31",
+			"nombre": "producto31",
+			"descripcion": "descripcion p31",
+			"precio": 5,
+			"idCategoria": "4"
+		},
+		{
+			"id": "p32",
+			"nombre": "producto32",
+			"descripcion": "descripcion p32",
+			"precio": 6,
+			"idCategoria": "4"
+		}
+	],
+	"carritos": [],
+	"historial": []
+}

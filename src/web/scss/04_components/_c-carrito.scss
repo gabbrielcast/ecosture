@@ -6,7 +6,7 @@
 	// height: 65%;
 	// visibility: hidden;
 	top: -1000px;
-	// left: 30%;
+	left: 25vw;
 	background-color: getColors("verde", 0);
 	border: 2px solid getColors("verde", 1);
 	overflow-y: auto;
@@ -21,6 +21,7 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
+		padding: 30px;
 	}
 	// height: 60%;
 	&::-webkit-scrollbar {

@@ -1,4 +1,4 @@
-let User = { username: false };
+let User = { active: false, username: "" };
 
 let Auth = { accessToken: "", refreshToken: "" };
 
