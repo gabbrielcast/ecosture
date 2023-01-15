@@ -1,5 +1,6 @@
 <?php
 
+use Database\orm\DB;
 use Middleware\Acceso;
 use Response\HTTPResponse;
 
@@ -21,6 +22,7 @@ $router->before('GET|POST', '/api/.*', function() {
 
 $router->get('/api/peliculas',function(){
     echo json_encode([["nombre"=>"interestellar"],["nombre"=>"avatar"]]);
+//    echo json_encode(DB::table('user')->select()->get());
 });//Loguearse
 
 

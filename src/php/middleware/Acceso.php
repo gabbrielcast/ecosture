@@ -11,7 +11,19 @@ use PDO;
 class Acceso{
 
     static function acceso(){
-        $token = ltrim(getallheaders()['Authorization'], 'Bearer ');
+
+        try{
+
+            $token = ltrim(getallheaders()['Authorization']??throw new Exception(), 'Bearer ');
+        }catch(Exception){
+            $data = [
+                "Error" => "Token no encontrado"
+            ];
+            HTTPResponse::json(
+                400,$data
+            );
+            return false;
+        }
  
         if($token == "") {
             $data = [
@@ -20,7 +32,7 @@ class Acceso{
             HTTPResponse::json(
                 400,$data
             );
-            exit(0);
+            return false;
         }
         
         try {
@@ -37,7 +49,7 @@ class Acceso{
             HTTPResponse::json(
                 404,["Error"=>$th->getMessage()]
             );
-            exit(0);
+            return false;
         }
     
         $result=(array)$result[0];
@@ -51,7 +63,7 @@ class Acceso{
             HTTPResponse::json(
                 401,$data
             );
-            exit(0);
+            return false;
         }
         return true;
         

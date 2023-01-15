@@ -5,9 +5,9 @@ import { setLogin, Login } from "./login.js";
 import { peticion } from "./peticion.js";
 import { User, Auth } from "./auth.js";
 import { textos } from "./textos.js";
+import { confAlerta } from "./alerta.js";
 
 let CARRITO = null;
-let HISTORIAL = null;
 function cargaInicio() {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
@@ -525,7 +525,7 @@ function detalleProducto() {
 		});
 	};
 	doScroll({
-		top: 20,
+		top: 125,
 		behavior: "smooth",
 	});
 }
@@ -539,11 +539,11 @@ function doScroll(conf = null) {
 }
 
 window.onload = () => {
-	HISTORIAL = new Historial();
 	CARRITO = new Carrito();
 	setNav();
 	cargaInicio();
 	setLogin();
+	confAlerta();
 	// Login();
 
 	// let authLocal = JSON.parse(localStorage.getItem("Auth")).r;
@@ -554,4 +554,4 @@ window.onload = () => {
 	// 	.then((r) => console.log(r))
 	// 	.catch((r) => console.log(r));
 };
-export { CARRITO, HISTORIAL, cargaInicio };
+export { CARRITO, cargaInicio };

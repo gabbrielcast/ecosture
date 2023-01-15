@@ -14,6 +14,10 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="icon" type="image/jpg" href="./assets/img/logo2.svg" />
+		<script
+			src="https://kit.fontawesome.com/498cb667c6.js"
+			crossorigin="anonymous"
+		></script>
 		<script src="./js/main.js" type="module"></script>
 	</head>
 	<body>
@@ -74,46 +78,7 @@
 
 		<div id="historialCarrito" class="c-historialCarrito">
 			<h3 class="c-historialCarrito__title">HISTORIAL DE CARRITOS</h3>
-			<div class="c-historial__container">
-				<div class="c-historialCarrito__item">
-					<img
-						class="c-historialCarrito__close"
-						src="./assets/img/iconos/close.png"
-						alt=""
-					/>
-					<img
-						class="c-historialCarrito__img"
-						src="./assets/img/Ropa/mujer/sudaderas/sudadera4.jpg"
-					/>
-
-					<div class="c-historialCarrito__descripcion">
-						<span>Lorem Ipsum</span>
-						<span>Tempus Fugit</span>
-						<span>Nº 37625 </span>
-					</div>
-
-					<div class="c-historialCarrito__precio">19.90€</div>
-				</div>
-				<div class="c-historialCarrito__item">
-					<img
-						class="c-historialCarrito__close"
-						src="./assets/img/iconos/close.png"
-						alt=""
-					/>
-					<img
-						class="c-historialCarrito__img"
-						src="./assets/img/Ropa/mujer/sudaderas/sudadera4.jpg"
-					/>
-
-					<div class="c-historialCarrito__descripcion">
-						<span>Lorem Ipsum</span>
-						<span>Tempus Fugit</span>
-						<span>Nº 37625 </span>
-					</div>
-
-					<div class="c-historialCarrito__precio">19.90€</div>
-				</div>
-			</div>
+			<div id="historialContainer" class="c-historial__container"></div>
 
 			<div class="c-carrito__botones">
 				<a class="c-button" id="cerrarHistorial">Seguir Comprando</a>
@@ -147,7 +112,7 @@
 				</div>
 				<div class="c-pago__btns">
 					<a id="btnCancelarPago" class="c-button">CANCELAR</a>
-					<a class="c-button">PAGAR</a>
+					<a id="btnRealizarPago" class="c-button">PAGAR</a>
 				</div>
 			</div>
 		</div>
@@ -229,6 +194,24 @@
 					</svg>
 				</div>
 			</div>
+		</div>
+
+		<!-- Alerta -->
+		<div id="alerta" class="c-alerta">
+			<span class="c-alerta__icon-error"
+				><i class="fa-solid fa-xmark"></i
+			></span>
+
+			<h2 id="alertaTitulo" class="c-alerta__titulo">No has iniciado sesion</h2>
+			<button
+				id="btnAlertaCancelar"
+				class="c-button c-button--alert c-button--cancel"
+			>
+				Cancelar
+			</button>
+			<button id="btnAlertaAceptar" class="c-button c-button--alert">
+				Aceptar
+			</button>
 		</div>
 
 		<footer id="footer" class="c-footer">

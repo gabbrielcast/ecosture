@@ -8,9 +8,9 @@
 	padding: getPadding(6) getPadding(9);
 	background-color: getColors("verde", 0);
 	font-family: getFontFamily("principal");
-	width: 100vw;
+	width: 100%;
 	transition: all 0.5s;
-	z-index: 1;
+	z-index: 1000;
 
 	&__logo {
 		width: 150px;

@@ -1,9 +1,10 @@
 import { toggleBtnsNav, setUsername } from "./nav.js";
 import { User, Auth } from "./auth.js";
 import { peticion } from "./peticion.js";
+import { Historial } from "./historialCarrito.js";
 
 let modalLogin = null;
-
+let HISTORIAL = null;
 function setLogin() {
 	modalLogin = document.getElementById("login");
 	let loader = document.getElementById("loader-login");
@@ -22,6 +23,8 @@ function setLogin() {
 			Login()
 				.then((r) => {
 					// console.log("sesion iniciada", r);
+					HISTORIAL = new Historial();
+					HISTORIAL.update();
 					spanError.innerHTML = "";
 					loader.style.visibility = "hidden";
 					cerrarLogin();
@@ -51,6 +54,7 @@ function Login(datos = null) {
 				localStorage.setItem("user", JSON.stringify(r));
 				User.active = true;
 				User.username = r[0].username;
+				User.id = r[0].id;
 				resolve(r);
 				// localStorage.setItem("Auth", JSON.stringify(r.datos));
 				// Auth.accessToken = r.TokenAcceso;
@@ -77,7 +81,6 @@ function cerrarLogin() {
 }
 
 function abrirLogin() {
-	toggleBtnsNav();
 	modalLogin.style.top = "150px";
 }
-export { setLogin, Login, cerrarLogin, abrirLogin };
+export { setLogin, Login, cerrarLogin, abrirLogin, HISTORIAL };

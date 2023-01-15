@@ -9,7 +9,7 @@
 	"04_components/c-footer", "04_components/c-header", "04_components/c-nav",
 	"04_components/c-hero", "04_components/c-about", "04_components/c-testimonio",
 	"04_components/c-producto", "04_components/c-detalle", "04_components/c-pago",
-	"04_components/c-historialCarrito";
+	"04_components/c-historialCarrito", "04_components/c-alerta";
 
 @import "06_global/g--clear-list", "06_global/_g--padding",
 	"06_global/g--seccion-productos-title";
@@ -19,19 +19,21 @@ html {
 	position: absolute;
 	min-width: 100vw;
 	overflow-x: hidden;
-	min-width: 100vw;
+	min-height: 100vh;
 }
 
 body {
-	width: 100vw;
+	min-width: 100vw;
+	min-height: 100vh;
 }
 
 #contenedor {
 	width: 100%;
 	overflow-x: hidden;
-	// min-height: 100vh;
+	min-height: 80vh;
 }
 
 #contenedor-detalle {
-	min-height: 80vh;
+	// margin-top: 80px;
+	min-height: 800px;
 }

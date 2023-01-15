@@ -1,11 +1,46 @@
+import { User } from "./auth.js";
 import { toggleBtnsNav } from "./nav.js";
 import { Pago } from "./pago.js";
+import { abrirLogin } from "./login.js";
 export class Carrito {
 	constructor() {
 		this.modalCarrito = document.getElementById("carrito");
 		this.productos = [];
 		this.animacionCarrito();
 	}
+	animacionCarrito() {
+		let cerrar = document.getElementById("cerrarCarrito");
+
+		cerrar.onclick = () => {
+			this.quitarCarrito();
+			toggleBtnsNav();
+		};
+
+		this.setPago();
+	}
+
+	quitarCarrito() {
+		this.modalCarrito.style.top = "-1000px";
+	}
+
+	vaciarProductos() {
+		this.productos = [];
+	}
+
+	setPago() {
+		let btnPagarCarrito = document.getElementById("pagarCarrito");
+
+		btnPagarCarrito.onclick = () => {
+			this.quitarCarrito();
+			if (User.active) {
+				let pago = new Pago(this.productos, this.precioTotal());
+				pago.abrirPago();
+			} else {
+				abrirLogin();
+			}
+		};
+	}
+
 	hayProductos() {
 		return this.productos.length > 0;
 	}
@@ -17,25 +52,7 @@ export class Carrito {
 
 		return precioTotal;
 	}
-	animacionCarrito() {
-		let btnPagarCarrito = document.getElementById("pagarCarrito");
-		let cerrar = document.getElementById("cerrarCarrito");
 
-		cerrar.onclick = () => {
-			this.quitarCarrito();
-			toggleBtnsNav();
-			// activarBtnsNav("carrito");
-		};
-
-		btnPagarCarrito.onclick = () => {
-			this.quitarCarrito();
-			let pago = new Pago();
-			pago.abrirPago();
-		};
-	}
-	quitarCarrito() {
-		this.modalCarrito.style.top = "-1000px";
-	}
 	anyadeProducto(producto) {
 		let existe = this.productos.find((a) => a.codigo == producto.codigo);
 		existe == undefined ? this.productos.push(producto) : existe.unidades++;
@@ -80,8 +97,9 @@ export class Carrito {
 
 		this.productos.forEach((p) => {
 			let producto = document.createElement("div");
+			producto.id = p.codigo;
+			producto.className = "c-carrito__item";
 			producto.innerHTML = `
-			<div id="${p.codigo}" class="c-carrito__item">
 				<img id="p-eliminar"
 					class="c-carrito__close"
 					src="./assets/img/iconos/close.png"
@@ -91,31 +109,31 @@ export class Carrito {
 					class="c-carrito__img"
 					src="./assets/img/Ropa/hombre/camisetas/camiseta8.jpg"
 				/>
-	
+
 				<div class="c-carrito__descripcion">
 					<span>${p.nombre}</span>
 					<span>${p.descripcion}</span>
 					<span>categoria</span>
 				</div>
-	
+
 				<div class="c-carrito__cantidad">
 					<img id="p-minus"
 						class="c-icon c-icon--cantidad c-icon--minus"
 						src="./assets/img/iconos/minus.png"
 						alt=""
 					/>
-	
+
 					<input class="c-carrito__input" type="number" name="name" value="${p.unidades}" />
-	
+
 					<img id="p-plus"
 						class="c-icon c-icon--cantidad c-icon--plus"
 						src="./assets/img/iconos/plus.png"
 						alt=""
 					/>
 				</div>
-	
+
 				<div class="c-carrito__precio-item">${p.precio}€</div>
-			</div>
+			
 			`;
 
 			let btnsCantidad = Array.from(producto.getElementsByClassName("c-icon"));

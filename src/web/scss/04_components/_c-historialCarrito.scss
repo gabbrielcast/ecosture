@@ -2,11 +2,11 @@
 	display: block;
 	z-index: 1;
 	position: fixed;
-	width: 50%;
-	// height: 65%;
+	width: 900px;
+	height: 500px;
 	// visibility: hidden;
 	top: -1000px;
-	left: 25vw;
+	left: calc(50vw - (900px / 2));
 	background-color: getColors("verde", 0);
 	border: 2px solid getColors("verde", 1);
 	overflow-y: auto;
@@ -15,7 +15,14 @@
 	flex-direction: column;
 
 	@media (max-height: 900px) {
-		height: 500px;
+		width: 600px;
+		height: 400px;
+		left: calc(50vw - (300px));
+	}
+	@media (max-height: 600px) {
+		width: 700px;
+		height: 350px;
+		left: calc(50vw - (350px));
 	}
 	// height: 60%;
 	&::-webkit-scrollbar {
@@ -51,12 +58,18 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		cursor: pointer;
+		transition: all 0.2s;
+
+		&:hover {
+			background-color: getColors("verde", 3);
+		}
 	}
 
-	&__item:nth-child(3) {
-		border-top: 1px solid getColors("verde", 1);
-		border-bottom: 1px solid getColors("verde", 1);
-	}
+	// &__item:nth-child(3) {
+	// 	border-top: 1px solid getColors("verde", 1);
+	// 	border-bottom: 1px solid getColors("verde", 1);
+	// }
 
 	&__img {
 		width: 75px;

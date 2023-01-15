@@ -21,6 +21,12 @@
 		height: 400px;
 	}
 
+	@media (max-height: 600px) {
+		width: 700px;
+		height: 400px;
+		left: calc(50vw - (350px));
+	}
+
 	&__error {
 		color: rgb(190, 31, 31);
 		height: 15px;
