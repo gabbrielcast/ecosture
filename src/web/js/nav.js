@@ -1,7 +1,7 @@
 import { cargaInicio } from "./main.js";
 import { CARRITO } from "./main.js";
 import { User } from "./auth.js";
-import { showAlerta, BtnCancel } from "./alerta.js";
+import { showAlerta, displayBtnCancel } from "./alerta.js";
 import { HISTORIAL } from "./login.js";
 let btnLogin = null;
 let btnCarrito = null;
@@ -38,14 +38,13 @@ function setNav() {
 
 	btnLogin.onclick = () => {
 		if (!User.active) {
-			modalLogin.style.top = "calc(52vh - (200px))";
 			modalLogin.style.top = "calc(52vh - (" + topLogin + "px))";
 
 			toggleBtnsNav();
 			spanError.innerHTML = "";
 		} else {
 			showAlerta("¿Seguro que quieres cerrar sesión?", false);
-			BtnCancel();
+			displayBtnCancel();
 		}
 	};
 

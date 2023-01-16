@@ -1,20 +1,26 @@
 import { toggleBtnsNav } from "./nav.js";
 import { peticion } from "./peticion.js";
 import { User } from "./auth.js";
+import { CARRITO } from "./main.js";
 export class Historial {
 	constructor() {
+		this.historial = null;
 		this.setHistorial();
 		this.carritos = [];
 	}
 
 	setHistorial() {
-		let historial = document.getElementById("historialCarrito");
+		this.historial = document.getElementById("historialCarrito");
 
 		let btnCerrar = document.getElementById("cerrarHistorial");
 		btnCerrar.onclick = () => {
-			toggleBtnsNav();
-			historial.style.top = "-1000px";
+			this.cerrar();
 		};
+	}
+
+	cerrar() {
+		toggleBtnsNav();
+		this.historial.style.top = "-1000px";
 	}
 
 	hayCarritos() {
@@ -27,43 +33,103 @@ export class Historial {
 			"http://localhost:3030/historial?idUser=" + User.id,
 			false
 		).then((r) => {
-			console.log(r);
 			this.carritos = r;
 		});
 	}
 
-	mostrarCarrito() {}
+	eliminarCarrito(carrito) {
+		let index = this.carritos.findIndex((c) => c.id === carrito.id);
+		this.carritos.splice(index, 1);
+
+		if (!this.hayCarritos()) {
+			this.cerrar();
+			return;
+		}
+		this.pintarHistorial();
+	}
 
 	pintarHistorial() {
 		let historialContainer = document.getElementById("historialContainer");
 		historialContainer.innerHTML = "";
 
-		this.carritos.forEach((c) => {
-			let carrito = document.createElement("div");
-
-			carrito.innerHTML = `
+		this.carritos.forEach((carrito) => {
+			let carritoDOM = document.createElement("div");
+			carritoDOM.innerHTML = `
 				<div class="c-historialCarrito__item">
-					<img
+					<img id="historialDelete"
 						class="c-historialCarrito__close"
 						src="./assets/img/iconos/close.png"
 						alt=""
 					/>
-					// <img
-					// 	class="c-historialCarrito__img"
-					// 	src="./assets/img/Ropa/mujer/sudaderas/sudadera4.jpg"
-					// />
-	
-					<div class="c-historialCarrito__descripcion">
-						<span>Lorem IpsumGGGGG</span>
-						<span>Tempus Fugit</span>
-						<span>Nº ${c.id} </span>
+
+					<div class="c-historialCarrito__numSerie">
+						<span>Nº ${carrito.id} </span>
 					</div>
 	
-					<div class="c-historialCarrito__precio">${c.precio}€</div>
+					<div class="c-historialCarrito__descripcion">
+						<span>${carrito.productos.length} productos</span>
+						<span>Tempus Fugit</span>
+					</div>
+	
+					<div class="c-historialCarrito__precio">${carrito.precio}€</div>
 				</div>
-			
 			`;
-			historialContainer.appendChild(carrito);
+
+			carritoDOM.onclick = async () => {
+				this.cerrar();
+				toggleBtnsNav();
+				CARRITO.vaciarProductos();
+
+				let historial = await getHistorial(carrito);
+				await addProductosCarrito(historial);
+				CARRITO.abrir();
+			};
+
+			let btnEliminar = Array.from(
+				carritoDOM.getElementsByClassName("c-historialCarrito__close")
+			)[0];
+
+			btnEliminar.onclick = (e) => {
+				e.stopPropagation();
+				this.eliminarCarrito(carrito.id);
+			};
+
+			historialContainer.appendChild(carritoDOM);
 		});
+
+		async function getHistorial(carrito) {
+			return new Promise((resolve, reject) => {
+				peticion("GET", "http://localhost:3030/historial?id=" + carrito.id)
+					.then((r) => r[0])
+					.then(async (r) => {
+						resolve(r.productos);
+					});
+			});
+		}
+
+		async function addProductosCarrito(productosIds) {
+			for (const productoID of productosIds) {
+				let productoBD = await getProducto(productoID);
+
+				let producto = {
+					id: productoBD.id,
+					nombre: productoBD.nombre,
+					descripcion: productoBD.descripcion,
+					precio: productoBD.precio,
+					idCategoria: productoBD.idCategoria,
+					unidades: productoID.unidades,
+				};
+				CARRITO.anyadeProducto(producto);
+			}
+		}
+
+		async function getProducto(producto) {
+			return new Promise((resolve, reject) => {
+				peticion(
+					"GET",
+					"http://localhost:3030/productos?id=" + producto.id
+				).then((r) => resolve(r[0]));
+			});
+		}
 	}
 }

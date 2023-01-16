@@ -517,7 +517,7 @@ function detalleProducto() {
 		let num = Math.floor(Math.random() * 10);
 
 		CARRITO.anyadeProducto({
-			codigo: num,
+			id: num,
 			nombre: "prueba" + num,
 			descripcion: "desc" + num,
 			precio: 22,

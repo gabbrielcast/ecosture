@@ -19,12 +19,22 @@ export class Carrito {
 		this.setPago();
 	}
 
+	abrir() {
+		this.pintaProductos();
+		let topCarrito = parseInt(this.modalCarrito.offsetHeight) / 2;
+		this.modalCarrito.style.top = "calc(52vh - (" + topCarrito + "px))";
+	}
+
 	quitarCarrito() {
 		this.modalCarrito.style.top = "-1000px";
 	}
 
 	vaciarProductos() {
 		this.productos = [];
+	}
+
+	setProductos(productos) {
+		this.productos = productos;
 	}
 
 	setPago() {
@@ -54,12 +64,12 @@ export class Carrito {
 	}
 
 	anyadeProducto(producto) {
-		let existe = this.productos.find((a) => a.codigo == producto.codigo);
+		let existe = this.productos.find((a) => a.id == producto.id);
 		existe == undefined ? this.productos.push(producto) : existe.unidades++;
 	}
 
 	eliminarProducto(codigo) {
-		let index = this.productos.findIndex((p) => p.codigo === +codigo);
+		let index = this.productos.findIndex((p) => p.id === +codigo);
 		this.productos.splice(index, 1);
 
 		if (!this.hayProductos()) {
@@ -71,12 +81,12 @@ export class Carrito {
 	}
 
 	modificaUnidades(codigo, op) {
-		let producto = this.productos.find((p) => p.codigo === +codigo);
+		let producto = this.productos.find((p) => p.id === +codigo);
 
 		if (op === "minus" && producto.unidades >= 1) {
 			producto.unidades--;
 			if (producto.unidades == 0) {
-				let index = this.productos.findIndex((p) => p.codigo === +codigo);
+				let index = this.productos.findIndex((p) => p.id === +codigo);
 				this.productos.splice(index, 1);
 			}
 		} else if (op === "plus") {
@@ -97,7 +107,7 @@ export class Carrito {
 
 		this.productos.forEach((p) => {
 			let producto = document.createElement("div");
-			producto.id = p.codigo;
+			producto.id = p.id;
 			producto.className = "c-carrito__item";
 			producto.innerHTML = `
 				<img id="p-eliminar"
@@ -144,7 +154,7 @@ export class Carrito {
 						.reverse()[0]
 						.split("--")
 						.reverse()[0];
-					this.modificaUnidades(p.codigo, op);
+					this.modificaUnidades(p.id, op);
 				};
 			});
 
@@ -155,7 +165,7 @@ export class Carrito {
 				}
 			);
 			btnEliminar[0].onclick = () => {
-				this.eliminarProducto(p.codigo);
+				this.eliminarProducto(p.id);
 			};
 			contCarrito.appendChild(producto);
 		});

@@ -23,7 +23,7 @@ export class Pago {
 
 	pagar() {
 		let compra = this.compra.map((p) => {
-			return { codigo: p.codigo, unidades: p.unidades };
+			return { id: p.id, unidades: p.unidades };
 		});
 		let carro = { idUser: User.id, productos: compra, precio: this.precio };
 

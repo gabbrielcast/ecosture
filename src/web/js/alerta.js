@@ -21,7 +21,7 @@ function showAlerta(mensaje, disappear = true) {
 	visible = true;
 }
 
-function BtnCancel() {
+function displayBtnCancel() {
 	btnCancelar.onclick = () => {
 		closeAlerta();
 		setTimeout(() => {
@@ -57,4 +57,4 @@ function confAlerta() {
 	};
 }
 
-export { showAlerta, BtnCancel, confAlerta };
+export { showAlerta, displayBtnCancel, confAlerta };
