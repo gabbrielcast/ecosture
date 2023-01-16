@@ -62,7 +62,10 @@
 		padding: getPadding(7) getPadding(9);
 		height: 120px;
 		display: flex;
-		justify-content: space-around;
+		align-items: center;
+		// justify-content: center;
+		justify-content: space-between;
+		gap: 30px;
 		align-items: center;
 	}
 
@@ -78,6 +81,7 @@
 	&__descripcion {
 		display: flex;
 		flex-direction: column;
+		width: 150px;
 		gap: getGap(5);
 		font-size: getFontSize("xs");
 
@@ -95,6 +99,10 @@
 		display: flex;
 		justify-content: center;
 		gap: getGap(6);
+	}
+
+	&__precio-item {
+		width: 50px;
 	}
 
 	&__icon {

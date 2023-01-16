@@ -56,7 +56,6 @@ function about(contenedor) {
             justo. Ut tincidunt vel turpis ut placerat. Sed ut rutrum elit.
             </p>
         </div>
-
 		<div class="c-about__body">
 			<div class="c-icon">
 				<img
@@ -70,7 +69,6 @@ function about(contenedor) {
 				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
 				</p>
 			</div>
-
 			<div class="c-icon">
 				<img class="c-icon__img" src="./assets/img/iconos/ecologia.png" alt="" />
 				<h3 class="c-icon__title">Organic</h3>
@@ -79,7 +77,6 @@ function about(contenedor) {
 				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
 				</p>
 			</div>
-
 			<div class="c-icon">
 				<img
 					class="c-icon__img"
@@ -104,7 +101,6 @@ function about(contenedor) {
 				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
 				</p>
 			</div>
-
 			<div class="c-icon">
 				<img
 					class="c-icon__img"
@@ -141,343 +137,131 @@ function testimonio(contenedor) {
         consequat pulvinar lorem sed, volutpat finibus sapien.
         </p>
         <p class="c-testimonio__name">Donec Hendrerit</p>
-
     
     `;
 
 	contenedor.appendChild(section);
 }
 
-function categorias(contenedor) {
+async function categorias(contenedor) {
 	let section = document.createElement("section");
 	section.id = "categorias";
+	let titulo = document.createElement("h1");
+	titulo.innerHTML = "CATEGORÍAS";
+	section.appendChild(titulo);
 
-	section.innerHTML = `
-    <h1 class="g--seccion-productos-title" >CATEGORÍAS</h1>
-					<div
-						class="l-grid l-grid--auto-fit l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12"
-					>
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/mujer/camisetas/camiseta1.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-							
-								<a class="c-button c-button--categoria" >Ver Categoria</a>
-							</div>
-						</div>
+	let contCategorias = document.createElement("div");
+	contCategorias.className =
+		"l-grid l-grid--auto-fit l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12";
 
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/hombre/camisetas/camiseta3.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								<a class="c-button c-button--categoria" >Ver Categoria</a>
-							</div>
-						</div>
+	let categorias = await peticion("GET", "http://localhost:3030/categorias");
 
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/mujer/vestidos/vestido1.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								
-								<a class="c-button c-button--categoria" >Ver Categoria</a>
-							</div>
-						</div>
+	categorias.forEach((categoriaBD) => {
+		let categoria = document.createElement("div");
+		categoria.className = "c-producto";
+		categoria.innerHTML = `
+			<img
+				class="c-producto__img"
+				src="./assets/img/Ropa/mujer/camisetas/camiseta.jpg"
+				alt=""
+			/>
+			<div class="c-producto__info">
+				<h4 class="c-producto__title">${categoriaBD.nombre}</h4>
+				<a id="${categoriaBD.id}" class="c-button c-button--categoria" >Ver Categoria</a>
+			</div>
+		
+		`;
 
-						<div class="c-producto">
-							<img
-								class="c-producto__img"
-								src="./assets/img/Ropa/hombre/chaquetas/chaqueta4.jpg"
-								alt=""
-							/>
-							<div class="c-producto__info">
-								<h4 class="c-producto__title">LOREM IPSUM</h4>
-								
-								<a class="c-button c-button--categoria" >Ver Categoria</a>
-							</div>
-						</div>
-					</div>
-    
-    `;
+		let btn = Array.from(categoria.getElementsByTagName("a"))[0];
 
-	let btns = Array.from(section.getElementsByTagName("a"));
-	btns.forEach((b) => {
-		if (b.className.includes("c-button")) {
-			b.onclick = () => {
-				listProductos();
-			};
-		}
+		btn.onclick = () => {
+			listProductos(btn.id);
+		};
+		contCategorias.appendChild(categoria);
 	});
-
-	contenedor.appendChild(section);
+	contenedor.appendChild(contCategorias);
 }
 
 //PRODUCTOS
-function listProductos() {
+
+async function listProductos(categoriaID) {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
+	let titulo = document.createElement("h1");
+	titulo.className = "g--seccion-productos-title";
+
 	let section = document.createElement("section");
 	section.id = "productos";
+	section.appendChild(titulo);
 
-	section.innerHTML = `
-    <h1 class="g--seccion-productos-title">LOREM IPSUM</h1>
-		<div
-			class="l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8"
-		>
-			<div class="c-producto">
-				<img
-					class="c-producto__img"
-					src="./assets/img/Ropa/mujer/faldas/falda2.jpg"
-					alt=""
-				/>
-				<div class="c-producto__info">
-					<h4 class="c-producto__title">LOREM IPSUM</h4>
-					
-					<p class="c-producto__price">19.99€</p>
+	let contProductos = document.createElement("div");
+	contProductos.className =
+		"l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8";
 
-					<div class="c-producto__botones">
-						<div class="c-producto__anyade">
-							
-							<a class="c-button c-button--products" >
-								<i class="fas fa-cart-plus"></i>
-								Añadir
-								</a>
-						</div>
-						<div class="c-producto__ver">
-							<a class="c-button c-button--products" >
-							<i class="fas fa-search"></i>
-								Ver producto
+	let productos = await peticion(
+		"GET",
+		"http://localhost:3030/productos?idCategoria=" + categoriaID
+	);
+
+	productos.forEach((productoBD) => {
+		let producto = document.createElement("div");
+		producto.className = "c-producto";
+		producto.innerHTML = `
+			<img
+				class="c-producto__img"
+				src="./assets/img/Ropa/mujer/faldas/falda2.jpg"
+				alt=""
+			/>
+			<div class="c-producto__info">
+				<h4 class="c-producto__title">${productoBD.nombre}</h4>
+				
+				<p class="c-producto__price">${productoBD.precio}€</p>
+				<div class="c-producto__botones">
+					<div id="${productoBD.id}" class="c-producto__anyade">
+						
+						<a class="c-button c-button--products" >
+							<i class="fas fa-cart-plus"></i>
+							Añadir
 							</a>
-						</div>
 					</div>
-				</div>
-			</div>
-
-			<div class="c-producto">
-				<img
-					class="c-producto__img"
-					src="./assets/img/Ropa/mujer/camisetas/camiseta2.jpg"
-					alt=""
-				/>
-				<div class="c-producto__info">
-					<h4 class="c-producto__title">LOREM IPSUM</h4>
-					
-					<p class="c-producto__price">19.99€</p>
-					<div class="c-producto__botones">
-						<div class="c-producto__anyade">
-						
-						<a class="c-button c-button--products" >
-						<i class="fas fa-cart-plus"></i>
-						Añadir
+					<div id="${productoBD.id}" class="c-producto__ver">
+						<a  class="c-button c-button--products" >
+						<i class="fas fa-search"></i>
+							Ver producto
 						</a>
-				</div>
-				<div class="c-producto__ver">
-					<a class="c-button c-button--products" >
-					<i class="fas fa-search"></i>
-						Ver producto
-					</a>
-						</div>
 					</div>
 				</div>
 			</div>
+		
+		`;
 
-			<div class="c-producto">
-				<img
-					class="c-producto__img"
-					src="./assets/img/Ropa/mujer/camisetas/camiseta3.jpg"
-					alt=""
-				/>
-				<div class="c-producto__info">
-					<h4 class="c-producto__title">LOREM IPSUM</h4>
-					
-					<p class="c-producto__price">19.99€</p>
-					<div class="c-producto__botones">
-						<div class="c-producto__anyade">
-							
-						
-						<a class="c-button c-button--products" >
-						<i class="fas fa-cart-plus"></i>
-						Añadir
-						</a>
-				</div>
-				<div class="c-producto__ver">
-					<a class="c-button c-button--products" >
-					<i class="fas fa-search"></i>
-						Ver producto
-					</a>
-						</div>
-					</div>
-				</div>
-			</div>
+		let btnAnyadir = Array.from(
+			producto.getElementsByClassName("c-producto__anyade")
+		)[0];
 
-			<div class="c-producto">
-				<img
-					class="c-producto__img"
-					src="./assets/img/Ropa/hombre/camisetas/camiseta4.jpg"
-					alt=""
-				/>
-				<div class="c-producto__info">
-					<h4 class="c-producto__title">LOREM IPSUM</h4>
-					
-					<p class="c-producto__price">19.99€</p>
-					<div class="c-producto__botones">
-						<div class="c-producto__anyade">
-						
-						<a class="c-button c-button--products" >
-						<i class="fas fa-cart-plus"></i>
-						Añadir
-						</a>
-				</div>
-				<div class="c-producto__ver">
-					<a class="c-button c-button--products" >
-					<i class="fas fa-search"></i>
-						Ver producto
-					</a>
-						</div>
-					</div>
-				</div>
-			</div>
+		let btnVer = Array.from(
+			producto.getElementsByClassName("c-producto__ver")
+		)[0];
 
-			<div class="c-producto">
-				<img
-					class="c-producto__img"
-					src="./assets/img/Ropa/hombre/camisetas/camiseta6.jpg"
-					alt=""
-				/>
-				<div class="c-producto__info">
-					<h4 class="c-producto__title">LOREM IPSUM</h4>
-					
-					<p class="c-producto__price">19.99€</p>
-					<div class="c-producto__botones">
-						<div class="c-producto__anyade">
-							
-						
-						<a class="c-button c-button--products" >
-						<i class="fas fa-cart-plus"></i>
-						Añadir
-						</a>
-				</div>
-				<div class="c-producto__ver">
-					<a class="c-button c-button--products" >
-					<i class="fas fa-search"></i>
-						Ver producto
-					</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="c-producto">
-				<img
-					class="c-producto__img"
-					src="./assets/img/Ropa/mujer/camisetas/camiseta7.jpg"
-					alt=""
-				/>
-				<div class="c-producto__info">
-					<h4 class="c-producto__title">LOREM IPSUM</h4>
-					
-					<p class="c-producto__price">19.99€</p>
-					<div class="c-producto__botones">
-						<div class="c-producto__anyade">
-							
-						
-						<a class="c-button c-button--products" >
-						<i class="fas fa-cart-plus"></i>
-						Añadir
-						</a>
-				</div>
-				<div class="c-producto__ver">
-					<a class="c-button c-button--products" >
-					<i class="fas fa-search"></i>
-						Ver producto
-					</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="c-producto">
-				<img
-					class="c-producto__img"
-					src="./assets/img/Ropa/mujer/camisetas/camiseta6.jpg"
-					alt=""
-				/>
-				<div class="c-producto__info">
-					<h4 class="c-producto__title">LOREM IPSUM</h4>
-					
-					<p class="c-producto__price">19.99€</p>
-					<div class="c-producto__botones">
-						<div class="c-producto__anyade">
-							
-					
-						<a class="c-button c-button--products" >
-						<i class="fas fa-cart-plus"></i>
-						Añadir
-						</a>
-				</div>
-				<div class="c-producto__ver">
-					<a class="c-button c-button--products" >
-					<i class="fas fa-search"></i>
-						Ver producto
-					</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="c-producto">
-				<img
-					class="c-producto__img"
-					src="./assets/img/Ropa/hombre/camisetas/camiseta12.jpg"
-					alt=""
-				/>
-				<div class="c-producto__info">
-					<h4 class="c-producto__title">LOREM IPSUM</h4>
-					
-					<p class="c-producto__price">19.99€</p>
-					<div class="c-producto__botones">
-						<div class="c-producto__anyade">
-							
-						
-						<a class="c-button c-button--products" >
-						<i class="fas fa-cart-plus"></i>
-						Añadir
-						</a>
-				</div>
-				<div class="c-producto__ver">
-					<a class="c-button c-button--products" >
-					<i class="fas fa-search"></i>
-						Ver producto
-					</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    
-    `;
-
-	let btns = Array.from(section.getElementsByTagName("a"));
-	btns.forEach((b) => {
-		if (b.className.includes("c-button")) {
-			b.onclick = () => {
-				detalleProducto();
+		btnAnyadir.onclick = () => {
+			let productoCarrito = {
+				id: productoBD.id,
+				nombre: productoBD.nombre,
+				descripcion: productoBD.descripcion,
+				precio: productoBD.precio,
+				idCategoria: productoBD.idCategoria,
+				unidades: 1,
 			};
-		}
+			CARRITO.anyadeProducto(productoCarrito);
+		};
+
+		btnVer.onclick = () => {
+			detalleProducto();
+		};
+		contProductos.appendChild(producto);
 	});
+
+	section.appendChild(contProductos);
 
 	contenedor.appendChild(section);
 	doScroll();

@@ -2,6 +2,7 @@ import { User } from "./auth.js";
 import { toggleBtnsNav } from "./nav.js";
 import { Pago } from "./pago.js";
 import { abrirLogin } from "./login.js";
+import { peticion } from "./peticion.js";
 export class Carrito {
 	constructor() {
 		this.modalCarrito = document.getElementById("carrito");
@@ -69,7 +70,7 @@ export class Carrito {
 			.map((p) => p.precio * p.unidades)
 			.reduce((a, s) => a + s);
 
-		return precioTotal;
+		return +precioTotal.toFixed(2);
 	}
 
 	anyadeProducto(producto) {
@@ -79,7 +80,7 @@ export class Carrito {
 	}
 
 	eliminarProducto(codigo) {
-		let index = this.productos.findIndex((p) => p.id === +codigo);
+		let index = this.productos.findIndex((p) => p.id === codigo);
 		this.productos.splice(index, 1);
 
 		if (!this.hayProductos()) {
@@ -91,8 +92,8 @@ export class Carrito {
 	}
 
 	modificaUnidades(codigo, op) {
-		let producto = this.productos.find((p) => p.id === +codigo);
-
+		let producto = this.productos.find((p) => p.id === codigo);
+		console.log(codigo, "unidades");
 		if (op === "minus" && producto.unidades >= 1) {
 			producto.unidades--;
 			if (producto.unidades == 0) {
@@ -117,46 +118,52 @@ export class Carrito {
 
 		this.saveCarritoOnLocalStorage();
 
-		this.productos.forEach((p) => {
+		for (let p of this.productos) {
 			let producto = document.createElement("div");
 			producto.id = p.id;
 			producto.className = "c-carrito__item";
+
+			// let categoria = await peticion(
+			// 	"GET",
+			// 	"http://localhost:3030/categorias?id=" + p.idCategoria
+			// ).then((r) => r[0]);
+			// console.log(categoria);
 			producto.innerHTML = `
-				<img id="p-eliminar"
-					class="c-carrito__close"
-					src="./assets/img/iconos/close.png"
-					alt=""
-				/>
-				<img
-					class="c-carrito__img"
-					src="./assets/img/Ropa/hombre/camisetas/camiseta8.jpg"
-				/>
-
-				<div class="c-carrito__descripcion">
-					<span>${p.nombre}</span>
-					<span>${p.descripcion}</span>
-					<span>categoria</span>
-				</div>
-
-				<div class="c-carrito__cantidad">
-					<img id="p-minus"
-						class="c-icon c-icon--cantidad c-icon--minus"
-						src="./assets/img/iconos/minus.png"
+					<img id="p-eliminar"
+						class="c-carrito__close"
+						src="./assets/img/iconos/close.png"
 						alt=""
 					/>
-
-					<input class="c-carrito__input" type="number" name="name" value="${p.unidades}" />
-
-					<img id="p-plus"
-						class="c-icon c-icon--cantidad c-icon--plus"
-						src="./assets/img/iconos/plus.png"
-						alt=""
+					<img
+						class="c-carrito__img"
+						src="./assets/img/Ropa/hombre/camisetas/camiseta8.jpg"
 					/>
-				</div>
 
-				<div class="c-carrito__precio-item">${p.precio}€</div>
-			
-			`;
+					<div class="c-carrito__descripcion">
+						<span>${p.nombre}</span>
+						<span>${p.descripcion}</span>
+						<span></span>
+					</div>
+
+					<div class="c-carrito__cantidad">
+						<img id="p-minus"
+							class="c-icon c-icon--cantidad c-icon--minus"
+							src="./assets/img/iconos/minus.png"
+							alt=""
+						/>
+
+						<input class="c-carrito__input" type="number" name="name" value="${p.unidades}" />
+
+						<img id="p-plus"
+							class="c-icon c-icon--cantidad c-icon--plus"
+							src="./assets/img/iconos/plus.png"
+							alt=""
+						/>
+					</div>
+
+					<div class="c-carrito__precio-item">${p.precio}€</div>
+				
+				`;
 
 			let btnsCantidad = Array.from(producto.getElementsByClassName("c-icon"));
 			btnsCantidad.forEach((bt) => {
@@ -180,7 +187,7 @@ export class Carrito {
 				this.eliminarProducto(p.id);
 			};
 			contCarrito.appendChild(producto);
-		});
+		}
 
 		let precioTotal = document.getElementById("carritoPrecio");
 		precioTotal.innerHTML = this.precioTotal() + "€";

@@ -746,7 +746,9 @@ table {
   padding: 20px 32px;
   height: 120px;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
   align-items: center;
 }
 .c-carrito__item:not(:last-child) {
@@ -758,6 +760,7 @@ table {
 .c-carrito__descripcion {
   display: flex;
   flex-direction: column;
+  width: 150px;
   gap: 12px;
   font-size: 12px;
 }
@@ -773,6 +776,9 @@ table {
   display: flex;
   justify-content: center;
   gap: 16px;
+}
+.c-carrito__precio-item {
+  width: 50px;
 }
 .c-carrito__icon {
   width: 20px;
