@@ -1,7 +1,7 @@
-import { setNav } from "./nav.js";
+import { setNav, setUsername } from "./nav.js";
 import { Historial } from "./historialCarrito.js";
 import { Carrito } from "./carrito.js";
-import { setLogin, Login } from "./login.js";
+import { setLogin, Login, HISTORIAL, instantiateHISTORIAL } from "./login.js";
 import { peticion } from "./peticion.js";
 import { User, Auth } from "./auth.js";
 import { textos } from "./textos.js";
@@ -155,7 +155,7 @@ function categorias(contenedor) {
 	section.innerHTML = `
     <h1 class="g--seccion-productos-title" >CATEGORÍAS</h1>
 					<div
-						class="l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12"
+						class="l-grid l-grid--auto-fit l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12"
 					>
 						<div class="c-producto">
 							<img
@@ -538,12 +538,36 @@ function doScroll(conf = null) {
 	window.scroll(scroll);
 }
 
+function checkUserLogged() {
+	let carrito = JSON.parse(localStorage.getItem("currentShop"));
+
+	if (carrito != null) {
+		CARRITO.setProductos(carrito);
+	}
+
+	let usuario = JSON.parse(localStorage.getItem("user"));
+
+	if (usuario === null) {
+		return;
+	}
+
+	User.active = true;
+	User.username = usuario.username;
+	User.id = usuario.id;
+	setUsername();
+	instantiateHISTORIAL();
+	HISTORIAL.update();
+}
+
 window.onload = () => {
-	CARRITO = new Carrito();
 	setNav();
-	cargaInicio();
 	setLogin();
 	confAlerta();
+	cargaInicio();
+
+	CARRITO = new Carrito();
+
+	checkUserLogged();
 	// Login();
 
 	// let authLocal = JSON.parse(localStorage.getItem("Auth")).r;

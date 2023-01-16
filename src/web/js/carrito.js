@@ -23,6 +23,7 @@ export class Carrito {
 		this.pintaProductos();
 		let topCarrito = parseInt(this.modalCarrito.offsetHeight) / 2;
 		this.modalCarrito.style.top = "calc(52vh - (" + topCarrito + "px))";
+		this.modalCarrito.scrollTop = 0;
 	}
 
 	quitarCarrito() {
@@ -35,6 +36,14 @@ export class Carrito {
 
 	setProductos(productos) {
 		this.productos = productos;
+	}
+
+	getProductos() {
+		return this.productos;
+	}
+
+	saveCarritoOnLocalStorage() {
+		localStorage.setItem("currentShop", JSON.stringify(this.productos));
 	}
 
 	setPago() {
@@ -66,6 +75,7 @@ export class Carrito {
 	anyadeProducto(producto) {
 		let existe = this.productos.find((a) => a.id == producto.id);
 		existe == undefined ? this.productos.push(producto) : existe.unidades++;
+		this.saveCarritoOnLocalStorage();
 	}
 
 	eliminarProducto(codigo) {
@@ -104,6 +114,8 @@ export class Carrito {
 		let contCarrito = document.getElementById("carritoContainer");
 
 		contCarrito.innerHTML = "";
+
+		this.saveCarritoOnLocalStorage();
 
 		this.productos.forEach((p) => {
 			let producto = document.createElement("div");

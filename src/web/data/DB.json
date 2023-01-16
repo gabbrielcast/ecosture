@@ -1,313 +1,336 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "username": "ecosture",
-      "password": "ecosture"
-    }
-  ],
-  "categorias": [
-    {
-      "id": 1,
-      "nombre": "pantalones"
-    },
-    {
-      "id": 2,
-      "nombre": "camisetas"
-    },
-    {
-      "id": 3,
-      "nombre": "gorros"
-    },
-    {
-      "id": 4,
-      "nombre": "bufandas"
-    }
-  ],
-  "productos": [
-    {
-      "id": 1,
-      "nombre": "producto1",
-      "descripcion": "descripcion p1",
-      "precio": 1,
-      "idCategoria": 1
-    },
-    {
-      "id": 2,
-      "nombre": "producto2",
-      "descripcion": "descripcion p2",
-      "precio": 2,
-      "idCategoria": 1
-    },
-    {
-      "id": 3,
-      "nombre": "producto3",
-      "descripcion": "descripcion p3",
-      "precio": 3,
-      "idCategoria": 1
-    },
-    {
-      "id": 4,
-      "nombre": "producto4",
-      "descripcion": "descripcion p4",
-      "precio": 4,
-      "idCategoria": 1
-    },
-    {
-      "id": 5,
-      "nombre": "producto6",
-      "descripcion": "descripcion p6",
-      "precio": 5,
-      "idCategoria": 1
-    },
-    {
-      "id": 6,
-      "nombre": "producto6",
-      "descripcion": "descripcion p6",
-      "precio": 6,
-      "idCategoria": 1
-    },
-    {
-      "id": 7,
-      "nombre": "producto7",
-      "descripcion": "descripcion p7",
-      "precio": 1,
-      "idCategoria": 1
-    },
-    {
-      "id": 8,
-      "nombre": "producto8",
-      "descripcion": "descripcion p8",
-      "precio": 1,
-      "idCategoria": 1
-    },
-    {
-      "id": 9,
-      "nombre": "producto9",
-      "descripcion": "descripcion p9",
-      "precio": 1,
-      "idCategoria": 2
-    },
-    {
-      "id": 10,
-      "nombre": "producto10",
-      "descripcion": "descripcion p10",
-      "precio": 2,
-      "idCategoria": 2
-    },
-    {
-      "id": 11,
-      "nombre": "producto11",
-      "descripcion": "descripcion p11",
-      "precio": 3,
-      "idCategoria": 2
-    },
-    {
-      "id": 12,
-      "nombre": "producto12",
-      "descripcion": "descripcion p12",
-      "precio": 4,
-      "idCategoria": 2
-    },
-    {
-      "id": 13,
-      "nombre": "producto13",
-      "descripcion": "descripcion p13",
-      "precio": 5,
-      "idCategoria": 2
-    },
-    {
-      "id": 14,
-      "nombre": "producto14",
-      "descripcion": "descripcion p14",
-      "precio": 6,
-      "idCategoria": 2
-    },
-    {
-      "id": 15,
-      "nombre": "producto15",
-      "descripcion": "descripcion p7",
-      "precio": 1,
-      "idCategoria": 2
-    },
-    {
-      "id": 16,
-      "nombre": "producto16",
-      "descripcion": "descripcion p16",
-      "precio": 1,
-      "idCategoria": 2
-    },
-    {
-      "id": 17,
-      "nombre": "producto17",
-      "descripcion": "descripcion p17",
-      "precio": 1,
-      "idCategoria": 3
-    },
-    {
-      "id": 18,
-      "nombre": "producto18",
-      "descripcion": "descripcion p18",
-      "precio": 2,
-      "idCategoria": 3
-    },
-    {
-      "id": 19,
-      "nombre": "producto19",
-      "descripcion": "descripcion p19",
-      "precio": 3,
-      "idCategoria": 3
-    },
-    {
-      "id": 20,
-      "nombre": "producto20",
-      "descripcion": "descripcion p20",
-      "precio": 4,
-      "idCategoria": 3
-    },
-    {
-      "id": 21,
-      "nombre": "producto21",
-      "descripcion": "descripcion p21",
-      "precio": 5,
-      "idCategoria": 3
-    },
-    {
-      "id": 22,
-      "nombre": "producto22",
-      "descripcion": "descripcion p22",
-      "precio": 6,
-      "idCategoria": 3
-    },
-    {
-      "id": 23,
-      "nombre": "producto23",
-      "descripcion": "descripcion p23",
-      "precio": 1,
-      "idCategoria": 3
-    },
-    {
-      "id": 24,
-      "nombre": "producto24",
-      "descripcion": "descripcion p24",
-      "precio": 1,
-      "idCategoria": 3
-    },
-    {
-      "id": 25,
-      "nombre": "producto25",
-      "descripcion": "descripcion p25",
-      "precio": 1,
-      "idCategoria": 4
-    },
-    {
-      "id": 26,
-      "nombre": "producto26",
-      "descripcion": "descripcion p26",
-      "precio": 1,
-      "idCategoria": 4
-    },
-    {
-      "id": 27,
-      "nombre": "producto27",
-      "descripcion": "descripcion p27",
-      "precio": 2,
-      "idCategoria": 4
-    },
-    {
-      "id": 28,
-      "nombre": "producto28",
-      "descripcion": "descripcion p28",
-      "precio": 2,
-      "idCategoria": 4
-    },
-    {
-      "id": 29,
-      "nombre": "producto29",
-      "descripcion": "descripcion p29",
-      "precio": 3,
-      "idCategoria": 4
-    },
-    {
-      "id": 30,
-      "nombre": "producto30",
-      "descripcion": "descripcion p30",
-      "precio": 4,
-      "idCategoria": 4
-    },
-    {
-      "id": 31,
-      "nombre": "producto31",
-      "descripcion": "descripcion p31",
-      "precio": 5,
-      "idCategoria": 4
-    },
-    {
-      "id": 32,
-      "nombre": "producto32",
-      "descripcion": "descripcion p32",
-      "precio": 6,
-      "idCategoria": 4
-    }
-  ],
-  "carritos": [],
-  "historial": [
-    {
-      "idUser": 1,
-      "productos": [
-        {
-          "id": 8,
-          "unidades": 1
-        },
-        {
-          "id": 9,
-          "unidades": 1
-        },
-        {
-          "id": 5,
-          "unidades": 1
-        }
-      ],
-      "precio": 110,
-      "id": 1
-    },
-    {
-      "idUser": 1,
-      "productos": [
-        {
-          "id": 2,
-          "unidades": 4
-        },
-        {
-          "id": 1,
-          "unidades": 6
-        },
-        {
-          "id": 6,
-          "unidades": 4
-        }
-      ],
-      "precio": 308,
-      "id": 2
-    },
-    {
-      "idUser": 1,
-      "productos": [
-        {
-          "id": 2,
-          "unidades": 4
-        },
-        {
-          "id": 1,
-          "unidades": 6
-        },
-        {
-          "id": 6,
-          "unidades": 4
-        }
-      ],
-      "precio": 38,
-      "id": 3
-    }
-  ]
+	"users": [
+		{
+			"id": 1,
+			"username": "ecosture",
+			"password": "ecosture"
+		}
+	],
+	"categorias": [
+		{
+			"id": 1,
+			"nombre": "pantalones"
+		},
+		{
+			"id": 2,
+			"nombre": "camisetas"
+		},
+		{
+			"id": 3,
+			"nombre": "gorros"
+		},
+		{
+			"id": 4,
+			"nombre": "bufandas"
+		}
+	],
+	"productos": [
+		{
+			"id": 1,
+			"nombre": "producto1",
+			"descripcion": "descripcion p1",
+			"precio": 1,
+			"idCategoria": 1
+		},
+		{
+			"id": 2,
+			"nombre": "producto2",
+			"descripcion": "descripcion p2",
+			"precio": 2,
+			"idCategoria": 1
+		},
+		{
+			"id": 3,
+			"nombre": "producto3",
+			"descripcion": "descripcion p3",
+			"precio": 3,
+			"idCategoria": 1
+		},
+		{
+			"id": 4,
+			"nombre": "producto4",
+			"descripcion": "descripcion p4",
+			"precio": 4,
+			"idCategoria": 1
+		},
+		{
+			"id": 5,
+			"nombre": "producto6",
+			"descripcion": "descripcion p6",
+			"precio": 5,
+			"idCategoria": 1
+		},
+		{
+			"id": 6,
+			"nombre": "producto6",
+			"descripcion": "descripcion p6",
+			"precio": 6,
+			"idCategoria": 1
+		},
+		{
+			"id": 7,
+			"nombre": "producto7",
+			"descripcion": "descripcion p7",
+			"precio": 1,
+			"idCategoria": 1
+		},
+		{
+			"id": 8,
+			"nombre": "producto8",
+			"descripcion": "descripcion p8",
+			"precio": 1,
+			"idCategoria": 1
+		},
+		{
+			"id": 9,
+			"nombre": "producto9",
+			"descripcion": "descripcion p9",
+			"precio": 1,
+			"idCategoria": 2
+		},
+		{
+			"id": 10,
+			"nombre": "producto10",
+			"descripcion": "descripcion p10",
+			"precio": 2,
+			"idCategoria": 2
+		},
+		{
+			"id": 11,
+			"nombre": "producto11",
+			"descripcion": "descripcion p11",
+			"precio": 3,
+			"idCategoria": 2
+		},
+		{
+			"id": 12,
+			"nombre": "producto12",
+			"descripcion": "descripcion p12",
+			"precio": 4,
+			"idCategoria": 2
+		},
+		{
+			"id": 13,
+			"nombre": "producto13",
+			"descripcion": "descripcion p13",
+			"precio": 5,
+			"idCategoria": 2
+		},
+		{
+			"id": 14,
+			"nombre": "producto14",
+			"descripcion": "descripcion p14",
+			"precio": 6,
+			"idCategoria": 2
+		},
+		{
+			"id": 15,
+			"nombre": "producto15",
+			"descripcion": "descripcion p7",
+			"precio": 1,
+			"idCategoria": 2
+		},
+		{
+			"id": 16,
+			"nombre": "producto16",
+			"descripcion": "descripcion p16",
+			"precio": 1,
+			"idCategoria": 2
+		},
+		{
+			"id": 17,
+			"nombre": "producto17",
+			"descripcion": "descripcion p17",
+			"precio": 1,
+			"idCategoria": 3
+		},
+		{
+			"id": 18,
+			"nombre": "producto18",
+			"descripcion": "descripcion p18",
+			"precio": 2,
+			"idCategoria": 3
+		},
+		{
+			"id": 19,
+			"nombre": "producto19",
+			"descripcion": "descripcion p19",
+			"precio": 3,
+			"idCategoria": 3
+		},
+		{
+			"id": 20,
+			"nombre": "producto20",
+			"descripcion": "descripcion p20",
+			"precio": 4,
+			"idCategoria": 3
+		},
+		{
+			"id": 21,
+			"nombre": "producto21",
+			"descripcion": "descripcion p21",
+			"precio": 5,
+			"idCategoria": 3
+		},
+		{
+			"id": 22,
+			"nombre": "producto22",
+			"descripcion": "descripcion p22",
+			"precio": 6,
+			"idCategoria": 3
+		},
+		{
+			"id": 23,
+			"nombre": "producto23",
+			"descripcion": "descripcion p23",
+			"precio": 1,
+			"idCategoria": 3
+		},
+		{
+			"id": 24,
+			"nombre": "producto24",
+			"descripcion": "descripcion p24",
+			"precio": 1,
+			"idCategoria": 3
+		},
+		{
+			"id": 25,
+			"nombre": "producto25",
+			"descripcion": "descripcion p25",
+			"precio": 1,
+			"idCategoria": 4
+		},
+		{
+			"id": 26,
+			"nombre": "producto26",
+			"descripcion": "descripcion p26",
+			"precio": 1,
+			"idCategoria": 4
+		},
+		{
+			"id": 27,
+			"nombre": "producto27",
+			"descripcion": "descripcion p27",
+			"precio": 2,
+			"idCategoria": 4
+		},
+		{
+			"id": 28,
+			"nombre": "producto28",
+			"descripcion": "descripcion p28",
+			"precio": 2,
+			"idCategoria": 4
+		},
+		{
+			"id": 29,
+			"nombre": "producto29",
+			"descripcion": "descripcion p29",
+			"precio": 3,
+			"idCategoria": 4
+		},
+		{
+			"id": 30,
+			"nombre": "producto30",
+			"descripcion": "descripcion p30",
+			"precio": 4,
+			"idCategoria": 4
+		},
+		{
+			"id": 31,
+			"nombre": "producto31",
+			"descripcion": "descripcion p31",
+			"precio": 5,
+			"idCategoria": 4
+		},
+		{
+			"id": 32,
+			"nombre": "producto32",
+			"descripcion": "descripcion p32",
+			"precio": 6,
+			"idCategoria": 4
+		}
+	],
+	"carritos": [],
+	"historial": [
+		{
+			"idUser": 1,
+			"productos": [
+				{
+					"id": 8,
+					"unidades": 1
+				},
+				{
+					"id": 9,
+					"unidades": 1
+				},
+				{
+					"id": 5,
+					"unidades": 1
+				}
+			],
+			"precio": 110,
+			"id": 1
+		},
+		{
+			"idUser": 1,
+			"productos": [
+				{
+					"id": 2,
+					"unidades": 4
+				},
+				{
+					"id": 1,
+					"unidades": 6
+				},
+				{
+					"id": 6,
+					"unidades": 4
+				}
+			],
+			"precio": 308,
+			"id": 2
+		},
+		{
+			"idUser": 1,
+			"productos": [
+				{
+					"id": 2,
+					"unidades": 4
+				},
+				{
+					"id": 1,
+					"unidades": 6
+				},
+				{
+					"id": 6,
+					"unidades": 4
+				}
+			],
+			"precio": 38,
+			"id": 3
+		},
+		{
+			"idUser": 1,
+			"productos": [
+				{
+					"id": 6,
+					"unidades": 6
+				},
+				{
+					"id": 3,
+					"unidades": 8
+				},
+				{
+					"id": 1,
+					"unidades": 8
+				},
+				{
+					"id": 8,
+					"unidades": 3
+				}
+			],
+			"precio": 550,
+			"id": 4
+		}
+	]
 }

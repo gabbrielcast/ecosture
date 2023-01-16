@@ -7,6 +7,7 @@ let btnLogin = null;
 let btnCarrito = null;
 let btnHistorial = null;
 let btnInicio = null;
+let CerrarSesion = false;
 
 function setNav() {
 	btnLogin = document.getElementById("btnLogin");
@@ -43,6 +44,7 @@ function setNav() {
 			toggleBtnsNav();
 			spanError.innerHTML = "";
 		} else {
+			CerrarSesion = true;
 			showAlerta("¿Seguro que quieres cerrar sesión?", false);
 			displayBtnCancel();
 		}
@@ -50,10 +52,9 @@ function setNav() {
 
 	btnCarrito.onclick = () => {
 		if (CARRITO.hayProductos() == true) {
-			modalCarrito.style.top = "calc(52vh - (250px))";
 			modalCarrito.style.top = "calc(52vh - (" + topCarrito + "px))";
-
-			toggleBtnsNav("carrito");
+			modalCarrito.scrollTop = 0;
+			toggleBtnsNav();
 			CARRITO.pintaProductos();
 		} else {
 			showAlerta("Anyade Productos al Carrito");
@@ -73,6 +74,7 @@ function setNav() {
 
 		HISTORIAL.pintarHistorial();
 		modalHistorial.style.top = "calc(" + 52 + "vh - (" + topHistorial + "px))";
+		modalHistorial.scrollTop = 0;
 		toggleBtnsNav("historial");
 	};
 
@@ -81,8 +83,16 @@ function setNav() {
 	};
 }
 
-function setUsername() {
-	btnLogin.innerHTML = User.username;
+function setUsername(login = true) {
+	if (login) {
+		btnLogin.innerHTML = User.username;
+	} else {
+		btnLogin.innerHTML = '<i class="fas fa-user"></i>';
+	}
+}
+
+function setCerrarSesionFalse() {
+	CerrarSesion = false;
 }
 
 function toggleBtnsNav() {
@@ -91,4 +101,10 @@ function toggleBtnsNav() {
 	btnLogin.disabled = !btnLogin.disabled;
 }
 
-export { toggleBtnsNav, setNav, setUsername };
+export {
+	toggleBtnsNav,
+	setNav,
+	setUsername,
+	CerrarSesion,
+	setCerrarSesionFalse,
+};

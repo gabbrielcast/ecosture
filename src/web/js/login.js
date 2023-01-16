@@ -2,6 +2,7 @@ import { toggleBtnsNav, setUsername } from "./nav.js";
 import { User, Auth } from "./auth.js";
 import { peticion } from "./peticion.js";
 import { Historial } from "./historialCarrito.js";
+import { CARRITO } from "./main.js";
 
 let modalLogin = null;
 let HISTORIAL = null;
@@ -23,7 +24,8 @@ function setLogin() {
 			Login()
 				.then((r) => {
 					// console.log("sesion iniciada", r);
-					HISTORIAL = new Historial();
+					// HISTORIAL = new Historial();
+					instantiateHISTORIAL();
 					HISTORIAL.update();
 					spanError.innerHTML = "";
 					loader.style.visibility = "hidden";
@@ -51,7 +53,7 @@ function Login(datos = null) {
 		peticion("GET", url, JSON.stringify(credenciales))
 			.then((r) => {
 				console.log(r);
-				localStorage.setItem("user", JSON.stringify(r));
+				localStorage.setItem("user", JSON.stringify(r[0]));
 				User.active = true;
 				User.username = r[0].username;
 				User.id = r[0].id;
@@ -61,7 +63,7 @@ function Login(datos = null) {
 				// Auth.refreshToken = r.TokenRefresco;
 				// resolve(r.datos);
 			})
-			.catch((r) => reject(r.datos));
+			.catch((r) => reject(r.datos ?? "Credenciales Incorrectas"));
 	});
 }
 
@@ -75,6 +77,19 @@ function obtenerCredenciales() {
 	return { usuario: usuario, password: password };
 }
 
+function cerrarSesion() {
+	User.active = false;
+	CARRITO.vaciarProductos();
+
+	if (localStorage.getItem("user")) {
+		localStorage.removeItem("user");
+	}
+
+	if (localStorage.getItem("currentShop")) {
+		localStorage.removeItem("currentShop");
+	}
+}
+
 function cerrarLogin() {
 	toggleBtnsNav();
 	modalLogin.style.top = "-2000px";
@@ -83,4 +98,16 @@ function cerrarLogin() {
 function abrirLogin() {
 	modalLogin.style.top = "150px";
 }
-export { setLogin, Login, cerrarLogin, abrirLogin, HISTORIAL };
+
+function instantiateHISTORIAL() {
+	HISTORIAL = new Historial();
+}
+export {
+	setLogin,
+	Login,
+	cerrarSesion,
+	cerrarLogin,
+	abrirLogin,
+	HISTORIAL,
+	instantiateHISTORIAL,
+};

@@ -1,3 +1,5 @@
+import { CerrarSesion, setCerrarSesionFalse, setUsername } from "./nav.js";
+import { cerrarSesion } from "./login.js";
 let alerta = null;
 let visible = false;
 let timeout = null;
@@ -23,11 +25,10 @@ function showAlerta(mensaje, disappear = true) {
 
 function displayBtnCancel() {
 	btnCancelar.onclick = () => {
+		setCerrarSesionFalse();
 		closeAlerta();
 		setTimeout(() => {
-			window.getComputedStyle(btnCancelar).display === "block"
-				? (btnCancelar.style.display = "none")
-				: "";
+			btnCancelar.style.display = "none";
 		}, 200);
 
 		visible = false;
@@ -43,6 +44,11 @@ function closeAlerta() {
 function confAlerta() {
 	let btnAceptar = document.getElementById("btnAlertaAceptar");
 	btnAceptar.onclick = () => {
+		if (CerrarSesion) {
+			cerrarSesion();
+			setCerrarSesionFalse();
+			setUsername(false);
+		}
 		closeAlerta();
 		// btnCancelar.style.display = "none";
 

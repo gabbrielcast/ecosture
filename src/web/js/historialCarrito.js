@@ -110,7 +110,6 @@ export class Historial {
 		async function addProductosCarrito(productosIds) {
 			for (const productoID of productosIds) {
 				let productoBD = await getProducto(productoID);
-
 				let producto = {
 					id: productoBD.id,
 					nombre: productoBD.nombre,

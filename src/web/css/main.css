@@ -364,6 +364,9 @@ table {
 .l-grid--auto-fill {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+.l-grid--auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 .l-grid--columns-4 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
