@@ -9,50 +9,50 @@
 	"categorias": [
 		{
 			"id": 1,
-			"nombre": "Tops y camisetas de mujer"
+			"nombre": "Tops y camisetas de Mujer"
 		},
 		{
 			"id": 2,
-			"nombre": "Vestidos mujer"
+			"nombre": "Vestidos Mujer"
 		},
 		{
 			"id": 3,
-			"nombre": "Pantalones mujer"
+			"nombre": "Pantalones Mujer"
 		},
 		{
 			"id": 4,
-			"nombre": "Faldas mujer"
+			"nombre": "Faldas Mujer"
 		},
 		{
-			"nombre": "Sudaderas y jersey mujer",
+			"nombre": "Sudaderas y jersey Mujer",
 			"id": 5
 		},
 		{
-			"nombre": "Chaquetas y abrigos mujer",
+			"nombre": "Chaquetas y abrigos Mujer",
 			"id": 6
 		},
 		{
-			"nombre": "Camisetas hombre",
+			"nombre": "Camisetas Hombre",
 			"id": 7
 		},
 		{
-			"nombre": "Camisas hombre",
+			"nombre": "Camisas Hombre",
 			"id": 8
 		},
 		{
-			"nombre": "Pantalones hombre",
+			"nombre": "Pantalones Hombre",
 			"id": 9
 		},
 		{
-			"nombre": "Traje hombre",
+			"nombre": "Traje Hombre",
 			"id": 10
 		},
 		{
-			"nombre": "sudaderas_y_jersey_hombre",
+			"nombre": "sudaderas y jersey Hombre",
 			"id": 11
 		},
 		{
-			"nombre": "abrigos_hombre",
+			"nombre": "abrigos Hombre",
 			"id": 12
 		}
 	],

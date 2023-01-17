@@ -715,6 +715,7 @@ table {
   display: flex;
   flex-direction: column;
   padding: 0px 30px;
+  transition: all 0.5s;
 }
 .c-carrito::-webkit-scrollbar {
   background-color: #797979;
@@ -839,6 +840,7 @@ table {
 .c-carrito__cantidadTotal {
   font-size: 30px;
   color: #8cc63f;
+  width: 120px;
 }
 
 c-pagar {

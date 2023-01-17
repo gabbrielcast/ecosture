@@ -28,6 +28,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: 0px 30px;
+		transition: all 0.5s;
 	}
 	// height: 60%;
 	&::-webkit-scrollbar {
@@ -150,7 +151,6 @@
 		margin-bottom: getMargin(6);
 		// font-size: getFontSize("3xl");
 		font-weight: bold;
-
 		// // margin: getMargin(0) getMargin(10);
 		// color: getColors("amarillo", 0);
 		// // background: linear-gradient(
@@ -194,5 +194,6 @@
 	&__cantidadTotal {
 		font-size: getFontSize("3xl");
 		color: getColors("verde", 3);
+		width: 120px;
 	}
 }

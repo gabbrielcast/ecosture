@@ -8,13 +8,13 @@ import { textos } from "./textos.js";
 import { confAlerta } from "./alerta.js";
 
 let CARRITO = null;
-function cargaInicio() {
+async function cargaInicio() {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
 	portada(contenedor);
 	about(contenedor);
 	testimonio(contenedor);
-	categorias(contenedor);
+	await categorias(contenedor);
 }
 
 function portada(contenedor) {
@@ -146,8 +146,10 @@ function testimonio(contenedor) {
 async function categorias(contenedor) {
 	let section = document.createElement("section");
 	section.id = "categorias";
+	section.className = "ff";
 	let titulo = document.createElement("h1");
 	titulo.innerHTML = "CATEGORÍAS";
+	titulo.className = "g--seccion-productos-title";
 	section.appendChild(titulo);
 
 	let contCategorias = document.createElement("div");
@@ -159,10 +161,11 @@ async function categorias(contenedor) {
 	categorias.forEach((categoriaBD) => {
 		let categoria = document.createElement("div");
 		categoria.className = "c-producto";
+
 		categoria.innerHTML = `
 			<img
 				class="c-producto__img"
-				src="./assets/img/Ropa/mujer/camisetas/camiseta.jpg"
+				src="./assets/img/categorias/c${categoriaBD.id}.jpg"
 				alt=""
 			/>
 			<div class="c-producto__info">
@@ -175,19 +178,22 @@ async function categorias(contenedor) {
 		let btn = Array.from(categoria.getElementsByTagName("a"))[0];
 
 		btn.onclick = () => {
-			listProductos(btn.id);
+			listProductos(btn.id, categoriaBD.nombre);
 		};
 		contCategorias.appendChild(categoria);
 	});
-	contenedor.appendChild(contCategorias);
+
+	section.appendChild(contCategorias);
+	contenedor.appendChild(section);
 }
 
 //PRODUCTOS
 
-async function listProductos(categoriaID) {
+async function listProductos(categoriaID, categoriaNombre) {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
 	let titulo = document.createElement("h1");
+	titulo.innerHTML = categoriaNombre;
 	titulo.className = "g--seccion-productos-title";
 
 	let section = document.createElement("section");
@@ -206,10 +212,13 @@ async function listProductos(categoriaID) {
 	productos.forEach((productoBD) => {
 		let producto = document.createElement("div");
 		producto.className = "c-producto";
+		let genero =
+			productoBD.id.split("").reverse()[0] === "m" ? "mujer" : "hombre";
+
 		producto.innerHTML = `
 			<img
 				class="c-producto__img"
-				src="./assets/img/Ropa/mujer/faldas/falda2.jpg"
+				src="./assets/img/Ropa/${genero}/${productoBD.id}.jpg"
 				alt=""
 			/>
 			<div class="c-producto__info">
@@ -232,7 +241,6 @@ async function listProductos(categoriaID) {
 					</div>
 				</div>
 			</div>
-		
 		`;
 
 		let btnAnyadir = Array.from(
@@ -256,7 +264,7 @@ async function listProductos(categoriaID) {
 		};
 
 		btnVer.onclick = () => {
-			detalleProducto();
+			detalleProducto(productoBD);
 		};
 		contProductos.appendChild(producto);
 	});
@@ -267,49 +275,54 @@ async function listProductos(categoriaID) {
 	doScroll();
 }
 
-function detalleProducto() {
+function detalleProducto(producto) {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
-	let detalle = document.createElement("section");
-	detalle.id = "contenedor-detalle";
-	detalle.className =
+	let section = document.createElement("section");
+	section.id = "contenedor-detalle";
+	section.className =
 		"l-flex l-flex--direction-column l-flex--aling-items--center l-flex--justify-center";
-	detalle.innerHTML = `
-		<div class="c-detalle">
-			
-			<img class="c-detalle__img" src="./assets/img/Ropa/hombre/camisetas/camiseta1.jpg"></img>
-			<div class="c-detalle__info">
-				<h2 class="c-detalle__titulo">Fusce eleifend diam</h2>	
-				<span class="c-detalle__subtitulo">Phasellus tristique</span>
-				<p class="c-detalle__descripcion">Vivamus volutpat euismod nibh vel volutpat. Maecenas vitae odio massa. Donec pharetra convallis neque at molestie. Aliquam eu sodales arcu. Morbi quis laoreet dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eleifend diam non vestibulum volutpat. Maecenas maximus placerat velit sed auctor.</p>
-				<p class="c-detalle__precio"><del>500€</del> <span>300€</span></p>
-				<div class="c-detalle__botones">
-					<a id="anyadirProducto" class="c-button c-button--big">
-						<i class="fas fa-cart-plus"></i>
-						Añadir al Carrito</a>
-					<a class="c-button c-button--medium">Volver</a>
-				</div>
-			
+
+	let detalle = document.createElement("div");
+	detalle.className = "c-detalle";
+	let genero = producto.id.split("").reverse()[0] === "m" ? "mujer" : "hombre";
+	detalle.innerHTML = `	
+		<img class="c-detalle__img" src="./assets/img/Ropa/${genero}/${producto.id}.jpg"></img>
+		<div class="c-detalle__info">
+			<h2 class="c-detalle__titulo">${producto.nombre}</h2>	
+			<span class="c-detalle__subtitulo">${genero}</span>
+			<p class="c-detalle__descripcion">${producto.descripcion}</p>
+			<p class="c-detalle__precio"> <span>${producto.precio}€</span></p>
+			<div class="c-detalle__botones">
+				<a id="anyadirProducto" class="c-button c-button--big">
+					<i class="fas fa-cart-plus"></i>
+					Añadir al Carrito</a>
+				<a class="c-button c-button--medium">Volver</a>
 			</div>
-		
 		</div>
 	`;
 
-	contenedor.appendChild(detalle);
-	let btnAnyadir = document.getElementById("anyadirProducto");
-	btnAnyadir.onclick = () => {
-		let num = Math.floor(Math.random() * 10);
+	let btns = Array.from(detalle.getElementsByTagName("a"));
 
-		CARRITO.anyadeProducto({
-			id: num,
-			nombre: "prueba" + num,
-			descripcion: "desc" + num,
-			precio: 22,
-			unidades: 1,
-		});
-	};
+	btns.forEach((b) => {
+		b.onclick = () => {
+			if (b.id === "anyadirProducto") {
+				CARRITO.anyadeProducto({
+					id: producto.id,
+					nombre: producto.nombre,
+					descripcion: producto.descripcion,
+					precio: producto.precio,
+					idCategoria: producto.idCategoria,
+					unidades: 1,
+				});
+			}
+		};
+	});
+
+	contenedor.appendChild(detalle);
+
 	doScroll({
-		top: 125,
+		top: 50,
 		behavior: "smooth",
 	});
 }

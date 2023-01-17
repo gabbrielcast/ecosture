@@ -37,13 +37,14 @@ export class Carrito {
 
 	setProductos(productos) {
 		this.productos = productos;
+		// this.updateCarritoOnLocalStorage();
 	}
 
 	getProductos() {
 		return this.productos;
 	}
 
-	saveCarritoOnLocalStorage() {
+	updateCarritoOnLocalStorage() {
 		localStorage.setItem("currentShop", JSON.stringify(this.productos));
 	}
 
@@ -76,18 +77,20 @@ export class Carrito {
 	anyadeProducto(producto) {
 		let existe = this.productos.find((a) => a.id == producto.id);
 		existe == undefined ? this.productos.push(producto) : existe.unidades++;
-		this.saveCarritoOnLocalStorage();
+		this.updateCarritoOnLocalStorage();
 	}
 
 	eliminarProducto(codigo) {
 		let index = this.productos.findIndex((p) => p.id === codigo);
 		this.productos.splice(index, 1);
+		this.updateCarritoOnLocalStorage();
 
 		if (!this.hayProductos()) {
 			this.quitarCarrito();
 			toggleBtnsNav();
 			return;
 		}
+
 		this.pintaProductos();
 	}
 
@@ -108,6 +111,8 @@ export class Carrito {
 			toggleBtnsNav();
 			return;
 		}
+		this.updateCarritoOnLocalStorage();
+
 		this.pintaProductos();
 	}
 
@@ -116,7 +121,7 @@ export class Carrito {
 
 		contCarrito.innerHTML = "";
 
-		this.saveCarritoOnLocalStorage();
+		// this.updateCarritoOnLocalStorage();
 
 		for (let p of this.productos) {
 			let producto = document.createElement("div");
@@ -128,6 +133,8 @@ export class Carrito {
 			// 	"http://localhost:3030/categorias?id=" + p.idCategoria
 			// ).then((r) => r[0]);
 			// console.log(categoria);
+			console.log(p);
+			let genero = p.id.split("").reverse()[0] === "m" ? "mujer" : "hombre";
 			producto.innerHTML = `
 					<img id="p-eliminar"
 						class="c-carrito__close"
@@ -136,7 +143,7 @@ export class Carrito {
 					/>
 					<img
 						class="c-carrito__img"
-						src="./assets/img/Ropa/hombre/camisetas/camiseta8.jpg"
+						src="./assets/img/Ropa/${genero}/${p.id}.jpg"
 					/>
 
 					<div class="c-carrito__descripcion">

@@ -6,14 +6,23 @@ import { HISTORIAL } from "./login.js";
 let btnLogin = null;
 let btnCarrito = null;
 let btnHistorial = null;
-let btnInicio = null;
 let CerrarSesion = false;
+
+let btnInicio = null;
+let btnQuienesSomos = null;
+let btnOpinion = null;
+let btnCategorias = null;
 
 function setNav() {
 	btnLogin = document.getElementById("btnLogin");
 	btnCarrito = document.getElementById("btnCarrito");
 	btnHistorial = document.getElementById("btnHistorial");
 	btnInicio = document.getElementById("btn-nav-Inicio");
+
+	btnQuienesSomos = document.getElementById("btn-nav-quienes");
+	btnOpinion = document.getElementById("btn-nav-testimonio");
+	btnCategorias = document.getElementById("btn-nav-categorias");
+
 	let spanError = document.getElementById("login-error");
 
 	const modalLogin = document.getElementById("login");
@@ -81,6 +90,21 @@ function setNav() {
 	btnInicio.onclick = () => {
 		cargaInicio();
 	};
+
+	btnQuienesSomos.onclick = function () {
+		navSeccion(this);
+	};
+	btnOpinion.onclick = function () {
+		navSeccion(this);
+	};
+	btnCategorias.onclick = function () {
+		navSeccion(this);
+	};
+}
+
+async function navSeccion(btn) {
+	await cargaInicio();
+	window.location.href = btn.href;
 }
 
 function setUsername(login = true) {
