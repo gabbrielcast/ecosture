@@ -19,13 +19,14 @@ function peticion(metodo, url, authRequest = false, body = null) {
 				req.response.datos.Error === "Access Token expirado"
 			) {
 				refresh(metodo, url, body).then((r) => resolve(r));
-			} else {
-				console.log(Auth.accessToken);
-				reject({
-					estado: { codigo: req.status, desc: req.response.datos.Error },
-					datos: req.response.datos,
-				});
 			}
+			//  else {
+			// 	console.log(Auth.accessToken);
+			// 	reject({
+			// 		estado: { codigo: req.status, desc: req.response.datos.Error },
+			// 		datos: req.response.datos,
+			// 	});
+			// }
 		};
 	});
 }

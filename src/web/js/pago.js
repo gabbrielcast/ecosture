@@ -25,15 +25,15 @@ export class Pago {
 		let compra = this.compra.map((p) => {
 			return { id: p.id, unidades: p.unidades };
 		});
-		let carro = { idUser: User.id, productos: compra, precio: this.precio };
+		let carro = { userId: User.id, productos: compra, precio: this.precio };
 
 		peticion(
 			"POST",
 			"http://localhost:3030/historial",
 			false,
 			JSON.stringify(carro)
-		).then((r) => {
-			HISTORIAL.update();
+		).then(async (r) => {
+			await HISTORIAL.update();
 			CARRITO.vaciarProductos();
 			this.cerrarModal();
 		});

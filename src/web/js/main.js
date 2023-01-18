@@ -14,6 +14,7 @@ async function cargaInicio() {
 	portada(contenedor);
 	about(contenedor);
 	testimonio(contenedor);
+	contenedor.style.opacity = 1;
 	await categorias(contenedor);
 }
 
@@ -192,6 +193,7 @@ async function categorias(contenedor) {
 async function listProductos(categoriaID, categoriaNombre) {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
+
 	let titulo = document.createElement("h1");
 	titulo.innerHTML = categoriaNombre;
 	titulo.className = "g--seccion-productos-title";
@@ -213,7 +215,7 @@ async function listProductos(categoriaID, categoriaNombre) {
 		let producto = document.createElement("div");
 		producto.className = "c-producto";
 		let genero =
-			productoBD.id.split("").reverse()[0] === "m" ? "mujer" : "hombre";
+			productoBD.id.split("").reverse()[0] === "m" ? "Mujer" : "Hombre";
 
 		producto.innerHTML = `
 			<img
@@ -270,14 +272,15 @@ async function listProductos(categoriaID, categoriaNombre) {
 	});
 
 	section.appendChild(contProductos);
-
 	contenedor.appendChild(section);
+
 	doScroll();
 }
 
 function detalleProducto(producto) {
 	let contenedor = document.getElementById("contenedor");
 	contenedor.innerHTML = "";
+
 	let section = document.createElement("section");
 	section.id = "contenedor-detalle";
 	section.className =
@@ -285,7 +288,7 @@ function detalleProducto(producto) {
 
 	let detalle = document.createElement("div");
 	detalle.className = "c-detalle";
-	let genero = producto.id.split("").reverse()[0] === "m" ? "mujer" : "hombre";
+	let genero = producto.id.split("").reverse()[0] === "m" ? "Mujer" : "Hombre";
 	detalle.innerHTML = `	
 		<img class="c-detalle__img" src="./assets/img/Ropa/${genero}/${producto.id}.jpg"></img>
 		<div class="c-detalle__info">
@@ -297,7 +300,7 @@ function detalleProducto(producto) {
 				<a id="anyadirProducto" class="c-button c-button--big">
 					<i class="fas fa-cart-plus"></i>
 					Añadir al Carrito</a>
-				<a class="c-button c-button--medium">Volver</a>
+				<a  class="c-button c-button--medium">Volver</a>
 			</div>
 		</div>
 	`;
@@ -305,7 +308,7 @@ function detalleProducto(producto) {
 	let btns = Array.from(detalle.getElementsByTagName("a"));
 
 	btns.forEach((b) => {
-		b.onclick = () => {
+		b.onclick = async () => {
 			if (b.id === "anyadirProducto") {
 				CARRITO.anyadeProducto({
 					id: producto.id,
@@ -315,6 +318,13 @@ function detalleProducto(producto) {
 					idCategoria: producto.idCategoria,
 					unidades: 1,
 				});
+			} else {
+				let categoria = await peticion(
+					"GET",
+					"http://localhost:3030/categorias/" + producto.idCategoria
+				);
+
+				listProductos(producto.idCategoria, categoria.nombre);
 			}
 		};
 	});
@@ -335,7 +345,7 @@ function doScroll(conf = null) {
 	window.scroll(scroll);
 }
 
-function checkUserLogged() {
+async function checkUserLogged() {
 	let carrito = JSON.parse(localStorage.getItem("currentShop"));
 
 	if (carrito != null) {
@@ -353,7 +363,7 @@ function checkUserLogged() {
 	User.id = usuario.id;
 	setUsername();
 	instantiateHISTORIAL();
-	HISTORIAL.update();
+	await HISTORIAL.update();
 }
 
 window.onload = () => {

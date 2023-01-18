@@ -1,737 +1,737 @@
 {
-	"users": [
-		{
-			"id": 1,
-			"username": "ecosture",
-			"password": "ecosture"
-		}
-	],
-	"categorias": [
-		{
-			"id": 1,
-			"nombre": "Tops y camisetas de Mujer"
-		},
-		{
-			"id": 2,
-			"nombre": "Vestidos Mujer"
-		},
-		{
-			"id": 3,
-			"nombre": "Pantalones Mujer"
-		},
-		{
-			"id": 4,
-			"nombre": "Faldas Mujer"
-		},
-		{
-			"nombre": "Sudaderas y jersey Mujer",
-			"id": 5
-		},
-		{
-			"nombre": "Chaquetas y abrigos Mujer",
-			"id": 6
-		},
-		{
-			"nombre": "Camisetas Hombre",
-			"id": 7
-		},
-		{
-			"nombre": "Camisas Hombre",
-			"id": 8
-		},
-		{
-			"nombre": "Pantalones Hombre",
-			"id": 9
-		},
-		{
-			"nombre": "Traje Hombre",
-			"id": 10
-		},
-		{
-			"nombre": "sudaderas y jersey Hombre",
-			"id": 11
-		},
-		{
-			"nombre": "abrigos Hombre",
-			"id": 12
-		}
-	],
-	"productos": [
-		{
-			"nombre": "Camiseta print",
-			"id": "c1m",
-			"descripcion": "Camiseta manga corta print",
-			"precio": 7.99,
-			"idCategoria": 1
-		},
-		{
-			"nombre": "Top manga larga",
-			"id": "c2m",
-			"descripcion": "Top manga larga fruncido",
-			"precio": 12.99,
-			"idCategoria": 1
-		},
-		{
-			"nombre": "Top negro",
-			"id": "c3m",
-			"descripcion": "Top basico manga larga",
-			"precio": 7.99,
-			"idCategoria": 1
-		},
-		{
-			"nombre": "Top estampado",
-			"id": "c4m",
-			"descripcion": "Top manga larga estampado rayas de cebra",
-			"precio": 12.99,
-			"idCategoria": 1
-		},
-		{
-			"nombre": "Camiseta corta print",
-			"id": "c5m",
-			"numero_pedido": 1,
-			"descripcion": "Camiseta crop manga corta print",
-			"precio": 9.99,
-			"idCategoria": 1
-		},
-		{
-			"nombre": "Camiseta corta botones",
-			"id": "c6m",
-			"descripcion": "Camiseta crip manga corta botones",
-			"precio": 9.99,
-			"idCategoria": 1
-		},
-		{
-			"nombre": "Camiseta corsé",
-			"id": "c7m",
-			"descripcion": "Camiseta manga corta estilo corsé",
-			"precio": 14.99,
-			"idCategoria": 1
-		},
-		{
-			"nombre": "Camiseta floral",
-			"id": "c8m",
-			"descripcion": "Camiseta manga corta estampado de flores",
-			"precio": 12.99,
-			"idCategoria": 1
-		},
-		{
-			"nombre": "Vestido marrón",
-			"id": "v1m",
-			"descripcion": "Vestido largo tirantes",
-			"precio": 20.99,
-			"idCategoria": 2
-		},
-		{
-			"nombre": "Vestido de fiesta negro",
-			"id": "v2m",
-			"descripcion": "Vestido midi pierna abierta",
-			"precio": 27.99,
-			"idCategoria": 2
-		},
-		{
-			"nombre": "Vestido mangas",
-			"id": "v3m",
-			"descripcion": "Vestido manga larga con volantes",
-			"precio": 20.99,
-			"idCategoria": 2
-		},
-		{
-			"nombre": "Vestido casual",
-			"id": "v4m",
-			"numero_pedido": 1,
-			"descripcion": "Vestido midi escote V",
-			"precio": 25.99,
-			"idCategoria": 2
-		},
-		{
-			"nombre": "Vestido con brillos",
-			"id": "v5m",
-			"descripcion": "Vestido midi tul",
-			"precio": 30.99,
-			"idCategoria": 2
-		},
-		{
-			"nombre": "Vestido floral",
-			"id": "v6m",
-			"descripcion": "Vestido manga larga estampado floral",
-			"precio": 17.99,
-			"idCategoria": 2
-		},
-		{
-			"nombre": "Vestido estampado",
-			"id": "v7m",
-			"descripcion": "Vestido tirantes satinado con estampado animal",
-			"precio": 20.0,
-			"idCategoria": 2
-		},
-		{
-			"nombre": "Vestido manga larga estampado",
-			"id": "v8m",
-			"descripcion": "Vestido manga larga estampadoa animal",
-			"precio": 17.0,
-			"idCategoria": 2
-		},
-		{
-			"nombre": "Pantalón diseño lineas",
-			"id": "p1m",
-			"descripcion": "Pantalon largo diseño de lineas laterales",
-			"precio": 20.0,
-			"idCategoria": 3
-		},
-		{
-			"nombre": "Pantalón mom jean",
-			"id": "p2m",
-			"descripcion": "Pantalón estilo mom jean azul",
-			"precio": 23.99,
-			"idCategoria": 3
-		},
-		{
-			"nombre": "Pantalón formal",
-			"id": "p3m",
-			"descripcion": "Pantalón azul marino con botones",
-			"precio": 25.0,
-			"idCategoria": 3
-		},
-		{
-			"nombre": "Pantalón skinny negro",
-			"id": "p4m",
-			"descripcion": "Pantalón azul estilo skinny jean",
-			"precio": 19.99,
-			"idCategoria": 3
-		},
-		{
-			"nombre": "Pantalón corte recto",
-			"id": "p5m",
-			"descripcion": "Pantalón de vestir de tiro alto",
-			"precio": 27.99,
-			"idCategoria": 3
-		},
-		{
-			"nombre": "Pantalón jean fit basico",
-			"id": "p6m",
-			"descripcion": "Pantalón jean casual gris oscuro",
-			"precio": 21.99,
-			"idCategoria": 3
-		},
-		{
-			"nombre": "Pantalón baggy jeans roto",
-			"id": "p7m",
-			"descripcion": "Pantalón estilo baggy jean roto azul",
-			"precio": 20.99,
-			"idCategoria": 3
-		},
-		{
-			"nombre": "Pantalón camuflaje",
-			"id": "p8m",
-			"descripcion": "Pantalón jogger con estampado de camuflaje",
-			"precio": 19.99,
-			"idCategoria": 3
-		},
-		{
-			"nombre": "Falda jean recto",
-			"id": "f1m",
-			"descripcion": "Min falda jean de corte recto verde",
-			"precio": 12.99,
-			"idCategoria": 4
-		},
-		{
-			"nombre": "Falda estampado",
-			"id": "f2m",
-			"descripcion": "Falda midi con estampado y apertura lateral",
-			"precio": 17.0,
-			"idCategoria": 4
-		},
-		{
-			"nombre": "Mini falda brillos",
-			"id": "f3m",
-			"descripcion": "Mini falda rosa con brillantes y corte en el muslo",
-			"precio": 17.99,
-			"idCategoria": 4
-		},
-		{
-			"nombre": "Mini falda con estampado",
-			"id": "f4m",
-			"descripcion": "Mini falda con estampado floral y plisados laterales",
-			"precio": 15.99,
-			"idCategoria": 4
-		},
-		{
-			"nombre": "Mini falda a cuadros",
-			"id": "f5m",
-			"descripcion": "Mini falda de cuadros con apertura en los laterales",
-			"precio": 12.99,
-			"idCategoria": 4
-		},
-		{
-			"nombre": "Mini falda plisada",
-			"id": "f6m",
-			"descripcion": "Mini falda con tablas plisada",
-			"precio": 12.99,
-			"idCategoria": 4
-		},
-		{
-			"nombre": "Falda midi cruzada",
-			"id": "f7m",
-			"descripcion": "Falda midi con cruce lateral y acabado en volantes",
-			"precio": 12.99,
-			"idCategoria": 4
-		},
-		{
-			"nombre": "Mini falda tenis",
-			"id": "f8m",
-			"descripcion": "Mini falda sport plisada y cordón lateral",
-			"precio": 15.99,
-			"idCategoria": 4
-		},
-		{
-			"nombre": "Sudadera básica",
-			"id": "s1m",
-			"descripcion": "Sudadera gris básica con estampado",
-			"precio": 19.99,
-			"idCategoria": 5
-		},
-		{
-			"nombre": "Jersey de cuello alto",
-			"id": "s2m",
-			"descripcion": "Jesey de lana con cuello alto",
-			"precio": 24.0,
-			"idCategoria": 5
-		},
-		{
-			"nombre": "Jersey lana",
-			"id": "s3m",
-			"descripcion": "Jersey gris de lana con cuello alto y fruncido en las muñecas",
-			"precio": 24.99,
-			"idCategoria": 5
-		},
-		{
-			"nombre": "Sudadera print",
-			"id": "s4m",
-			"descripcion": "Sudadera basica con capucha y print en la espalda",
-			"precio": 20.99,
-			"idCategoria": 5
-		},
-		{
-			"nombre": "Sudadera print",
-			"id": "s5m",
-			"descripcion": "Sudadera gris con print EXPLORING LIFE",
-			"precio": 25.0,
-			"idCategoria": 5
-		},
-		{
-			"nombre": "Jersey básico",
-			"id": "s6m",
-			"descripcion": "Jersey hombro caído blanco de lana",
-			"precio": 25.0,
-			"idCategoria": 5
-		},
-		{
-			"nombre": "Sudadera deportiva",
-			"id": "s7m",
-			"descripcion": "Sudadera de deporte de hombro caído con capucha",
-			"precio": 20.99,
-			"idCategoria": 5
-		},
-		{
-			"nombre": "Sudadera con capucha",
-			"id": "s8m",
-			"descripcion": "Sudadera negra con tejido SURVIVE",
-			"precio": 21.99,
-			"idCategoria": 5
-		},
-		{
-			"nombre": "Abrigo piel sintética",
-			"id": "a1m",
-			"descripcion": "Abrigo de piel sintetica negro con cinturon",
-			"precio": 55.99,
-			"idCategoria": 6
-		},
-		{
-			"nombre": "Chaqueta casual",
-			"id": "a2m",
-			"descripcion": "Chaqueta de piel sintetica estilo casual",
-			"precio": 45.0,
-			"idCategoria": 6
-		},
-		{
-			"nombre": "Chaqueta oversize",
-			"id": "a3m",
-			"descripcion": "Chaqueta estilo oversize negra con print",
-			"precio": 35.99,
-			"idCategoria": 6
-		},
-		{
-			"nombre": "Chaqueta ovversize linea lateral",
-			"id": "a4m",
-			"descripcion": "Chaqueta con linea lateral y cremallera estilo oversize",
-			"precio": 40,
-			"idCategoria": 6
-		},
-		{
-			"nombre": "Abrigo formal",
-			"id": "a5m",
-			"descripcion": "Abrigo de piel sintética estilo formal con bolsillos",
-			"precio": 50.99,
-			"idCategoria": 6
-		},
-		{
-			"nombre": "Abrigo largo formal",
-			"id": "a6m",
-			"descripcion": "Abrigo negro de tela largo con botones",
-			"precio": 70.0,
-			"idCategoria": 6
-		},
-		{
-			"nombre": "Chaqueta impermeable",
-			"id": "a7m",
-			"descripcion": "Cortavientos con diseño de rayas laterales",
-			"precio": 30.99,
-			"idCategoria": 6
-		},
-		{
-			"nombre": "Chaqueta puffy",
-			"id": "a8m",
-			"descripcion": "Chaqueta roja estilo puffy",
-			"precio": 45.0,
-			"idCategoria": 6
-		},
-		{
-			"nombre": "Camiseta print",
-			"id": "c1h",
-			"descripcion": "Camiseta manga corta print",
-			"precio": 12.0,
-			"idCategoria": 7
-		},
-		{
-			"nombre": "Camiseta print espalda",
-			"id": "c2h",
-			"descripcion": "Camiseta manga corta print COBBLES CLASSIC",
-			"precio": 12.99,
-			"idCategoria": 7
-		},
-		{
-			"nombre": "Camiseta manga larga print",
-			"id": "c3h",
-			"descripcion": "Camiseta manga larga con diseño",
-			"precio": 15.99,
-			"idCategoria": 7
-		},
-		{
-			"nombre": "Camiseta basica con diseño",
-			"id": "c4h",
-			"descripcion": "Camiseta manga corta print FUCKING AWESOME",
-			"precio": 12.0,
-			"idCategoria": 7
-		},
-		{
-			"nombre": "Camiseta oversize",
-			"id": "c5h",
-			"descripcion": "Camiseta oversize con diseño en la espalda",
-			"precio": 17.99,
-			"idCategoria": 7
-		},
-		{
-			"nombre": "Camiseta con diseño PAC - MAN",
-			"id": "c6h",
-			"descripcion": "Camiseta manga corta diseño PAC - MAN",
-			"precio": 16.99,
-			"idCategoria": 7
-		},
-		{
-			"nombre": "Camiseta diseño frontal",
-			"id": "c7h",
-			"descripcion": "Camiseta manga corta con diseño frontal",
-			"precio": 12.99,
-			"idCategoria": 7
-		},
-		{
-			"nombre": "Camiseta con diseño LOS ANGELES",
-			"id": "c8h",
-			"descripcion": "Camiseta manga corta con diseño LOS ANGELES",
-			"precio": 13.99,
-			"idCategoria": 7
-		},
-		{
-			"nombre": "Camisa de cuadros",
-			"id": "ca1h",
-			"descripcion": "Camisa manga larga de cuadros",
-			"precio": 13.75,
-			"idCategoria": 8
-		},
-		{
-			"nombre": "Camisa con bolsillo",
-			"id": "ca2h",
-			"descripcion": "Camisa de lino bolsillo",
-			"precio": 23.75,
-			"idCategoria": 8
-		},
-		{
-			"nombre": "Camisa de cuadros verde",
-			"id": "ca3h",
-			"descripcion": "Camisa manga larga casual con estampado de cuadros verde",
-			"precio": 17.0,
-			"idCategoria": 8
-		},
-		{
-			"nombre": "Camisa floral",
-			"id": "ca4h",
-			"descripcion": "Camisa manga larga con estampado floral",
-			"precio": 23.0,
-			"idCategoria": 8
-		},
-		{
-			"nombre": "Camisa patron de líneas",
-			"id": "ca5h",
-			"descripcion": "Camisa manga corta con patrón de lineas y cuadrados",
-			"precio": 17.95,
-			"idCategoria": 8
-		},
-		{
-			"nombre": "Camisa tropical",
-			"id": "ca6h",
-			"descripcion": "Camisa con estampado tropical con bolsillo y manga larga",
-			"precio": 21.0,
-			"idCategoria": 8
-		},
-		{
-			"nombre": "Camisa jean",
-			"id": "ca7h",
-			"descripcion": "Camisa con tejido jean casual",
-			"precio": 70,
-			"idCategoria": 8
-		},
-		{
-			"nombre": "Camisa casual",
-			"id": "ca8h",
-			"descripcion": "Camisa de manga corta y bolsillos simétricos casual",
-			"precio": 21.95,
-			"idCategoria": 8
-		},
-		{
-			"nombre": "Pantalón formal negro",
-			"id": "p1h",
-			"descripcion": "Pantalon negro formal corte recto",
-			"precio": 26.95,
-			"idCategoria": 9
-		},
-		{
-			"nombre": "Pantalon jogger cargo",
-			"id": "p2h",
-			"descripcion": "Pantalon jogger cargo básico",
-			"precio": 21.99,
-			"idCategoria": 9
-		},
-		{
-			"nombre": "Pantalón campana",
-			"id": "p3h",
-			"descripcion": "Pantalón jean de campana verde con lineas verticales",
-			"precio": 24.95,
-			"idCategoria": 9
-		},
-		{
-			"nombre": "Pantalón deportivo",
-			"id": "p4h",
-			"descripcion": "Pantalón jogger deportivo con lineas en los laterales",
-			"precio": 35.0,
-			"idCategoria": 9
-		},
-		{
-			"nombre": "Jean básico",
-			"id": "p5h",
-			"descripcion": "Pantalón básico jean wide leg",
-			"precio": 25.75,
-			"idCategoria": 9
-		},
-		{
-			"nombre": "Pantalon jogger formal",
-			"id": "p6h",
-			"descripcion": "Pantalón estilo jogger formal negro",
-			"precio": 24.95,
-			"idCategoria": 9
-		},
-		{
-			"nombre": "Jean informal",
-			"id": "p7h",
-			"descripcion": "Jean baggy con bolsilllos con detalle de rotos ",
-			"precio": 24.95,
-			"idCategoria": 9
-		},
-		{
-			"nombre": "Pantalon corte recto",
-			"id": "p8h",
-			"descripcion": "Pantalon beige de corte recto, estilo formal con bolsillos",
-			"precio": 25.99,
-			"idCategoria": 9
-		},
-		{
-			"nombre": "Traje formal gris",
-			"id": "t1h",
-			"descripcion": "Traje formal gris con chaleco con cuello en V y botones",
-			"precio": 167.99,
-			"idCategoria": 10
-		},
-		{
-			"nombre": "Treje con patron lineal",
-			"id": "t2h",
-			"descripcion": "Traje formal gris con botones, patron de lineas a cuadros",
-			"precio": 153.75,
-			"idCategoria": 10
-		},
-		{
-			"nombre": "Traje gris con lineas",
-			"id": "t3h",
-			"descripcion": "Traje gris con patron de lineas",
-			"precio": 130.99,
-			"idCategoria": 10
-		},
-		{
-			"nombre": "Traje gris sencillo",
-			"id": "t4h",
-			"descripcion": "Traje gris sencillo con bolsillos",
-			"precio": 170.0,
-			"idCategoria": 10
-		},
-		{
-			"nombre": "Traje conjunto",
-			"id": "t5h",
-			"descripcion": "Traje con blazer azul marino con líneas y pantalón gris, con bolsillos",
-			"precio": 129.75,
-			"idCategoria": 10
-		},
-		{
-			"nombre": "Traje chaleco",
-			"id": "t6h",
-			"descripcion": "Traje de chaleco en pico, bolsillos con cremallera y pantalón oscuro formal",
-			"precio": 100.75,
-			"idCategoria": 10
-		},
-		{
-			"nombre": "Traje elegante",
-			"id": "t7h",
-			"descripcion": "Traje elegante azul marino a rayas con bolsillos",
-			"precio": 170.0,
-			"idCategoria": 10
-		},
-		{
-			"nombre": "Traje básico",
-			"id": "t8h",
-			"descripcion": "Traje gris sencillo con bolsillos",
-			"precio": 95.99,
-			"idCategoria": 10
-		},
-		{
-			"nombre": "Sudadera gris YIKES",
-			"id": "s1h",
-			"descripcion": "Sudadera gris básica con capucha, print YIKES, con bolsillo",
-			"precio": 21.75,
-			"idCategoria": 11
-		},
-		{
-			"nombre": "Sudadera básica",
-			"id": "s2h",
-			"descripcion": "Sudadera blanca básica con bolsillo y capucha",
-			"precio": 19.95,
-			"idCategoria": 11
-		},
-		{
-			"nombre": "Sudadera deportiva",
-			"id": "s3h",
-			"descripcion": "Sudadera azul con diseño, lineas lateralen en las mangas, con capucha y bolsillo",
-			"precio": 30.0,
-			"idCategoria": 11
-		},
-		{
-			"nombre": "Sudadera térmica",
-			"id": "s4h",
-			"descripcion": "Sudadera azul térmica sin capucha, con bolsillos",
-			"precio": 40.0,
-			"idCategoria": 11
-		},
-		{
-			"nombre": "Jersey básico",
-			"id": "s5h",
-			"descripcion": "Jersey básico gris con textura",
-			"precio": 23.99,
-			"idCategoria": 11
-		},
-		{
-			"nombre": "Sudadera diseño",
-			"id": "s6h",
-			"descripcion": "Sudadera gris con diseño, mangas azules, con bolsillo y capucha",
-			"precio": 26.0,
-			"idCategoria": 11
-		},
-		{
-			"nombre": "Sudadera negra GIFT OF PEACE",
-			"id": "s7h",
-			"descripcion": "Sudadera negra con capucha, print GIFT OF PEACE",
-			"precio": 25.99,
-			"idCategoria": 11
-		},
-		{
-			"nombre": "Sudadera PAST TENSE",
-			"id": "s8h",
-			"descripcion": "Sudadera básica, print PAST TENSE",
-			"precio": 80,
-			"idCategoria": 11
-		},
-		{
-			"nombre": "Abrigo patrón a cuadros",
-			"id": "a1h",
-			"descripcion": "Abrigo rojo con patrón de líneas amarillas, con botones y bolsillos",
-			"precio": 105.9,
-			"idCategoria": 12
-		},
-		{
-			"nombre": "Abrigo marrón",
-			"id": "a2h",
-			"descripcion": "Abrigo otoñal marrón con bolsillos y capucha",
-			"precio": 45.0,
-			"idCategoria": 12
-		},
-		{
-			"nombre": "Chaqueta beige",
-			"id": "a3h",
-			"descripcion": "Chaqueta estilo bomber marrón con bolsillos y cremallera",
-			"precio": 45.0,
-			"idCategoria": 12
-		},
-		{
-			"nombre": "Abrigo formal",
-			"id": "a4h",
-			"descripcion": "Abrigo formal de color negro con bolsillos",
-			"precio": 70.9,
-			"idCategoria": 12
-		},
-		{
-			"nombre": "Chaqueta cortavientos",
-			"id": "a5h",
-			"descripcion": "Chaqueta naranja cortavientos con cremallera y bolsillos",
-			"precio": 50.0,
-			"idCategoria": 12
-		},
-		{
-			"nombre": "Chaqueta con diseño",
-			"id": "a6h",
-			"descripcion": "Chaqueta informal con diseño de parches, bolsillos, botones y cremallera",
-			"precio": 45.0,
-			"idCategoria": 12
-		},
-		{
-			"nombre": "Chaqueta polar",
-			"id": "a7h",
-			"descripcion": "Chaqueta negra estilo polar con capucha, multiples bolsillos, con cremallera y botones",
-			"precio": 110.0,
-			"idCategoria": 12
-		},
-		{
-			"nombre": "Chaqueta negra casual",
-			"id": "a8h",
-			"descripcion": "Chaqueta estilo bomber negra casul, multiples bolsillos, impermeable, cremallera y botones",
-			"precio": 80,
-			"idCategoria": 12
-		}
-	],
-	"carritos": [],
-	"historial": []
+  "users": [
+    {
+      "id": 1,
+      "username": "ecosture",
+      "password": "ecosture"
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Tops y camisetas de Mujer"
+    },
+    {
+      "id": 2,
+      "nombre": "Vestidos Mujer"
+    },
+    {
+      "id": 3,
+      "nombre": "Pantalones Mujer"
+    },
+    {
+      "id": 4,
+      "nombre": "Faldas Mujer"
+    },
+    {
+      "nombre": "Sudaderas y jersey Mujer",
+      "id": 5
+    },
+    {
+      "nombre": "Chaquetas y abrigos Mujer",
+      "id": 6
+    },
+    {
+      "nombre": "Camisetas Hombre",
+      "id": 7
+    },
+    {
+      "nombre": "Camisas Hombre",
+      "id": 8
+    },
+    {
+      "nombre": "Pantalones Hombre",
+      "id": 9
+    },
+    {
+      "nombre": "Traje Hombre",
+      "id": 10
+    },
+    {
+      "nombre": "sudaderas y jersey Hombre",
+      "id": 11
+    },
+    {
+      "nombre": "abrigos Hombre",
+      "id": 12
+    }
+  ],
+  "productos": [
+    {
+      "nombre": "Camiseta print",
+      "id": "c1m",
+      "descripcion": "Camiseta de manga corta con print de algodón suave, estampado original, cuello redondo y corte regular. Ideal para estilos casuales y cómodo",
+      "precio": 7.99,
+      "idCategoria": 1
+    },
+    {
+      "nombre": "Top manga larga ",
+      "id": "c2m",
+      "descripcion": "Top de manga larga con corte ajustado y cuello redondo, estampado femenino y elegante, hecho de tela suave y cómoda. Ideal para ocasiones especiales.",
+      "precio": 12.99,
+      "idCategoria": 1
+    },
+    {
+      "nombre": "Top negro",
+      "id": "c3m",
+      "descripcion": "Top negro con rayas estampadas, cuello redondo, manga larga, corte ajustado y hecho de tela suave. Perfecto para looks elegantes y sofisticados.",
+      "precio": 7.99,
+      "idCategoria": 1
+    },
+    {
+      "nombre": "Top estampado",
+      "id": "c4m",
+      "descripcion": "Top estampado de rayas de cebra, cuello redondo, manga larga, corte ajustado, tela suave y original. Ideal para lucir diferente y llamativo.",
+      "precio": 12.99,
+      "idCategoria": 1
+    },
+    {
+      "nombre": "Camiseta corta print",
+      "id": "c5m",
+      "numero_pedido": 1,
+      "descripcion": "Camiseta crop de manga corta ecológica, con corte ajustado, cuello redondo, estampado original y hecha de tela sostenible y cómoda. Ideal para estilos conscientes y modernos.",
+      "precio": 9.99,
+      "idCategoria": 1
+    },
+    {
+      "nombre": "Camiseta corta botones",
+      "id": "c6m",
+      "descripcion": "Camiseta crip manga corta botones",
+      "precio": 9.99,
+      "idCategoria": 1
+    },
+    {
+      "nombre": "Camiseta corsé",
+      "id": "c7m",
+      "descripcion": "Camiseta manga corta estilo corsé",
+      "precio": 14.99,
+      "idCategoria": 1
+    },
+    {
+      "nombre": "Camiseta floral",
+      "id": "c8m",
+      "descripcion": "Camiseta manga corta estampado de flores",
+      "precio": 12.99,
+      "idCategoria": 1
+    },
+    {
+      "nombre": "Vestido marrón",
+      "id": "v1m",
+      "descripcion": "Vestido largo tirantes",
+      "precio": 20.99,
+      "idCategoria": 2
+    },
+    {
+      "nombre": "Vestido de fiesta negro",
+      "id": "v2m",
+      "descripcion": "Vestido midi pierna abierta",
+      "precio": 27.99,
+      "idCategoria": 2
+    },
+    {
+      "nombre": "Vestido mangas",
+      "id": "v3m",
+      "descripcion": "Vestido manga larga con volantes",
+      "precio": 20.99,
+      "idCategoria": 2
+    },
+    {
+      "nombre": "Vestido casual",
+      "id": "v4m",
+      "numero_pedido": 1,
+      "descripcion": "Vestido midi con escote en V",
+      "precio": 25.99,
+      "idCategoria": 2
+    },
+    {
+      "nombre": "Vestido con brillos",
+      "id": "v5m",
+      "descripcion": "Vestido midi tul",
+      "precio": 30.99,
+      "idCategoria": 2
+    },
+    {
+      "nombre": "Vestido floral",
+      "id": "v6m",
+      "descripcion": "Vestido manga larga estampado floral",
+      "precio": 17.99,
+      "idCategoria": 2
+    },
+    {
+      "nombre": "Vestido estampado",
+      "id": "v7m",
+      "descripcion": "Vestido tirantes satinado con estampado animal",
+      "precio": 20,
+      "idCategoria": 2
+    },
+    {
+      "nombre": "Vestido manga larga estampado",
+      "id": "v8m",
+      "descripcion": "Vestido manga larga estampadoa animal",
+      "precio": 17,
+      "idCategoria": 2
+    },
+    {
+      "nombre": "Pantalón diseño lineas",
+      "id": "p1m",
+      "descripcion": "Pantalón largo con diseño de líneas laterales, hecho con tela ecológica y suave, cintura elástica y corte ajustado. Ideal para estilos conscientes y modernos.",
+      "precio": 20,
+      "idCategoria": 3
+    },
+    {
+      "nombre": "Pantalón mom jean",
+      "id": "p2m",
+      "descripcion": "Pantalón estilo mom jean azul",
+      "precio": 23.99,
+      "idCategoria": 3
+    },
+    {
+      "nombre": "Pantalón formal",
+      "id": "p3m",
+      "descripcion": "Pantalón azul marino con botones",
+      "precio": 25,
+      "idCategoria": 3
+    },
+    {
+      "nombre": "Pantalón skinny negro",
+      "id": "p4m",
+      "descripcion": "Pantalón azul estilo skinny jean",
+      "precio": 19.99,
+      "idCategoria": 3
+    },
+    {
+      "nombre": "Pantalón corte recto",
+      "id": "p5m",
+      "descripcion": "Pantalón de vestir de tiro alto",
+      "precio": 27.99,
+      "idCategoria": 3
+    },
+    {
+      "nombre": "Pantalón jean fit basico",
+      "id": "p6m",
+      "descripcion": "Pantalón jean casual gris oscuro",
+      "precio": 21.99,
+      "idCategoria": 3
+    },
+    {
+      "nombre": "Pantalón baggy jeans roto",
+      "id": "p7m",
+      "descripcion": "Pantalón estilo baggy jean roto azul",
+      "precio": 20.99,
+      "idCategoria": 3
+    },
+    {
+      "nombre": "Pantalón camuflaje",
+      "id": "p8m",
+      "descripcion": "Pantalón jogger con estampado de camuflaje",
+      "precio": 19.99,
+      "idCategoria": 3
+    },
+    {
+      "nombre": "Falda jean recto",
+      "id": "f1m",
+      "descripcion": "Min falda jean de corte recto verde",
+      "precio": 12.99,
+      "idCategoria": 4
+    },
+    {
+      "nombre": "Falda estampado",
+      "id": "f2m",
+      "descripcion": "Falda midi con estampado y apertura lateral",
+      "precio": 17,
+      "idCategoria": 4
+    },
+    {
+      "nombre": "Mini falda brillos",
+      "id": "f3m",
+      "descripcion": "Mini falda rosa con brillantes y corte en el muslo",
+      "precio": 17.99,
+      "idCategoria": 4
+    },
+    {
+      "nombre": "Mini falda con estampado",
+      "id": "f4m",
+      "descripcion": "Mini falda con estampado floral y plisados laterales",
+      "precio": 15.99,
+      "idCategoria": 4
+    },
+    {
+      "nombre": "Mini falda a cuadros",
+      "id": "f5m",
+      "descripcion": "Mini falda de cuadros con apertura en los laterales",
+      "precio": 12.99,
+      "idCategoria": 4
+    },
+    {
+      "nombre": "Mini falda plisada",
+      "id": "f6m",
+      "descripcion": "Mini falda con tablas plisada",
+      "precio": 12.99,
+      "idCategoria": 4
+    },
+    {
+      "nombre": "Falda midi cruzada",
+      "id": "f7m",
+      "descripcion": "Falda midi con cruce lateral y acabado en volantes",
+      "precio": 12.99,
+      "idCategoria": 4
+    },
+    {
+      "nombre": "Mini falda tenis",
+      "id": "f8m",
+      "descripcion": "Mini falda sport plisada y cordón lateral",
+      "precio": 15.99,
+      "idCategoria": 4
+    },
+    {
+      "nombre": "Sudadera básica",
+      "id": "s1m",
+      "descripcion": "Sudadera gris básica con estampado",
+      "precio": 19.99,
+      "idCategoria": 5
+    },
+    {
+      "nombre": "Jersey de cuello alto",
+      "id": "s2m",
+      "descripcion": "Jesey de lana con cuello alto",
+      "precio": 24,
+      "idCategoria": 5
+    },
+    {
+      "nombre": "Jersey lana",
+      "id": "s3m",
+      "descripcion": "Jersey gris de lana con cuello alto y fruncido en las muñecas",
+      "precio": 24.99,
+      "idCategoria": 5
+    },
+    {
+      "nombre": "Sudadera print",
+      "id": "s4m",
+      "descripcion": "Sudadera basica con capucha y print en la espalda",
+      "precio": 20.99,
+      "idCategoria": 5
+    },
+    {
+      "nombre": "Sudadera print",
+      "id": "s5m",
+      "descripcion": "Sudadera gris con print EXPLORING LIFE",
+      "precio": 25,
+      "idCategoria": 5
+    },
+    {
+      "nombre": "Jersey básico",
+      "id": "s6m",
+      "descripcion": "Jersey hombro caído blanco de lana",
+      "precio": 25,
+      "idCategoria": 5
+    },
+    {
+      "nombre": "Sudadera deportiva",
+      "id": "s7m",
+      "descripcion": "Sudadera de deporte de hombro caído con capucha",
+      "precio": 20.99,
+      "idCategoria": 5
+    },
+    {
+      "nombre": "Sudadera con capucha",
+      "id": "s8m",
+      "descripcion": "Sudadera negra con tejido SURVIVE",
+      "precio": 21.99,
+      "idCategoria": 5
+    },
+    {
+      "nombre": "Abrigo piel sintética",
+      "id": "a1m",
+      "descripcion": "Abrigo de piel sintetica negro con cinturon",
+      "precio": 55.99,
+      "idCategoria": 6
+    },
+    {
+      "nombre": "Chaqueta casual",
+      "id": "a2m",
+      "descripcion": "Chaqueta de piel sintetica estilo casual",
+      "precio": 45,
+      "idCategoria": 6
+    },
+    {
+      "nombre": "Chaqueta oversize",
+      "id": "a3m",
+      "descripcion": "Chaqueta estilo oversize negra con print",
+      "precio": 35.99,
+      "idCategoria": 6
+    },
+    {
+      "nombre": "Chaqueta ovversize linea lateral",
+      "id": "a4m",
+      "descripcion": "Chaqueta con linea lateral y cremallera estilo oversize",
+      "precio": 40,
+      "idCategoria": 6
+    },
+    {
+      "nombre": "Abrigo formal",
+      "id": "a5m",
+      "descripcion": "Abrigo de piel sintética estilo formal con bolsillos",
+      "precio": 50.99,
+      "idCategoria": 6
+    },
+    {
+      "nombre": "Abrigo largo formal",
+      "id": "a6m",
+      "descripcion": "Abrigo negro de tela largo con botones",
+      "precio": 70,
+      "idCategoria": 6
+    },
+    {
+      "nombre": "Chaqueta impermeable",
+      "id": "a7m",
+      "descripcion": "Cortavientos con diseño de rayas laterales",
+      "precio": 30.99,
+      "idCategoria": 6
+    },
+    {
+      "nombre": "Chaqueta puffy",
+      "id": "a8m",
+      "descripcion": "Chaqueta roja estilo puffy",
+      "precio": 45,
+      "idCategoria": 6
+    },
+    {
+      "nombre": "Camiseta print",
+      "id": "c1h",
+      "descripcion": "Camiseta manga corta print",
+      "precio": 12,
+      "idCategoria": 7
+    },
+    {
+      "nombre": "Camiseta print espalda",
+      "id": "c2h",
+      "descripcion": "Camiseta manga corta print COBBLES CLASSIC",
+      "precio": 12.99,
+      "idCategoria": 7
+    },
+    {
+      "nombre": "Camiseta manga larga print",
+      "id": "c3h",
+      "descripcion": "Camiseta manga larga con diseño",
+      "precio": 15.99,
+      "idCategoria": 7
+    },
+    {
+      "nombre": "Camiseta basica con diseño",
+      "id": "c4h",
+      "descripcion": "Camiseta manga corta print FUCKING AWESOME",
+      "precio": 12,
+      "idCategoria": 7
+    },
+    {
+      "nombre": "Camiseta oversize",
+      "id": "c5h",
+      "descripcion": "Camiseta oversize con diseño en la espalda",
+      "precio": 17.99,
+      "idCategoria": 7
+    },
+    {
+      "nombre": "Camiseta con diseño PAC - MAN",
+      "id": "c6h",
+      "descripcion": "Camiseta manga corta diseño PAC - MAN",
+      "precio": 16.99,
+      "idCategoria": 7
+    },
+    {
+      "nombre": "Camiseta diseño frontal",
+      "id": "c7h",
+      "descripcion": "Camiseta manga corta con diseño frontal",
+      "precio": 12.99,
+      "idCategoria": 7
+    },
+    {
+      "nombre": "Camiseta con diseño LOS ANGELES",
+      "id": "c8h",
+      "descripcion": "Camiseta manga corta con diseño LOS ANGELES",
+      "precio": 13.99,
+      "idCategoria": 7
+    },
+    {
+      "nombre": "Camisa de cuadros",
+      "id": "ca1h",
+      "descripcion": "Camisa manga larga de cuadros",
+      "precio": 13.75,
+      "idCategoria": 8
+    },
+    {
+      "nombre": "Camisa con bolsillo",
+      "id": "ca2h",
+      "descripcion": "Camisa de lino bolsillo",
+      "precio": 23.75,
+      "idCategoria": 8
+    },
+    {
+      "nombre": "Camisa de cuadros verde",
+      "id": "ca3h",
+      "descripcion": "Camisa manga larga casual con estampado de cuadros verde",
+      "precio": 17,
+      "idCategoria": 8
+    },
+    {
+      "nombre": "Camisa floral",
+      "id": "ca4h",
+      "descripcion": "Camisa manga larga con estampado floral",
+      "precio": 23,
+      "idCategoria": 8
+    },
+    {
+      "nombre": "Camisa patron de líneas",
+      "id": "ca5h",
+      "descripcion": "Camisa manga corta con patrón de lineas y cuadrados",
+      "precio": 17.95,
+      "idCategoria": 8
+    },
+    {
+      "nombre": "Camisa tropical",
+      "id": "ca6h",
+      "descripcion": "Camisa con estampado tropical con bolsillo y manga larga",
+      "precio": 21,
+      "idCategoria": 8
+    },
+    {
+      "nombre": "Camisa jean",
+      "id": "ca7h",
+      "descripcion": "Camisa con tejido jean casual",
+      "precio": 70,
+      "idCategoria": 8
+    },
+    {
+      "nombre": "Camisa casual",
+      "id": "ca8h",
+      "descripcion": "Camisa de manga corta y bolsillos simétricos casual",
+      "precio": 21.95,
+      "idCategoria": 8
+    },
+    {
+      "nombre": "Pantalón formal negro",
+      "id": "p1h",
+      "descripcion": "Pantalon negro formal corte recto",
+      "precio": 26.95,
+      "idCategoria": 9
+    },
+    {
+      "nombre": "Pantalon jogger cargo",
+      "id": "p2h",
+      "descripcion": "Pantalon jogger cargo básico",
+      "precio": 21.99,
+      "idCategoria": 9
+    },
+    {
+      "nombre": "Pantalón campana",
+      "id": "p3h",
+      "descripcion": "Pantalón jean de campana verde con lineas verticales",
+      "precio": 24.95,
+      "idCategoria": 9
+    },
+    {
+      "nombre": "Pantalón deportivo",
+      "id": "p4h",
+      "descripcion": "Pantalón jogger deportivo con lineas en los laterales",
+      "precio": 35,
+      "idCategoria": 9
+    },
+    {
+      "nombre": "Jean básico",
+      "id": "p5h",
+      "descripcion": "Pantalón básico jean wide leg",
+      "precio": 25.75,
+      "idCategoria": 9
+    },
+    {
+      "nombre": "Pantalon jogger formal",
+      "id": "p6h",
+      "descripcion": "Pantalón estilo jogger formal negro",
+      "precio": 24.95,
+      "idCategoria": 9
+    },
+    {
+      "nombre": "Jean informal",
+      "id": "p7h",
+      "descripcion": "Jean baggy con bolsilllos con detalle de rotos ",
+      "precio": 24.95,
+      "idCategoria": 9
+    },
+    {
+      "nombre": "Pantalon corte recto",
+      "id": "p8h",
+      "descripcion": "Pantalon beige de corte recto, estilo formal con bolsillos",
+      "precio": 25.99,
+      "idCategoria": 9
+    },
+    {
+      "nombre": "Traje formal gris",
+      "id": "t1h",
+      "descripcion": "Traje formal gris con chaleco con cuello en V y botones",
+      "precio": 167.99,
+      "idCategoria": 10
+    },
+    {
+      "nombre": "Treje con patron lineal",
+      "id": "t2h",
+      "descripcion": "Traje formal gris con botones, patron de lineas a cuadros",
+      "precio": 153.75,
+      "idCategoria": 10
+    },
+    {
+      "nombre": "Traje gris con lineas",
+      "id": "t3h",
+      "descripcion": "Traje gris con patron de lineas",
+      "precio": 130.99,
+      "idCategoria": 10
+    },
+    {
+      "nombre": "Traje gris sencillo",
+      "id": "t4h",
+      "descripcion": "Traje gris sencillo con bolsillos",
+      "precio": 170,
+      "idCategoria": 10
+    },
+    {
+      "nombre": "Traje conjunto",
+      "id": "t5h",
+      "descripcion": "Traje con blazer azul marino con líneas y pantalón gris, con bolsillos",
+      "precio": 129.75,
+      "idCategoria": 10
+    },
+    {
+      "nombre": "Traje chaleco",
+      "id": "t6h",
+      "descripcion": "Traje de chaleco en pico, bolsillos con cremallera y pantalón oscuro formal",
+      "precio": 100.75,
+      "idCategoria": 10
+    },
+    {
+      "nombre": "Traje elegante",
+      "id": "t7h",
+      "descripcion": "Traje elegante azul marino a rayas con bolsillos",
+      "precio": 170,
+      "idCategoria": 10
+    },
+    {
+      "nombre": "Traje básico",
+      "id": "t8h",
+      "descripcion": "Traje gris sencillo con bolsillos",
+      "precio": 95.99,
+      "idCategoria": 10
+    },
+    {
+      "nombre": "Sudadera gris YIKES",
+      "id": "s1h",
+      "descripcion": "Sudadera gris básica con capucha, print YIKES, con bolsillo",
+      "precio": 21.75,
+      "idCategoria": 11
+    },
+    {
+      "nombre": "Sudadera básica",
+      "id": "s2h",
+      "descripcion": "Sudadera blanca básica con bolsillo y capucha",
+      "precio": 19.95,
+      "idCategoria": 11
+    },
+    {
+      "nombre": "Sudadera deportiva",
+      "id": "s3h",
+      "descripcion": "Sudadera azul con diseño, lineas lateralen en las mangas, con capucha y bolsillo",
+      "precio": 30,
+      "idCategoria": 11
+    },
+    {
+      "nombre": "Sudadera térmica",
+      "id": "s4h",
+      "descripcion": "Sudadera azul térmica sin capucha, con bolsillos",
+      "precio": 40,
+      "idCategoria": 11
+    },
+    {
+      "nombre": "Jersey básico",
+      "id": "s5h",
+      "descripcion": "Jersey básico gris con textura",
+      "precio": 23.99,
+      "idCategoria": 11
+    },
+    {
+      "nombre": "Sudadera diseño",
+      "id": "s6h",
+      "descripcion": "Sudadera gris con diseño, mangas azules, con bolsillo y capucha",
+      "precio": 26,
+      "idCategoria": 11
+    },
+    {
+      "nombre": "Sudadera negra GIFT OF PEACE",
+      "id": "s7h",
+      "descripcion": "Sudadera negra con capucha, print GIFT OF PEACE",
+      "precio": 25.99,
+      "idCategoria": 11
+    },
+    {
+      "nombre": "Sudadera PAST TENSE",
+      "id": "s8h",
+      "descripcion": "Sudadera básica, print PAST TENSE",
+      "precio": 80,
+      "idCategoria": 11
+    },
+    {
+      "nombre": "Abrigo patrón a cuadros",
+      "id": "a1h",
+      "descripcion": "Abrigo rojo con patrón de líneas amarillas, con botones y bolsillos",
+      "precio": 105.9,
+      "idCategoria": 12
+    },
+    {
+      "nombre": "Abrigo marrón",
+      "id": "a2h",
+      "descripcion": "Abrigo otoñal marrón con bolsillos y capucha",
+      "precio": 45,
+      "idCategoria": 12
+    },
+    {
+      "nombre": "Chaqueta beige",
+      "id": "a3h",
+      "descripcion": "Chaqueta estilo bomber marrón con bolsillos y cremallera",
+      "precio": 45,
+      "idCategoria": 12
+    },
+    {
+      "nombre": "Abrigo formal",
+      "id": "a4h",
+      "descripcion": "Abrigo formal de color negro con bolsillos",
+      "precio": 70.9,
+      "idCategoria": 12
+    },
+    {
+      "nombre": "Chaqueta cortavientos",
+      "id": "a5h",
+      "descripcion": "Chaqueta naranja cortavientos con cremallera y bolsillos",
+      "precio": 50,
+      "idCategoria": 12
+    },
+    {
+      "nombre": "Chaqueta con diseño",
+      "id": "a6h",
+      "descripcion": "Chaqueta informal con diseño de parches, bolsillos, botones y cremallera",
+      "precio": 45,
+      "idCategoria": 12
+    },
+    {
+      "nombre": "Chaqueta polar",
+      "id": "a7h",
+      "descripcion": "Chaqueta negra estilo polar con capucha, multiples bolsillos, con cremallera y botones",
+      "precio": 110,
+      "idCategoria": 12
+    },
+    {
+      "nombre": "Chaqueta negra casual",
+      "id": "a8h",
+      "descripcion": "Chaqueta estilo bomber negra casul, multiples bolsillos, impermeable, cremallera y botones",
+      "precio": 80,
+      "idCategoria": 12
+    }
+  ],
+  "carritos": [],
+  "historial": []
 }

@@ -22,11 +22,11 @@ function setLogin() {
 
 		setTimeout(() => {
 			Login()
-				.then((r) => {
+				.then(async (r) => {
 					// console.log("sesion iniciada", r);
 					// HISTORIAL = new Historial();
 					instantiateHISTORIAL();
-					HISTORIAL.update();
+					await HISTORIAL.update();
 					spanError.innerHTML = "";
 					loader.style.visibility = "hidden";
 					cerrarLogin();

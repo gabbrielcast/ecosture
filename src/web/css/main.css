@@ -2228,18 +2228,19 @@ html {
   position: absolute;
   min-width: 100vw;
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
 body {
   min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
 }
 
 #contenedor {
   width: 100%;
   overflow-x: hidden;
   min-height: 80vh;
+  opacity: 0;
+  transition: all 0.7s ease-in;
 }
 
 #contenedor-detalle {

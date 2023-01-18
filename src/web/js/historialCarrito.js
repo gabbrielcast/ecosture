@@ -30,17 +30,22 @@ export class Historial {
 	update() {
 		peticion(
 			"GET",
-			"http://localhost:3030/historial?idUser=" + User.id,
+			"http://localhost:3030/historial?userId=" + User.id,
 			false
 		).then((r) => {
 			this.carritos = r;
 		});
 	}
 
-	eliminarCarrito(carrito) {
-		let index = this.carritos.findIndex((c) => c.id === carrito.id);
+	updateLocalStorage() {
+		localStorage.setItem("historial", this.carritos);
+	}
+
+	async eliminarCarrito(id) {
+		let index = this.carritos.findIndex((c) => c.id === id);
 		this.carritos.splice(index, 1);
 
+		await peticion("DELETE", "http://localhost:3030/historial/" + id);
 		if (!this.hayCarritos()) {
 			this.cerrar();
 			return;

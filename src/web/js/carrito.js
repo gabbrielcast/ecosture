@@ -134,7 +134,7 @@ export class Carrito {
 			// ).then((r) => r[0]);
 			// console.log(categoria);
 			console.log(p);
-			let genero = p.id.split("").reverse()[0] === "m" ? "mujer" : "hombre";
+			let genero = p.id.split("").reverse()[0] === "m" ? "Mujer" : "Hombre";
 			producto.innerHTML = `
 					<img id="p-eliminar"
 						class="c-carrito__close"
