@@ -33,11 +33,11 @@ export class Carrito {
 
 	vaciarProductos() {
 		this.productos = [];
+		this.updateCarritoOnLocalStorage();
 	}
 
 	setProductos(productos) {
 		this.productos = productos;
-		// this.updateCarritoOnLocalStorage();
 	}
 
 	getProductos() {
