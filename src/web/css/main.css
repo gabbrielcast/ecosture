@@ -1314,6 +1314,9 @@ c-pagar {
 .c-pago__subgrupo input {
   width: 90px;
 }
+.c-pago__subgrupo input[type=date] {
+  width: 140px;
+}
 .c-pago__grupo {
   display: flex;
   flex-direction: row;

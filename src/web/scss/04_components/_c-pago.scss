@@ -39,6 +39,9 @@
 		input {
 			width: 90px;
 		}
+		input[type="date"] {
+			width: 140px;
+		}
 	}
 
 	&__grupo {

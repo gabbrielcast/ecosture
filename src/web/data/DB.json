@@ -733,5 +733,43 @@
     }
   ],
   "carritos": [],
-  "historial": []
+  "historial": [
+    {
+      "userId": 1,
+      "productos": [
+        {
+          "id": "v1m",
+          "unidades": 2
+        }
+      ],
+      "precio": 41.98,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "productos": [
+        {
+          "id": "v3m",
+          "unidades": 4
+        }
+      ],
+      "precio": 83.96,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "productos": [
+        {
+          "id": "p3m",
+          "unidades": 2
+        },
+        {
+          "id": "p1m",
+          "unidades": 2
+        }
+      ],
+      "precio": 90,
+      "id": 3
+    }
+  ]
 }
