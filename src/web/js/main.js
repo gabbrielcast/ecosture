@@ -43,18 +43,8 @@ function about(contenedor) {
 	section.innerHTML = `
     
         <div class="c-about__header">
-            <h3 class="c-about__title">Lorem ipsum dolor sit amet</h3>
-            <p class="c-about__text">
-            Quisque vulputate sem pulvinar nibh interdum dignissim. Vivamus id
-            arcu porttitor, lacinia ipsum sit amet, vulputate erat. Ut dictum
-            risus metus, et venenatis lectus efficitur quis. Sed placerat, erat
-            eu fermentum euismod, justo lectus molestie sem, sed dapibus eros
-            diam nec urna. Etiam magna ligula, eleifend a mi ac, maximus
-            vulputate nunc. Quisque ut sapien eu nunc pretium molestie ac ac
-            mauris. Fusce ultrices molestie justo id porta. Donec condimentum
-            semper eleifend. Phasellus eu tempor risus. Mauris in bibendum
-            purus. Donec justo quam, mollis vel leo nec, dignissim lacinia
-            justo. Ut tincidunt vel turpis ut placerat. Sed ut rutrum elit.
+            <h3 class="c-about__title">${textos.quienesSomos.titulo}</h3>
+            <p class="c-about__text">${textos.quienesSomos.parrafo}
             </p>
         </div>
 		<div class="c-about__body">
@@ -64,19 +54,13 @@ function about(contenedor) {
 					src="./assets/img/iconos/salvar-plantas.png"
 					alt="icono comercio justo"
 				/>
-				<h3 class="c-icon__title">Comercio Justo</h3>
-				<p class="c-icon__text">
-				Integer rutrum lacinia nibh, ut porttitor justo vehicula at. Praesent aliquam ante augue, 
-				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
-				</p>
+				<h3 class="c-icon__title">${textos.quienesSomos.columnas.comercioJusto.titulo}</h3>
+				<p class="c-icon__text">${textos.quienesSomos.columnas.comercioJusto.parrafo}</p>
 			</div>
 			<div class="c-icon">
 				<img class="c-icon__img" src="./assets/img/iconos/ecologia.png" alt="" />
-				<h3 class="c-icon__title">Organic</h3>
-				<p class="c-icon__text">
-				Integer rutrum lacinia nibh, ut porttitor justo vehicula at. Praesent aliquam ante augue, 
-				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
-				</p>
+				<h3 class="c-icon__title">${textos.quienesSomos.columnas.organic.titulo}</h3>
+				<p class="c-icon__text">${textos.quienesSomos.columnas.organic.parrafo}</p>
 			</div>
 			<div class="c-icon">
 				<img
@@ -84,11 +68,8 @@ function about(contenedor) {
 					src="./assets/img/iconos/el-planeta-tierra.png"
 					alt=""
 				/>
-				<h3 class="c-icon__title">Sostenible</h3>
-				<p class="c-icon__text">
-				Integer rutrum lacinia nibh, ut porttitor justo vehicula at. Praesent aliquam ante augue, 
-				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
-				</p>
+				<h3 class="c-icon__title">${textos.quienesSomos.columnas.sostenible.titulo}</h3>
+				<p class="c-icon__text">${textos.quienesSomos.columnas.sostenible.parrafo}</p>
 			</div>
 			<div class="c-icon">
 				<img
@@ -96,11 +77,8 @@ function about(contenedor) {
 					src="./assets/img/iconos/vegano.png"
 					alt="icono vegano"
 				/>
-				<h3 class="c-icon__title">Vegan</h3>
-				<p class="c-icon__text">
-				Integer rutrum lacinia nibh, ut porttitor justo vehicula at. Praesent aliquam ante augue, 
-				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
-				</p>
+				<h3 class="c-icon__title">${textos.quienesSomos.columnas.vegan.titulo}</h3>
+				<p class="c-icon__text">${textos.quienesSomos.columnas.vegan.parrafo}</p>
 			</div>
 			<div class="c-icon">
 				<img
@@ -108,10 +86,8 @@ function about(contenedor) {
 					src="./assets/img/iconos/reciclar-senal.png"
 					alt="icono reciclaje"
 				/>
-				<h3 class="c-icon__title">Upcycling</h3>
-				<p class="c-icon__text">
-				Integer rutrum lacinia nibh, ut porttitor justo vehicula at. Praesent aliquam ante augue, 
-				ac sodales justo iaculis id. Nunc dictum maximus nunc eu tincidunt.
+				<h3 class="c-icon__title">${textos.quienesSomos.columnas.upcycling.titulo}</h3>
+				<p class="c-icon__text">${textos.quienesSomos.columnas.upcycling.parrafo}
 				</p>
 			</div>
 		</div>
@@ -128,16 +104,9 @@ function testimonio(contenedor) {
 	section.innerHTML = `
         <!-- <div class="c-testimonio__img"></div> -->
         <i class="fas fa-quote-right fa-4x"></i>
-        <p class="c-testimonio__text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt labor et dolore magna aliqua ex commo
-        consequat irure. Maecenas nec libero porta, elementum erat eget,
-        pellentesque nulla. Curabitur sed sem quis metus vestibulum sodales
-        pulvinar eget tortor. Praesent non felis magna. Fusce egestas sapien
-        eu accumsan ultrices. Aliquam sed lacus mi. Aenean nisl tellus,
-        consequat pulvinar lorem sed, volutpat finibus sapien.
+        <p class="c-testimonio__text">${textos.testimonio.parrafo}
         </p>
-        <p class="c-testimonio__name">Donec Hendrerit</p>
+        <p class="c-testimonio__name">${textos.testimonio.autor}</p>
     
     `;
 
