@@ -1,26 +1,20 @@
 {
-	"name": "practica1/gcast",
-	"autoload": {
-		"psr-4": {
-			"App\\": "src/",
-			"Database\\": "db/",
-			"Auth\\": "src/auth",
-			"Middleware\\": "middleware/",
-			"Response\\": "response/"
-		},
-		"files": [
-			"src/helpers.php"
-		]
-	},
-	"authors": [
-		{
-			"name": "Gabriel Castillo",
-			"email": "gcastillo.tech@gmail.com"
-		}
-	],
-	"require": {
-		"bramus/router": "^1.6",
-		"larapack/dd": "^1.1",
-		"vlucas/phpdotenv": "^5.5"
-	}
+  "name": "practica1/gcast",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "Database\\": "db/",
+      "Auth\\": "src/auth",
+      "Middleware\\": "middleware/",
+      "Response\\": "response/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "require": {
+    "bramus/router": "^1.6",
+    "larapack/dd": "^1.1",
+    "vlucas/phpdotenv": "^5.5"
+  }
 }

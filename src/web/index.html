@@ -1,310 +1,310 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Proyecto Ecosture</title>
-		<link rel="stylesheet" href="./css/main.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<link rel="icon" type="image/jpg" href="./assets/img/logo2.svg" />
-		<script
-			src="https://kit.fontawesome.com/498cb667c6.js"
-			crossorigin="anonymous"
-		></script>
-		<script src="./js/main.js" type="module"></script>
-	</head>
-	<body>
-		<!-- NAV -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Ecosture</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/jpg" href="./assets/img/logo2.svg" />
+    <script
+      src="https://kit.fontawesome.com/498cb667c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js" type="module"></script>
+  </head>
+  <body>
+    <!-- NAV -->
 
-		<nav id="nav" class="c-nav">
-			<img
-				class="c-nav__logo"
-				src="./assets/img/logo2.svg"
-				alt="logo ecosture"
-			/>
-			<ul class="c-nav__menu">
-				<li>
-					<a id="btn-nav-Inicio" href="#hero" class="c-nav__item">Inicio</a>
-				</li>
-				<li>
-					<a id="btn-nav-quienes" href="#about" class="c-nav__item"
-						>¿Quiénes somos?</a
-					>
-				</li>
-				<li>
-					<a id="btn-nav-testimonio" href="#testimonio" class="c-nav__item"
-						>Opinión</a
-					>
-				</li>
-				<li>
-					<a href="#categorias" id="btn-nav-categorias" class="c-nav__item"
-						>Categorías</a
-					>
-				</li>
-				<li>
-					<a href="#footer" class="c-nav__item">Contacto</a>
-				</li>
-			</ul>
-			<div class="c-nav__iconos">
-				<button id="btnLogin"><i class="fas fa-user"></i></button>
-				<button id="btnCarrito"><i class="fas fa-shopping-cart"></i></button>
-				<button id="btnHistorial"><i class="far fa-chart-bar"></i></button>
-			</div>
-		</nav>
+    <nav id="nav" class="c-nav">
+      <img
+        class="c-nav__logo"
+        src="./assets/img/logo2.svg"
+        alt="logo ecosture"
+      />
+      <ul class="c-nav__menu">
+        <li>
+          <a id="btn-nav-Inicio" href="#hero" class="c-nav__item">Inicio</a>
+        </li>
+        <li>
+          <a id="btn-nav-quienes" href="#about" class="c-nav__item"
+            >¿Quiénes somos?</a
+          >
+        </li>
+        <li>
+          <a id="btn-nav-testimonio" href="#testimonio" class="c-nav__item"
+            >Opinión</a
+          >
+        </li>
+        <li>
+          <a href="#categorias" id="btn-nav-categorias" class="c-nav__item"
+            >Categorías</a
+          >
+        </li>
+        <li>
+          <a href="#footer" class="c-nav__item">Contacto</a>
+        </li>
+      </ul>
+      <div class="c-nav__iconos">
+        <button id="btnLogin"><i class="fas fa-user"></i></button>
+        <button id="btnCarrito"></button>
+        <button id="btnHistorial"><i class="far fa-chart-bar"></i></button>
+      </div>
+    </nav>
 
-		<main id="contenedor">
-			<!-- CONTACTO -->
-			<!-- <section class="c-section-contacto"></section> -->
-		</main>
+    <main id="contenedor">
+      <!-- CONTACTO -->
+      <!-- <section class="c-section-contacto"></section> -->
+    </main>
 
-		<!-- CARRITO DE LA COMPRA -->
+    <!-- CARRITO DE LA COMPRA -->
 
-		<!-- CARRITO DE LA COMPRA -->
-		<div id="carrito" class="c-carrito">
-			<h3 class="c-carrito__title">CARRITO DE LA COMPRA</h3>
-			<div id="carritoContainer" class="c-carrito__container"></div>
-			<div class="c-carrito__precioTotal">
-				<p class="c-carrito__textoTotal">TOTAL:</p>
-				<p id="carritoPrecio" class="c-carrito__cantidadTotal">89,90€</p>
-			</div>
-			<div class="c-carrito__botones">
-				<a class="c-button" id="cerrarCarrito">Seguir Comprando</a>
-				<a class="c-button" id="pagarCarrito">Pagar Carrito</a>
-			</div>
-		</div>
+    <!-- CARRITO DE LA COMPRA -->
+    <div id="carrito" class="c-carrito">
+      <h3 class="c-carrito__title">CARRITO DE LA COMPRA</h3>
+      <div id="carritoContainer" class="c-carrito__container"></div>
+      <div class="c-carrito__precioTotal">
+        <p class="c-carrito__textoTotal">TOTAL:</p>
+        <p id="carritoPrecio" class="c-carrito__cantidadTotal">89,90€</p>
+      </div>
+      <div class="c-carrito__botones">
+        <a class="c-button" id="cerrarCarrito">Seguir Comprando</a>
+        <a class="c-button" id="pagarCarrito">Pagar Carrito</a>
+      </div>
+    </div>
 
-		<!-- Historial de Carrito-->
+    <!-- Historial de Carrito-->
 
-		<div id="historialCarrito" class="c-historialCarrito">
-			<h3 class="c-historialCarrito__title">HISTORIAL DE CARRITOS</h3>
-			<div id="historialContainer" class="c-historial__container"></div>
+    <div id="historialCarrito" class="c-historialCarrito">
+      <h3 class="c-historialCarrito__title">HISTORIAL DE CARRITOS</h3>
+      <div id="historialContainer" class="c-historial__container"></div>
 
-			<div class="c-carrito__botones">
-				<a class="c-button" id="cerrarHistorial">Seguir Comprando</a>
-				<!-- <a class="c-button" id="pagarCarrito">Pagar Carrito</a> -->
-			</div>
-		</div>
-		<!-- PAGO -->
-		<div id="pago" class="c-pago">
-			<div class="c-pago__titulo">PASARELA DE PAGO</div>
-			<div id="pago-form" class="c-pago__form">
-				<div class="c-pago__icon">
-					<img src="./assets/img/iconos/pago.png" alt="" />
-				</div>
-				<div class="c-pago__grupo">
-					<label for="">Número de Tarjeta</label>
-					<input
-						id="pago-tarjeta"
-						type="text"
-						class="c-pago__input"
-						name="tarjeta"
-					/>
-				</div>
-				<div class="c-pago__grupo c-pago__grupo--junto">
-					<div class="c-pago__subgrupo">
-						<label for="">Fecha de Caducidad</label>
-						<input
-							id="pago-fecha"
-							type="date"
-							class="c-pago__input"
-							name="fecha"
-						/>
-					</div>
-					<div class="c-pago__subgrupo">
-						<label for="">CVC</label>
-						<input id="pago-cvc" type="text" class="c-pago__input" name="CVC" />
-					</div>
-				</div>
-				<div class="c-pago__grupo">
-					<label for="">Código Descuento</label>
-					<input
-						id="pago-descuento"
-						type="text"
-						class="c-pago__input"
-						name="Descuento"
-					/>
-				</div>
-				<div class="c-pago__btns">
-					<a id="btnCancelarPago" class="c-button">CANCELAR</a>
-					<a id="btnRealizarPago" class="c-button">PAGAR</a>
-				</div>
-			</div>
-		</div>
+      <div class="c-carrito__botones">
+        <a class="c-button" id="cerrarHistorial">Seguir Comprando</a>
+        <!-- <a class="c-button" id="pagarCarrito">Pagar Carrito</a> -->
+      </div>
+    </div>
+    <!-- PAGO -->
+    <div id="pago" class="c-pago">
+      <div class="c-pago__titulo">PASARELA DE PAGO</div>
+      <div id="pago-form" class="c-pago__form">
+        <div class="c-pago__icon">
+          <img src="./assets/img/iconos/pago.png" alt="" />
+        </div>
+        <div class="c-pago__grupo">
+          <label for="">Número de Tarjeta</label>
+          <input
+            id="pago-tarjeta"
+            type="text"
+            class="c-pago__input"
+            name="tarjeta"
+          />
+        </div>
+        <div class="c-pago__grupo c-pago__grupo--junto">
+          <div class="c-pago__subgrupo">
+            <label for="">Fecha de Caducidad</label>
+            <input
+              id="pago-fecha"
+              type="date"
+              class="c-pago__input"
+              name="fecha"
+            />
+          </div>
+          <div class="c-pago__subgrupo">
+            <label for="">CVC</label>
+            <input id="pago-cvc" type="text" class="c-pago__input" name="CVC" />
+          </div>
+        </div>
+        <div class="c-pago__grupo">
+          <label for="">Código Descuento</label>
+          <input
+            id="pago-descuento"
+            type="text"
+            class="c-pago__input"
+            name="Descuento"
+          />
+        </div>
+        <div class="c-pago__btns">
+          <a id="btnCancelarPago" class="c-button">CANCELAR</a>
+          <a id="btnRealizarPago" class="c-button">PAGAR</a>
+        </div>
+      </div>
+    </div>
 
-		<!-- LOGIN -->
-		<div class="c-login" id="login">
-			<div class="c-login__left">
-				<h3 class="c-login__title">¡BIENVENIDO!</h3>
+    <!-- LOGIN -->
+    <div class="c-login" id="login">
+      <div class="c-login__left">
+        <h3 class="c-login__title">¡BIENVENIDO!</h3>
 
-				<div id="login-form" class="c-login__form" onsubmit="return false">
-					<input
-						id="login-usuario"
-						class="c-login__input"
-						type="email"
-						placeholder="Email"
-					/>
-					<input
-						id="login-contrasenya"
-						class="c-login__input"
-						type="password"
-						placeholder="Contraseña"
-					/>
-					<span id="login-error" class="c-login__error"></span>
-					<a class="c-login__textForm">Has olvidado tu contraseña?</a>
-					<a id="login-acceder" class="c-button">Acceder</a>
-					<a id="login-cancelar" class="c-button">Cancelar</a>
-				</div>
-			</div>
+        <div id="login-form" class="c-login__form" onsubmit="return false">
+          <input
+            id="login-usuario"
+            class="c-login__input"
+            type="email"
+            placeholder="Email"
+          />
+          <input
+            id="login-contrasenya"
+            class="c-login__input"
+            type="password"
+            placeholder="Contraseña"
+          />
+          <span id="login-error" class="c-login__error"></span>
+          <a class="c-login__textForm">Has olvidado tu contraseña?</a>
+          <a id="login-acceder" class="c-button">Acceder</a>
+          <a id="login-cancelar" class="c-button">Cancelar</a>
+        </div>
+      </div>
 
-			<div class="c-login__right">
-				<img class="c-login__logo" src="./assets/img/logo_blanco.png" alt="" />
-				<div id="loader-login" class="c-icon__loading loader--style5" title="4">
-					<svg
-						version="1.1"
-						id="Layer_1"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						x="0px"
-						y="0px"
-						width="24px"
-						height="30px"
-						viewBox="0 0 24 30"
-						style="enable-background: new 0 0 250 250"
-						xml:space="preserve"
-					>
-						<rect x="0" y="0" width="4" height="10" fill="#333">
-							<animateTransform
-								attributeType="xml"
-								attributeName="transform"
-								type="translate"
-								values="0 0; 0 20; 0 0"
-								begin="0"
-								dur="0.6s"
-								repeatCount="indefinite"
-							/>
-						</rect>
-						<rect x="10" y="0" width="4" height="10" fill="#333">
-							<animateTransform
-								attributeType="xml"
-								attributeName="transform"
-								type="translate"
-								values="0 0; 0 20; 0 0"
-								begin="0.2s"
-								dur="0.6s"
-								repeatCount="indefinite"
-							/>
-						</rect>
-						<rect x="20" y="0" width="4" height="10" fill="#333">
-							<animateTransform
-								attributeType="xml"
-								attributeName="transform"
-								type="translate"
-								values="0 0; 0 20; 0 0"
-								begin="0.4s"
-								dur="0.6s"
-								repeatCount="indefinite"
-							/>
-						</rect>
-					</svg>
-				</div>
-			</div>
-		</div>
+      <div class="c-login__right">
+        <img class="c-login__logo" src="./assets/img/logo_blanco.png" alt="" />
+        <div id="loader-login" class="c-icon__loading loader--style5" title="4">
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="24px"
+            height="30px"
+            viewBox="0 0 24 30"
+            style="enable-background: new 0 0 250 250"
+            xml:space="preserve"
+          >
+            <rect x="0" y="0" width="4" height="10" fill="#333">
+              <animateTransform
+                attributeType="xml"
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 20; 0 0"
+                begin="0"
+                dur="0.6s"
+                repeatCount="indefinite"
+              />
+            </rect>
+            <rect x="10" y="0" width="4" height="10" fill="#333">
+              <animateTransform
+                attributeType="xml"
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 20; 0 0"
+                begin="0.2s"
+                dur="0.6s"
+                repeatCount="indefinite"
+              />
+            </rect>
+            <rect x="20" y="0" width="4" height="10" fill="#333">
+              <animateTransform
+                attributeType="xml"
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 20; 0 0"
+                begin="0.4s"
+                dur="0.6s"
+                repeatCount="indefinite"
+              />
+            </rect>
+          </svg>
+        </div>
+      </div>
+    </div>
 
-		<!-- Alerta -->
-		<div id="alerta" class="c-alerta">
-			<span class="c-alerta__icon-error"
-				><i class="fa-solid fa-xmark"></i
-			></span>
+    <!-- Alerta -->
+    <div id="alerta" class="c-alerta">
+      <span class="c-alerta__icon-error"
+        ><i class="fa-solid fa-xmark"></i
+      ></span>
 
-			<h2 id="alertaTitulo" class="c-alerta__titulo">No has iniciado sesion</h2>
-			<button
-				id="btnAlertaCancelar"
-				class="c-button c-button--alert c-button--cancel"
-			>
-				Cancelar
-			</button>
-			<button id="btnAlertaAceptar" class="c-button c-button--alert">
-				Aceptar
-			</button>
-		</div>
+      <h2 id="alertaTitulo" class="c-alerta__titulo">No has iniciado sesion</h2>
+      <button
+        id="btnAlertaCancelar"
+        class="c-button c-button--alert c-button--cancel"
+      >
+        Cancelar
+      </button>
+      <button id="btnAlertaAceptar" class="c-button c-button--alert">
+        Aceptar
+      </button>
+    </div>
 
-		<footer id="footer" class="c-footer">
-			<div class="c-footer__info">
-				<div class="c-footer__box">
-					<img
-						class="c-footer__logo"
-						src="./assets/img/logo_blanco.png"
-						alt="Logo Ecosture"
-					/>
+    <footer id="footer" class="c-footer">
+      <div class="c-footer__info">
+        <div class="c-footer__box">
+          <img
+            class="c-footer__logo"
+            src="./assets/img/logo_blanco.png"
+            alt="Logo Ecosture"
+          />
 
-					<div class="c-footer__media">
-						<img
-							class="c-icon__media"
-							src="./assets/img/iconos/instagram.png"
-							alt="icono instagram"
-						/>
-						<img
-							class="c-icon__media"
-							src="./assets/img/iconos/facebook.png"
-							alt="icono facebook"
-						/>
-						<img
-							class="c-icon__media"
-							src="./assets/img/iconos/twitter.png"
-							alt="icono twitter"
-						/>
-					</div>
-				</div>
-				<div class="c-footer__box">
-					<ul class="c-footer__list">
-						<li>Sostenibilidad</li>
+          <div class="c-footer__media">
+            <img
+              class="c-icon__media"
+              src="./assets/img/iconos/instagram.png"
+              alt="icono instagram"
+            />
+            <img
+              class="c-icon__media"
+              src="./assets/img/iconos/facebook.png"
+              alt="icono facebook"
+            />
+            <img
+              class="c-icon__media"
+              src="./assets/img/iconos/twitter.png"
+              alt="icono twitter"
+            />
+          </div>
+        </div>
+        <div class="c-footer__box">
+          <ul class="c-footer__list">
+            <li>Sostenibilidad</li>
 
-						<li><a class="c-footer__item" href=""> Proyecto</a></li>
+            <li><a class="c-footer__item" href=""> Proyecto</a></li>
 
-						<li><a class="c-footer__item" href="">Moda sostenible</a></li>
-					</ul>
-				</div>
+            <li><a class="c-footer__item" href="">Moda sostenible</a></li>
+          </ul>
+        </div>
 
-				<div class="c-footer__box">
-					<ul class="c-footer__list">
-						<li>Ayuda</li>
+        <div class="c-footer__box">
+          <ul class="c-footer__list">
+            <li>Ayuda</li>
 
-						<li>
-							<a class="c-footer__item" href="">Contáctanos</a>
-						</li>
+            <li>
+              <a class="c-footer__item" href="">Contáctanos</a>
+            </li>
 
-						<li>
-							<a class="c-footer__item" href=""> Métodos de pago y envío</a>
-						</li>
-					</ul>
-				</div>
+            <li>
+              <a class="c-footer__item" href=""> Métodos de pago y envío</a>
+            </li>
+          </ul>
+        </div>
 
-				<div class="c-footer__box">
-					<ul class="c-footer__list">
-						<li>Privacidad</li>
+        <div class="c-footer__box">
+          <ul class="c-footer__list">
+            <li>Privacidad</li>
 
-						<li>
-							<a class="c-footer__item" href=""> Política de privacidad</a>
-						</li>
+            <li>
+              <a class="c-footer__item" href=""> Política de privacidad</a>
+            </li>
 
-						<li>
-							<a class="c-footer__item" href="">Términos y condiciones</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+            <li>
+              <a class="c-footer__item" href="">Términos y condiciones</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-			<div class="c-footer__line"></div>
-			<a class="c-footer__derechos" href="" target="_blank"
-				>Copyright <span>Ecosture</span> © 2023. All Right Reserved.</a
-			>
-		</footer>
-	</body>
+      <div class="c-footer__line"></div>
+      <a class="c-footer__derechos" href="" target="_blank"
+        >Copyright <span>Ecosture</span> © 2023. All Right Reserved.</a
+      >
+    </footer>
+  </body>
 </html>
