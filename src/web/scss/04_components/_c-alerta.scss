@@ -1,45 +1,121 @@
+// .c-alerta {
+//   background-color: getColors("blanco", 1);
+//   // border: 1px solid getColors("rojo", 1);
+//   border-radius: getBorderRadius(6);
+//   width: 650px;
+//   margin-left: calc(50vw - (300px));
+//   position: fixed;
+//   z-index: 1000;
+//   top: -500px;
+//   // height: 70px;
+//   display: flex;
+//   // flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 20px;
+//   padding: 30px 20px;
+//   box-shadow: 0px 2px 8px rgb(0, 0, 0, 0.25);
+//   transition: ease 1.2s;
+
+//   i {
+//     font-size: 40px;
+//     color: getColors("blanco", 0);
+//     // height: 80px;
+//   }
+
+//   &__icon-error {
+//     border-radius: 50%;
+//     background-color: getColors("rojo", 0);
+//     width: 40px;
+//     height: 40px;
+//     padding: 28px;
+//     text-align: center;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   &__titulo {
+//     font-size: getFontSize("2xl");
+//     font-weight: bold;
+//     font-family: getFontFamily("principal");
+//     // text-transform: uppercase;
+//     // color: getColors("verde", 3);
+//     color: rgb(15, 122, 0);
+//   }
+// }
+
 .c-alerta {
-  background-color: getColors("blanco", 1);
-  // border: 1px solid getColors("rojo", 1);
-  border-radius: getBorderRadius(6);
-  width: 650px;
-  margin-left: calc(50vw - (300px));
+  z-index: 1;
   position: fixed;
-  z-index: 1000;
-  top: -500px;
-  // height: 70px;
+  width: 900px;
+  height: 500px;
+  top: -1000px;
+  left: calc(50vw - (900px / 2));
+
+  // margin-top: -2000px;
+  // left: 350px;
+  background-color: getColors("verde", 0);
+  // border: 2px solid getColors("verde", 1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   display: flex;
-  // flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 30px 20px;
-  box-shadow: 0px 2px 8px rgb(0, 0, 0, 0.25);
   transition: ease 1.2s;
+  font-family: getFontFamily("principal");
 
-  i {
-    font-size: 40px;
-    color: getColors("blanco", 0);
-    // height: 80px;
-  }
-
-  &__icon-error {
-    border-radius: 50%;
-    background-color: getColors("rojo", 0);
-    width: 40px;
-    height: 40px;
-    padding: 28px;
-    text-align: center;
+  &__right {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: getFontSize("s");
+    padding: getPadding(0) getPadding(10);
+    gap: getGap(6);
   }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: getGap(6);
+  }
+
   &__titulo {
-    font-size: getFontSize("2xl");
+    font-size: getFontSize("3xl");
     font-weight: bold;
-    font-family: getFontFamily("principal");
-    // text-transform: uppercase;
-    // color: getColors("verde", 3);
-    color: rgb(15, 122, 0);
+    text-align: center;
+    color: getColors("verde", 1);
+    color: #3a562e;
+    margin-bottom: getMargin(9);
+  }
+
+  &__text {
+    margin-bottom: getMargin(4);
+    color: getColors("verde", 1);
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background-color: getColors("verde", 1);
+    background-image: url("../assets/img/paisaje.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+  }
+
+  &__logo {
+    width: 150px;
+    margin: getMargin(5) getMargin(0);
+  }
+
+  &__img {
+    width: 150px;
   }
 }

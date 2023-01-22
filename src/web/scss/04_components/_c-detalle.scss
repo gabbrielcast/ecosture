@@ -10,7 +10,7 @@
 
   &__img {
     width: 400px;
-    height: 450px;
+    // height: 450px;
   }
 
   &__info {
@@ -45,6 +45,7 @@
     margin-bottom: getMargin(6);
     span {
       color: getColors("verde", 3);
+      font-weight: 600;
     }
   }
 

@@ -14,6 +14,7 @@
   transition: all 0.3s;
   user-select: none;
   border: none;
+  font-size: getFontSize("m");
   cursor: pointer;
 
   // border: 2px solid rgb(28, 28, 28);
@@ -68,6 +69,35 @@
       background-color: getColors("verde", 3);
     }
   }
+
+  &--large {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    background-color: getColors("verde", 1);
+    color: getColors("verde", 0);
+    text-decoration: none;
+    padding: getPadding(5) getPadding(7);
+    border-radius: getBorderRadius(4);
+    display: table;
+    text-align: center;
+    transition: all 0.3s;
+    user-select: none;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+
+    // border: 2px solid rgb(28, 28, 28);
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: getColors("verde", 3);
+    }
+  }
+
   &--alert {
     font-size: getFontSize("l");
     padding: getPadding(3) getPadding(8);
@@ -75,8 +105,24 @@
     border-radius: getBorderRadius(5);
   }
   &--cancel {
-    background-color: getColors("rojo", 0);
+    background-color: getColors("blanco", 1);
+    font-size: getFontSize("s");
+    color: getColors("verde", 2);
+    border: 1px solid getColors("verde", 2);
+    border-radius: getBorderRadius(4);
+    text-align: center;
+    padding: getPadding(5) getPadding(7);
+    transition: all 0.3s;
     display: none;
+    width: 200px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: getColors("verde", 3);
+      color: getColors("verde", 0);
+      border: none;
+      transform: scale(1.1);
+    }
   }
 
   &--products {

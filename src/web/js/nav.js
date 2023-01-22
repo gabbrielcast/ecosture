@@ -66,18 +66,18 @@ function setNav() {
       toggleBtnsNav();
       CARRITO.pintaProductos();
     } else {
-      showAlerta("Añade Productos al Carrito");
+      showAlerta("Añade Productos al Carrito.");
     }
   };
 
   btnHistorial.onclick = () => {
     if (!User.active) {
-      showAlerta("Es necesario iniciar sesión");
+      showAlerta("Es necesario iniciar sesión.");
       return;
     }
 
     if (!HISTORIAL.hayCarritos()) {
-      showAlerta("Todavía no has realizado un pedido");
+      showAlerta("Todavía no has realizado un pedido.");
       return;
     }
 

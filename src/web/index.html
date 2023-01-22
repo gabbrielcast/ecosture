@@ -88,7 +88,7 @@
       <h3 class="c-historialCarrito__title">HISTORIAL DE CARRITOS</h3>
       <div id="historialContainer" class="c-historial__container"></div>
 
-      <div class="c-carrito__botones">
+      <div class="c-historialCarrito__botones">
         <a class="c-button" id="cerrarHistorial">Seguir Comprando</a>
         <!-- <a class="c-button" id="pagarCarrito">Pagar Carrito</a> -->
       </div>
@@ -134,7 +134,7 @@
           />
         </div>
         <div class="c-pago__btns">
-          <a id="btnCancelarPago" class="c-button">CANCELAR</a>
+          <a id="btnCancelarPago" class="c-button--cancelar">CANCELAR</a>
           <a id="btnRealizarPago" class="c-button">PAGAR</a>
         </div>
       </div>
@@ -221,6 +221,29 @@
     </div>
 
     <!-- Alerta -->
+
+    <div id="alerta" class="c-alerta">
+      <div class="c-alerta__left">
+        <img class="c-login__logo" src="./assets/img/logo_blanco.png" alt="" />
+      </div>
+      <div class="c-alerta__right">
+        <!-- <span class="c-alerta__icon-error"><i class="fas fa-times"></i></span> -->
+        <h2 id="alertaTitulo" class="c-alerta__titulo">
+          Debes iniciar sesión para poder continuar
+        </h2>
+
+        <p id="alertaTexto" class="c-alerta__text"></p>
+
+        <button id="btnAlertaAceptar" class="c-button--large">Aceptar</button>
+        <button
+          id="btnAlertaCancelar"
+          class="c-button c-button--alert c-button--cancel"
+        >
+          Cancelar
+        </button>
+      </div>
+    </div>
+    <!-- 
     <div id="alerta" class="c-alerta">
       <span class="c-alerta__icon-error"><i class="fas fa-times"></i></span>
 
@@ -234,7 +257,7 @@
       <button id="btnAlertaAceptar" class="c-button c-button--alert">
         Aceptar
       </button>
-    </div>
+    </div> -->
 
     <!-- FOOTER -->
 
