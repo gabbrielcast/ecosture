@@ -1,45 +1,45 @@
 .c-alerta {
-	background-color: getColors("blanco", 1);
-	// border: 1px solid getColors("rojo", 1);
-	border-radius: getBorderRadius(6);
-	width: 650px;
-	margin-left: calc(50vw - (300px));
-	position: fixed;
-	z-index: 1000;
-	top: -500px;
-	// height: 70px;
-	display: flex;
-	// flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	gap: 20px;
-	padding: 30px 20px;
-	box-shadow: 0px 2px 8px rgb(0, 0, 0, 0.25);
-	transition: all 0.5s;
+  background-color: getColors("blanco", 1);
+  // border: 1px solid getColors("rojo", 1);
+  border-radius: getBorderRadius(6);
+  width: 650px;
+  margin-left: calc(50vw - (300px));
+  position: fixed;
+  z-index: 1000;
+  top: -500px;
+  // height: 70px;
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 20px;
+  box-shadow: 0px 2px 8px rgb(0, 0, 0, 0.25);
+  transition: ease 1.2s;
 
-	i {
-		font-size: 40px;
-		color: getColors("blanco", 0);
-		// height: 80px;
-	}
+  i {
+    font-size: 40px;
+    color: getColors("blanco", 0);
+    // height: 80px;
+  }
 
-	&__icon-error {
-		border-radius: 50%;
-		background-color: getColors("rojo", 0);
-		width: 40px;
-		height: 40px;
-		padding: 28px;
-		text-align: center;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	&__titulo {
-		font-size: getFontSize("2xl");
-		font-weight: bold;
-		font-family: "consolas", sans-serif;
-		// text-transform: uppercase;
-		// color: getColors("verde", 3);
-		color: rgb(15, 122, 0);
-	}
+  &__icon-error {
+    border-radius: 50%;
+    background-color: getColors("rojo", 0);
+    width: 40px;
+    height: 40px;
+    padding: 28px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__titulo {
+    font-size: getFontSize("2xl");
+    font-weight: bold;
+    font-family: getFontFamily("principal");
+    // text-transform: uppercase;
+    // color: getColors("verde", 3);
+    color: rgb(15, 122, 0);
+  }
 }

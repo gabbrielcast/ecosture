@@ -1,101 +1,160 @@
 .c-button {
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	align-items: flex-end;
-	gap: 20px;
-	background-color: getColors("verde", 1);
-	color: getColors("verde", 0);
-	text-decoration: none;
-	padding: getPadding(5) getPadding(7);
-	border-radius: getBorderRadius(4);
-	display: table;
-	text-align: center;
-	transition: all 0.3s;
-	user-select: none;
-	border: none;
-	cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  background-color: getColors("verde", 1);
+  color: getColors("verde", 0);
+  text-decoration: none;
+  padding: getPadding(5) getPadding(7);
+  border-radius: getBorderRadius(4);
+  display: table;
+  text-align: center;
+  transition: all 0.3s;
+  user-select: none;
+  border: none;
+  cursor: pointer;
 
-	// border: 2px solid rgb(28, 28, 28);
-	transition: all 0.3s;
+  // border: 2px solid rgb(28, 28, 28);
+  transition: all 0.3s;
 
-	&:hover {
-		background-color: getColors("verde", 3);
-	}
+  &:hover {
+    transform: scale(1.1);
+    background-color: getColors("verde", 3);
+  }
 
-	&--big {
-		font-size: getFontSize("xl");
-		padding: getPadding(6) getPadding(14);
-		width: 500px;
-	}
+  &--big {
+    font-size: getFontSize("xl");
+    padding: getPadding(6) getPadding(14);
+    width: 500px;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.02);
+      background-color: getColors("verde", 3);
+    }
+  }
 
-	&--medium {
-		font-size: getFontSize("m");
-		padding: getPadding(3) getPadding(14);
-		width: 500px;
-	}
-	&--alert {
-		font-size: getFontSize("xl");
-		padding: getPadding(3) getPadding(8);
-		background-color: getColors("verde", 1);
-		border-radius: getBorderRadius(5);
-	}
-	&--cancel {
-		background-color: getColors("rojo", 0);
-		display: none;
-	}
+  &--bigCancelar {
+    background-color: getColors("blanco", 1);
+    color: getColors("verde", 2);
+    border: 1px solid getColors("verde", 2);
+    border-radius: getBorderRadius(4);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    text-align: center;
+    padding: getPadding(4) getPadding(7);
+    transition: all 0.3s;
+    cursor: pointer;
 
-	&--products {
-		font-size: getFontSize("s");
-		padding: getPadding(3) getPadding(14);
-		// width: 250px;
-		font-family: getFontFamily("principal");
-		// &:hover {
-		// 	transform: scale(1.06);
-		// 	background-color: getColors("verde", 3);
-		// }
-	}
+    &:hover {
+      background-color: getColors("verde", 3);
+      color: getColors("verde", 0);
+      border: none;
+      transform: scale(1.02);
+    }
+  }
 
-	&--categoria {
-		font-size: getFontSize("s");
-		padding: getPadding(5) getPadding(7);
-		text-align: center;
-		font-family: getFontFamily("principal");
-		&:hover {
-			transform: scale(1.04);
-			background-color: getColors("verde", 3);
-		}
-	}
+  &--medium {
+    font-size: getFontSize("m");
+    padding: getPadding(3) getPadding(14);
+    width: 500px;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.02);
+      background-color: getColors("verde", 3);
+    }
+  }
+  &--alert {
+    font-size: getFontSize("l");
+    padding: getPadding(3) getPadding(8);
+    background-color: getColors("verde", 1);
+    border-radius: getBorderRadius(5);
+  }
+  &--cancel {
+    background-color: getColors("rojo", 0);
+    display: none;
+  }
 
-	// &--primary {
-	// 	background-color: getColors("verde", 1);
-	// 	color: getColors("verde", 0);
-	// 	text-decoration: none;
-	// 	padding: getPadding(5) getPadding(7);
-	// 	border-radius: getBorderRadius(4);
-	// 	display: table;
-	// 	text-align: center;
-	// 	&:hover {
-	// 		transform: scale(1.1);
-	// 	}
-	// 	&:active {
-	// 		transform: scale(0.9);
-	// 	}
-	// }
+  &--products {
+    font-size: getFontSize("s");
+    padding: getPadding(3) getPadding(4);
+    width: 250px;
+    font-family: getFontFamily("principal");
+    display: flex;
+    justify-content: center;
+    &:hover {
+      transform: scale(1.06);
+      background-color: getColors("verde", 3);
+    }
+  }
 
-	// &--resta {
-	// 	background-color: getColors("verde", 1);
-	// 	color: getColors("verde", 0);
-	// 	text-decoration: none;
-	// 	padding: getPadding(5) getPadding(7);
-	// 	border-radius: getBorderRadius(4);
-	// 	display: table;
-	// 	text-align: center;
-	// 	&:hover {
-	// 		transform: scale(1.2);
-	// 	}
-	// 	&:active {
-	// 		transform: scale(0.8);
-	// 	}
-	// }
+  &--categoria {
+    font-size: getFontSize("s");
+    padding: getPadding(5) getPadding(7);
+    text-align: center;
+    font-family: getFontFamily("principal");
+    &:hover {
+      transform: scale(1.04);
+      background-color: getColors("verde", 3);
+    }
+  }
+
+  &--cancelar {
+    background-color: getColors("blanco", 1);
+    color: getColors("verde", 2);
+    border: 1px solid getColors("verde", 2);
+    border-radius: getBorderRadius(4);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    text-align: center;
+    padding: getPadding(4) getPadding(7);
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: getColors("verde", 3);
+      color: getColors("verde", 0);
+      border: none;
+      transform: scale(1.1);
+    }
+  }
+
+  // &--primary {
+  // 	background-color: getColors("verde", 1);
+  // 	color: getColors("verde", 0);
+  // 	text-decoration: none;
+  // 	padding: getPadding(5) getPadding(7);
+  // 	border-radius: getBorderRadius(4);
+  // 	display: table;
+  // 	text-align: center;
+  // 	&:hover {
+  // 		transform: scale(1.1);
+  // 	}
+  // 	&:active {
+  // 		transform: scale(0.9);
+  // 	}
+  // }
+
+  // &--resta {
+  // 	background-color: getColors("verde", 1);
+  // 	color: getColors("verde", 0);
+  // 	text-decoration: none;
+  // 	padding: getPadding(5) getPadding(7);
+  // 	border-radius: getBorderRadius(4);
+  // 	display: table;
+  // 	text-align: center;
+  // 	&:hover {
+  // 		transform: scale(1.2);
+  // 	}
+  // 	&:active {
+  // 		transform: scale(0.8);
+  // 	}
+  // }
 }

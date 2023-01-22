@@ -1,31 +1,40 @@
 .c-about {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	padding: getPadding(15) getPadding(14);
-	font-family: getFontFamily("principal");
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: getPadding(15) getPadding(14);
+  font-family: getFontFamily("principal");
 
-	&__header {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		text-align: center;
-		margin-bottom: getMargin(10);
-		gap: getGap(6);
-	}
+  &__header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: getMargin(10);
+    gap: getGap(6);
+  }
 
-	&__body {
-		display: flex;
-		justify-content: space-between;
-	}
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
 
-	&__title {
-		font-size: getFontSize("xl");
-		font-weight: bold;
-		color: getColors("verde", 1);
-	}
+  &__title {
+    font-size: getFontSize("3xl");
+    margin: getMargin(4) getMargin(2);
+    font-weight: bold;
+    line-height: getLineHeight("2xl");
+    color: getColors("verde", 1);
+    font-family: getFontFamily("principal");
+    margin-bottom: getMargin(6);
+    margin-top: getMargin(6);
+  }
 
-	&__text {
-		line-height: getLineHeight("2xl");
-	}
+  &__text {
+    line-height: getLineHeight("2xl");
+  }
+
+  &__fa-user {
+    color: green;
+  }
 }

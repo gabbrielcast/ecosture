@@ -573,20 +573,52 @@ table {
   transition: all 0.3s;
 }
 .c-button:hover {
+  transform: scale(1.1);
   background-color: #8cc63f;
 }
 .c-button--big {
   font-size: 20px;
   padding: 16px 96px;
   width: 500px;
+  transition: all 0.3s;
+}
+.c-button--big:hover {
+  transform: scale(1.02);
+  background-color: #8cc63f;
+}
+.c-button--bigCancelar {
+  background-color: #f1f2f3;
+  color: #01190d;
+  border: 1px solid #01190d;
+  border-radius: 8px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.c-button--bigCancelar:hover {
+  background-color: #8cc63f;
+  color: #f5f5f5;
+  border: none;
+  transform: scale(1.02);
 }
 .c-button--medium {
   font-size: 16px;
   padding: 8px 96px;
   width: 500px;
+  transition: all 0.3s;
+}
+.c-button--medium:hover {
+  transform: scale(1.02);
+  background-color: #8cc63f;
 }
 .c-button--alert {
-  font-size: 20px;
+  font-size: 18px;
   padding: 8px 24px;
   background-color: #3a562e;
   border-radius: 16px;
@@ -597,8 +629,15 @@ table {
 }
 .c-button--products {
   font-size: 14px;
-  padding: 8px 96px;
+  padding: 8px 10px;
+  width: 250px;
   font-family:  'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.c-button--products:hover {
+  transform: scale(1.06);
+  background-color: #8cc63f;
 }
 .c-button--categoria {
   font-size: 14px;
@@ -609,6 +648,27 @@ table {
 .c-button--categoria:hover {
   transform: scale(1.04);
   background-color: #8cc63f;
+}
+.c-button--cancelar {
+  background-color: #f1f2f3;
+  color: #01190d;
+  border: 1px solid #01190d;
+  border-radius: 8px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.c-button--cancelar:hover {
+  background-color: #8cc63f;
+  color: #f5f5f5;
+  border: none;
+  transform: scale(1.1);
 }
 
 .c-icon {
@@ -631,13 +691,12 @@ table {
 .c-icon__text {
   line-height: 24px;
 }
-.c-icon--media {
+.c-icon__media {
   width: 25px;
-  height: 25px;
   transition: all 0.3s;
   cursor: pointer;
 }
-.c-icon--media:hover {
+.c-icon__media:hover {
   transform: scale(1.2);
   color: #8cc63f;
 }
@@ -649,35 +708,46 @@ table {
 .c-icon__loading svg rect {
   fill: white;
 }
-.c-icon--cantidad {
+.c-icon--cantidadPlus {
   width: 20px;
   height: 20px;
   transition: ease 0.3s;
   background-size: cover;
   cursor: pointer;
+  background-image: url(../assets/img/iconos/plus.png);
 }
-.c-icon--cantidad--minus {
+.c-icon--cantidadPlus:hover {
+  transform: scale(1.2) rotate(90deg);
+}
+.c-icon--cantidadMinus {
+  width: 20px;
+  height: 20px;
+  transition: ease 0.3s;
+  background-size: cover;
+  cursor: pointer;
   background-image: url(../assets/img/iconos/minus.png);
 }
-.c-icon--cantidad--plus {
-  background-image: url(../assets/img/iconos/minus.png);
-}
-.c-icon--cantidad:hover {
+.c-icon--cantidadMinus:hover {
   transform: scale(1.2) rotate(180deg);
 }
-.c-icon--planeta {
+.c-icon__circulo {
+  border: 3px solid #3a562e;
+  border-radius: 50%;
+  padding: 8px;
+}
+.c-icon__circulo--planeta {
   background-image: url(../assets/img/iconos/icono1.png);
   width: 60px;
   height: 60px;
   background-size: cover;
 }
-.c-icon--bombilla {
+.c-icon__circulo--bombilla {
   background-image: url(../assets/img/iconos/icono4.png);
   width: 60px;
   height: 60px;
   background-size: cover;
 }
-.c-icon--hojas {
+.c-icon__circulo--hojas {
   background-image: url(../assets/img/iconos/icono2.png);
   width: 60px;
   height: 60px;
@@ -744,22 +814,23 @@ table {
   margin-bottom: 16px;
 }
 .c-carrito__item {
-  padding: 20px 32px;
-  height: 120px;
+  padding: 40px 32px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
   align-items: center;
 }
-.c-carrito__item:not(:last-child) {
-  border-bottom: 1px solid #3a562e;
+.c-carrito__item:not(:first-child) {
+  border-top: 1px solid #3a562e;
 }
 .c-carrito__img {
-  width: 75px;
+  width: 90px;
 }
 .c-carrito__descripcion {
   display: flex;
+  padding: 12px 0px;
   flex-direction: column;
   width: 150px;
   gap: 12px;
@@ -780,6 +851,8 @@ table {
 }
 .c-carrito__precio-item {
   width: 50px;
+  font-weight: 600;
+  color: #3a562e;
 }
 .c-carrito__icon {
   width: 20px;
@@ -950,10 +1023,6 @@ c-pagar {
   padding: 64px 40px;
   font-family:  'Montserrat', sans-serif;
   font-size: 14px;
-  margin-bottom: 0px;
-  position: relative;
-  clear: both;
-  margin-bottom: 0px;
 }
 .c-footer__logo {
   width: 150px;
@@ -1053,6 +1122,7 @@ c-pagar {
 .c-nav__iconos {
   display: flex;
   gap: 24px;
+  color: #3a562e;
   transition: all 0.3s;
 }
 .c-nav__iconos button {
@@ -1071,6 +1141,9 @@ c-pagar {
 .c-nav__iconos button {
   border: none;
   background-color: #f5f5f5;
+}
+.c-nav__icono {
+  color: #3a562e;
 }
 
 .c-hero {
@@ -1130,12 +1203,20 @@ c-pagar {
   justify-content: space-between;
 }
 .c-about__title {
-  font-size: 20px;
+  font-size: 30px;
+  margin: 10px 6px;
   font-weight: bold;
+  line-height: 24px;
   color: #3a562e;
+  font-family:  'Montserrat', sans-serif;
+  margin-bottom: 16px;
+  margin-top: 16px;
 }
 .c-about__text {
   line-height: 24px;
+}
+.c-about__fa-user {
+  color: green;
 }
 
 .c-testimonio {
@@ -1172,7 +1253,7 @@ c-pagar {
   gap: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
-  margin: 20px 6px;
+  margin: 20px 0px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   background-color: #f5f5f5;
@@ -1227,9 +1308,9 @@ c-pagar {
 .c-detalle {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 30px;
   padding: 70px 0px;
-  width: 90%;
   overflow-x: hidden;
   font-family:  'Montserrat', sans-serif;
 }
@@ -1238,7 +1319,7 @@ c-pagar {
   height: 450px;
 }
 .c-detalle__info {
-  padding: 12px 40px;
+  padding: 48px 40px;
   height: 470px;
   font-size: 14px;
   display: flex;
@@ -1499,7 +1580,7 @@ c-pagar {
   gap: 20px;
   padding: 30px 20px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-  transition: all 0.5s;
+  transition: ease 1.2s;
 }
 .c-alerta i {
   font-size: 40px;
@@ -1519,7 +1600,7 @@ c-pagar {
 .c-alerta__titulo {
   font-size: 24px;
   font-weight: bold;
-  font-family: "consolas", sans-serif;
+  font-family:  'Montserrat', sans-serif;
   color: rgb(15, 122, 0);
 }
 

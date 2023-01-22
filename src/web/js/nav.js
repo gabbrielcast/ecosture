@@ -111,7 +111,7 @@ function setUsername(login = true) {
   if (login) {
     btnLogin.innerHTML = User.username;
   } else {
-    btnLogin.innerHTML = '<i class="fas fa-user"></i>';
+    btnLogin.innerHTML = '<i class="fas fa-user c-nav__icono"></i>';
   }
 }
 

@@ -97,13 +97,13 @@ export class Carrito {
   modificaUnidades(codigo, op) {
     let producto = this.productos.find((p) => p.id === codigo);
     console.log(codigo, "unidades");
-    if (op === "minus" && producto.unidades >= 1) {
+    if (op === "cantidadMinus" && producto.unidades >= 1) {
       producto.unidades--;
       if (producto.unidades == 0) {
         let index = this.productos.findIndex((p) => p.id === +codigo);
         this.productos.splice(index, 1);
       }
-    } else if (op === "plus") {
+    } else if (op === "cantidadPlus") {
       producto.unidades++;
     }
     if (!this.hayProductos()) {
@@ -154,7 +154,7 @@ export class Carrito {
 
 					<div class="c-carrito__cantidad">
 						<img id="p-minus"
-							class="c-icon c-icon--cantidad c-icon--minus"
+							class="c-icon c-icon--cantidad c-icon--cantidadMinus"
 							src="./assets/img/iconos/minus.png"
 							alt=""
 						/>
@@ -162,13 +162,13 @@ export class Carrito {
 						<input class="c-carrito__input" type="number" name="name" value="${p.unidades}" />
 
 						<img id="p-plus"
-							class="c-icon c-icon--cantidad c-icon--plus"
+							class="c-icon c-icon--cantidad c-icon--cantidadPlus"
 							src="./assets/img/iconos/plus.png"
 							alt=""
 						/>
 					</div>
 
-					<div class="c-carrito__precio-item">${p.precio}€</div>
+					<div class="c-carrito__precio-item">${p.precio}€/U</div>
 				
 				`;
 

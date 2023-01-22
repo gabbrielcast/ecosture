@@ -22,7 +22,7 @@ async function cargaInicio() {
 function cantidadCarrito() {
   let carrito = document.getElementById("btnCarrito");
   let totalArticulos = CARRITO.getProductos().length;
-  carrito.innerHTML = `<i class="fas fa-shopping-cart"></i> ${totalArticulos}`;
+  carrito.innerHTML = `<i class="fas fa-shopping-cart c-nav__icono"></i> ${totalArticulos}`;
 }
 
 function portada(contenedor) {
@@ -131,7 +131,7 @@ async function categorias(contenedor) {
 
   let contCategorias = document.createElement("div");
   contCategorias.className =
-    "l-grid l-grid--auto-fit l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12";
+    "l-grid l-grid--auto-fit l-grid--gap-9 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12";
 
   let categorias = await peticion("GET", "http://localhost:3000/categorias");
 
@@ -277,7 +277,7 @@ function detalleProducto(producto) {
 				<a id="anyadirProducto" class="c-button c-button--big">
 					<i class="fas fa-cart-plus"></i>
 					Añadir al Carrito</a>
-				<a  class="c-button c-button--medium">Volver</a>
+				<a  class="c-button c-button--medium c-button--bigCancelar">Volver</a>
 			</div>
 		</div>
 	`;

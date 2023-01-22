@@ -6,7 +6,7 @@
   gap: getGap(3);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
-  margin: getMargin(7) getMargin(2);
+  margin: getMargin(7) getMargin(0);
   border-top-left-radius: getBorderRadius(5);
   border-top-right-radius: getBorderRadius(5);
   background-color: getColors("verde", 0);

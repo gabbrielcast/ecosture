@@ -53,9 +53,11 @@
         </li>
       </ul>
       <div class="c-nav__iconos">
-        <button id="btnLogin"><i class="fas fa-user"></i></button>
+        <button id="btnLogin"><i class="fas fa-user c-nav__icono"></i></button>
         <button id="btnCarrito"></button>
-        <button id="btnHistorial"><i class="far fa-chart-bar"></i></button>
+        <button id="btnHistorial">
+          <i class="far fa-chart-bar c-nav__icono"></i>
+        </button>
       </div>
     </nav>
 
@@ -65,17 +67,17 @@
     </main>
 
     <!-- CARRITO DE LA COMPRA -->
-
-    <!-- CARRITO DE LA COMPRA -->
     <div id="carrito" class="c-carrito">
       <h3 class="c-carrito__title">CARRITO DE LA COMPRA</h3>
       <div id="carritoContainer" class="c-carrito__container"></div>
+      <div class="c-carrito__line"></div>
       <div class="c-carrito__precioTotal">
         <p class="c-carrito__textoTotal">TOTAL:</p>
+
         <p id="carritoPrecio" class="c-carrito__cantidadTotal">89,90€</p>
       </div>
       <div class="c-carrito__botones">
-        <a class="c-button" id="cerrarCarrito">Seguir Comprando</a>
+        <a class="c-button--cancelar" id="cerrarCarrito">Seguir Comprando</a>
         <a class="c-button" id="pagarCarrito">Pagar Carrito</a>
       </div>
     </div>
@@ -156,10 +158,11 @@
             type="password"
             placeholder="Contraseña"
           />
-          <span id="login-error" class="c-login__error"></span>
+
           <a class="c-login__textForm">Has olvidado tu contraseña?</a>
+          <span id="login-error" class="c-login__error"></span>
           <a id="login-acceder" class="c-button">Acceder</a>
-          <a id="login-cancelar" class="c-button">Cancelar</a>
+          <a id="login-cancelar" class="c-button--cancelar">Cancelar</a>
         </div>
       </div>
 
@@ -219,9 +222,7 @@
 
     <!-- Alerta -->
     <div id="alerta" class="c-alerta">
-      <span class="c-alerta__icon-error"
-        ><i class="fa-solid fa-xmark"></i
-      ></span>
+      <span class="c-alerta__icon-error"><i class="fas fa-times"></i></span>
 
       <h2 id="alertaTitulo" class="c-alerta__titulo">No has iniciado sesion</h2>
       <button
@@ -234,6 +235,8 @@
         Aceptar
       </button>
     </div>
+
+    <!-- FOOTER -->
 
     <footer id="footer" class="c-footer">
       <div class="c-footer__info">
