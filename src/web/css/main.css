@@ -811,7 +811,7 @@ table {
 }
 @media (max-height: 900px) {
   .c-carrito {
-    height: 400px;
+    height: 500px;
   }
 }
 @media (max-height: 600px) {

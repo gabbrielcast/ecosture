@@ -756,9 +756,17 @@
         {
           "id": "v7m",
           "unidades": 1
+        },
+        {
+          "id": "c3m",
+          "unidades": 1
+        },
+        {
+          "id": "c5m",
+          "unidades": 1
         }
       ],
-      "precio": 125.96,
+      "precio": 143.94,
       "id": 1
     }
   ]
