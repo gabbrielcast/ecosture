@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductosController;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +29,12 @@ Route::get("/hola",function(){
 
 Route::post("/login",[LoginController::class,'login']);
 Route::post("/refresh",[LoginController::class,'refresh']);
+
+
+
+
+Route::get("/producto",[ProductosController::class,'index']);
+Route::get("/producto/{id}",[ProductosController::class,'show']);
+Route::get("/categoria/{id}/producto",[ProductosController::class,'productosByCategoria']);
+
+

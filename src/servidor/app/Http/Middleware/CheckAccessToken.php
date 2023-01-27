@@ -40,34 +40,28 @@ class CheckAccessToken
         
         try {
            
-
             $result=DB::table('access_token')
             ->select('*')
             ->where('token','=',$token)
-            ->get();
-
-            dd($result);
-
-           
-            count($result)==0 ? throw new Exception("Access Token no encontrado en BD", 400) :"";
-            
+            ->get()[0];
             
         } catch (Exception $th) {
             
-            return response(["Error"=>$th->getMessage()],404);
+            return response(["Error"=>"Access Token no encontrado"],404);
         }
     
+        
         // $result=(array)$result[0];
        
-        // $now = strtotime("now");
-        // if ($now > $result["expires_in"]) {
+        $now = strtotime("now");
+        if ($now > $result->expires_in) {
             
-        //     $data = ([
-        //         "Error" => "Access Token expirado"
-        //     ]);
+            $data = ([
+                "Error" => "Access Token expirado"
+            ]);
 
-        //     return response($data,401);
-        // }
+            return response($data,401);
+        }
         // return true;
         return $next($request);
     }
