@@ -1,3 +1,4 @@
 src/web/node_modules
 src/php/vendor
 src/servidor/vendor
+src/.vscode
