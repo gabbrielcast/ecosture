@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
 use Ecosture\services\impl\TokenServicio;
 use Exception;
 use Illuminate\Http\Request;
@@ -14,7 +15,9 @@ class LoginController extends Controller
     }
     public function login(Request $request){
 
+        
         $user=(object)$request->input();
+      
         try{
 
             $data=$this->servicio->validateNewLogin($user);

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductosController;
 use App\Models\Producto;
@@ -22,19 +24,24 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get("/hola",function(){
-    return response(["datos"=>"hola"],200);
-})->middleware('acceso');
-
-
-Route::post("/login",[LoginController::class,'login']);
-Route::post("/refresh",[LoginController::class,'refresh']);
 
 
 
+Route::post("/login",[LoginController::class,'login'])->middleware('cors');
+Route::post("/refresh",[LoginController::class,'refresh'])->middleware('cors');
 
-Route::get("/producto",[ProductosController::class,'index']);
-Route::get("/producto/{id}",[ProductosController::class,'show']);
-Route::get("/categoria/{id}/producto",[ProductosController::class,'productosByCategoria']);
+
+Route::get("/producto",[ProductosController::class,'index'])->middleware('cors');
+Route::get("/producto/{id}",[ProductosController::class,'show'])->middleware('cors');
+Route::get("/categoria/{id}/producto",[ProductosController::class,'productosByCategoria'])->middleware('cors');
+
+
+Route::get("/categoria",[CategoriasController::class,'index'])->middleware('cors');
+Route::get("/categoria/{id}",[CategoriasController::class,'show'])->middleware('cors');
+
+Route::post("/carrito",[CarritoController::class,'store'])->middleware('cors');
+
+
+
 
 

@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Producto;
-use Ecosture\DAO\impl\ProductoDAO;
-use Ecosture\services\impl\ProductoServicio;
-use Exception;
+use Ecosture\services\impl\CategoriaServicio;
 use Illuminate\Http\Request;
 
-class ProductosController extends Controller
+class CategoriasController extends Controller
 {
-    private ProductoServicio $servicio;
+    private CategoriaServicio $servicio;
     function __construct()
-    {   
-        $this->servicio=new ProductoServicio(new ProductoDAO());
+    {
+        $this->servicio=new CategoriaServicio();
     }
     /**
      * Display a listing of the resource.
@@ -22,8 +19,17 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        $productos=$this->servicio->index();
-        return response($productos,200);
+        return response($this->servicio->index());
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -40,27 +46,33 @@ class ProductosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Producto  $producto
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        try{
+        return response($this->servicio->show($id),200);
+    }
 
-            return response($this->servicio->show($id),200);
-        }catch(Exception $e){
-            return response(['Error'=>"Producto no Encontrado"],404);
-        }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Producto  $producto
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Producto $producto)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -68,15 +80,11 @@ class ProductosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Producto  $producto
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Producto $producto)
+    public function destroy($id)
     {
         //
-    }
-
-    public function productosByCategoria($id){
-        return response($this->servicio->productosByCategoria($id));
     }
 }

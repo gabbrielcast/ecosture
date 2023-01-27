@@ -9,27 +9,27 @@ import { confAlerta } from "./alerta.js";
 
 let CARRITO = null;
 async function cargaInicio() {
-  let contenedor = document.getElementById("contenedor");
-  contenedor.innerHTML = "";
-  portada(contenedor);
-  about(contenedor);
-  testimonio(contenedor);
-  contenedor.style.opacity = 1;
-  await categorias(contenedor);
-  cantidadCarrito();
+	let contenedor = document.getElementById("contenedor");
+	contenedor.innerHTML = "";
+	portada(contenedor);
+	about(contenedor);
+	testimonio(contenedor);
+	contenedor.style.opacity = 1;
+	await categorias(contenedor);
+	cantidadCarrito();
 }
 
 function cantidadCarrito() {
-  let carrito = document.getElementById("btnCarrito");
-  let totalArticulos = CARRITO.getProductos().length;
-  carrito.innerHTML = `<i class="fas fa-shopping-cart c-nav__icono"></i> ${totalArticulos}`;
+	let carrito = document.getElementById("btnCarrito");
+	let totalArticulos = CARRITO.getProductos().length;
+	carrito.innerHTML = `<i class="fas fa-shopping-cart c-nav__icono"></i> ${totalArticulos}`;
 }
 
 function portada(contenedor) {
-  let section = document.createElement("section");
-  section.id = "hero";
-  section.className = "c-hero";
-  section.innerHTML = `
+	let section = document.createElement("section");
+	section.id = "hero";
+	section.className = "c-hero";
+	section.innerHTML = `
         <h1 class="c-hero__titulo">${textos.hero.titulo}</h1>
         <h2 class="c-hero__subtitulo">${textos.hero.subtitulo}</h2>
         <p class="c-hero__texto">${textos.hero.descripcion}</p>
@@ -39,15 +39,15 @@ function portada(contenedor) {
             <div class="c-icon c-icon__circulo--hojas"></div>
         </div>
     `;
-  contenedor.appendChild(section);
+	contenedor.appendChild(section);
 }
 
 function about(contenedor) {
-  let section = document.createElement("section");
-  section.id = "about";
-  section.className = "c-about";
+	let section = document.createElement("section");
+	section.id = "about";
+	section.className = "c-about";
 
-  section.innerHTML = `
+	section.innerHTML = `
     
         <div class="c-about__header">
             <h3 class="c-about__title">${textos.quienesSomos.titulo}</h3>
@@ -101,14 +101,14 @@ function about(contenedor) {
     
     `;
 
-  contenedor.appendChild(section);
+	contenedor.appendChild(section);
 }
 
 function testimonio(contenedor) {
-  let section = document.createElement("section");
-  section.id = "testimonio";
-  section.className = "c-testimonio";
-  section.innerHTML = `
+	let section = document.createElement("section");
+	section.id = "testimonio";
+	section.className = "c-testimonio";
+	section.innerHTML = `
         <!-- <div class="c-testimonio__img"></div> -->
         <i class="fas fa-quote-right fa-4x"></i>
         <p class="c-testimonio__text">${textos.testimonio.parrafo}
@@ -117,29 +117,29 @@ function testimonio(contenedor) {
     
     `;
 
-  contenedor.appendChild(section);
+	contenedor.appendChild(section);
 }
 
 async function categorias(contenedor) {
-  let section = document.createElement("section");
-  section.id = "categorias";
-  section.className = "ff";
-  let titulo = document.createElement("h1");
-  titulo.innerHTML = "CATEGORÍAS";
-  titulo.className = "g--seccion-productos-title";
-  section.appendChild(titulo);
+	let section = document.createElement("section");
+	section.id = "categorias";
+	section.className = "ff";
+	let titulo = document.createElement("h1");
+	titulo.innerHTML = "CATEGORÍAS";
+	titulo.className = "g--seccion-productos-title";
+	section.appendChild(titulo);
 
-  let contCategorias = document.createElement("div");
-  contCategorias.className =
-    "l-grid l-grid--auto-fit l-grid--gap-9 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12";
+	let contCategorias = document.createElement("div");
+	contCategorias.className =
+		"l-grid l-grid--auto-fit l-grid--gap-9 g--padding-horizontal-12 g--padding-vertical-8 g--padding-bottom-12";
 
-  let categorias = await peticion("GET", "http://localhost:3000/categorias");
+	let categorias = await peticion("GET", "http://localhost:4000/api/categoria");
 
-  categorias.forEach((categoriaBD) => {
-    let categoria = document.createElement("div");
-    categoria.className = "c-producto";
+	categorias.forEach((categoriaBD) => {
+		let categoria = document.createElement("div");
+		categoria.className = "c-producto";
 
-    categoria.innerHTML = `
+		categoria.innerHTML = `
 			<img
 				class="c-producto__img"
 				src="./assets/img/categorias/c${categoriaBD.id}.jpg"
@@ -152,48 +152,47 @@ async function categorias(contenedor) {
 		
 		`;
 
-    let btn = Array.from(categoria.getElementsByTagName("a"))[0];
+		let btn = Array.from(categoria.getElementsByTagName("a"))[0];
 
-    btn.onclick = () => {
-      listProductos(btn.id, categoriaBD.nombre);
-    };
-    contCategorias.appendChild(categoria);
-  });
+		btn.onclick = () => {
+			listProductos(btn.id, categoriaBD.nombre);
+		};
+		contCategorias.appendChild(categoria);
+	});
 
-  section.appendChild(contCategorias);
-  contenedor.appendChild(section);
+	section.appendChild(contCategorias);
+	contenedor.appendChild(section);
 }
 
 //PRODUCTOS
 
 async function listProductos(categoriaID, categoriaNombre) {
-  let contenedor = document.getElementById("contenedor");
-  contenedor.innerHTML = "";
+	let productos = await peticion(
+		"GET",
+		`http://localhost:4000/api/categoria/${categoriaID}/producto`
+	);
+	let contenedor = document.getElementById("contenedor");
+	contenedor.innerHTML = "";
 
-  let titulo = document.createElement("h1");
-  titulo.innerHTML = categoriaNombre;
-  titulo.className = "g--seccion-productos-title";
+	let titulo = document.createElement("h1");
+	titulo.innerHTML = categoriaNombre;
+	titulo.className = "g--seccion-productos-title";
 
-  let section = document.createElement("section");
-  section.id = "productos";
-  section.appendChild(titulo);
+	let section = document.createElement("section");
+	section.id = "productos";
+	section.appendChild(titulo);
 
-  let contProductos = document.createElement("div");
-  contProductos.className =
-    "l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8";
+	let contProductos = document.createElement("div");
+	contProductos.className =
+		"l-grid l-grid--auto-fill l-grid--gap-6 g--padding-horizontal-12 g--padding-vertical-8";
 
-  let productos = await peticion(
-    "GET",
-    "http://localhost:3000/productos?idCategoria=" + categoriaID
-  );
+	productos.forEach((productoBD) => {
+		let producto = document.createElement("div");
+		producto.className = "c-producto";
+		let genero =
+			productoBD.id.split("").reverse()[0] === "m" ? "Mujer" : "Hombre";
 
-  productos.forEach((productoBD) => {
-    let producto = document.createElement("div");
-    producto.className = "c-producto";
-    let genero =
-      productoBD.id.split("").reverse()[0] === "m" ? "Mujer" : "Hombre";
-
-    producto.innerHTML = `
+		producto.innerHTML = `
 			<img
 				class="c-producto__img"
 				src="./assets/img/Ropa/${genero}/${productoBD.id}.jpg"
@@ -221,52 +220,52 @@ async function listProductos(categoriaID, categoriaNombre) {
 			</div>
 		`;
 
-    let btnAnyadir = Array.from(
-      producto.getElementsByClassName("c-producto__anyade")
-    )[0];
+		let btnAnyadir = Array.from(
+			producto.getElementsByClassName("c-producto__anyade")
+		)[0];
 
-    let btnVer = Array.from(
-      producto.getElementsByClassName("c-producto__ver")
-    )[0];
+		let btnVer = Array.from(
+			producto.getElementsByClassName("c-producto__ver")
+		)[0];
 
-    btnAnyadir.onclick = () => {
-      let productoCarrito = {
-        id: productoBD.id,
-        nombre: productoBD.nombre,
-        descripcion: productoBD.descripcion,
-        precio: productoBD.precio,
-        idCategoria: productoBD.idCategoria,
-        unidades: 1,
-      };
-      CARRITO.anyadeProducto(productoCarrito);
-      cantidadCarrito();
-    };
+		btnAnyadir.onclick = () => {
+			let productoCarrito = {
+				id: productoBD.id,
+				nombre: productoBD.nombre,
+				descripcion: productoBD.descripcion,
+				precio: productoBD.precio,
+				idCategoria: productoBD.idCategoria,
+				unidades: 1,
+			};
+			CARRITO.anyadeProducto(productoCarrito);
+			cantidadCarrito();
+		};
 
-    btnVer.onclick = () => {
-      detalleProducto(productoBD);
-    };
-    contProductos.appendChild(producto);
-  });
+		btnVer.onclick = () => {
+			detalleProducto(productoBD);
+		};
+		contProductos.appendChild(producto);
+	});
 
-  section.appendChild(contProductos);
-  contenedor.appendChild(section);
+	section.appendChild(contProductos);
+	contenedor.appendChild(section);
 
-  doScroll();
+	doScroll();
 }
 
 function detalleProducto(producto) {
-  let contenedor = document.getElementById("contenedor");
-  contenedor.innerHTML = "";
+	let contenedor = document.getElementById("contenedor");
+	contenedor.innerHTML = "";
 
-  let section = document.createElement("section");
-  section.id = "contenedor-detalle";
-  section.className =
-    "l-flex l-flex--direction-column l-flex--aling-items--center l-flex--justify-center";
+	let section = document.createElement("section");
+	section.id = "contenedor-detalle";
+	section.className =
+		"l-flex l-flex--direction-column l-flex--aling-items--center l-flex--justify-center";
 
-  let detalle = document.createElement("div");
-  detalle.className = "c-detalle";
-  let genero = producto.id.split("").reverse()[0] === "m" ? "Mujer" : "Hombre";
-  detalle.innerHTML = `	
+	let detalle = document.createElement("div");
+	detalle.className = "c-detalle";
+	let genero = producto.id.split("").reverse()[0] === "m" ? "Mujer" : "Hombre";
+	detalle.innerHTML = `	
 		<img class="c-detalle__img" src="./assets/img/Ropa/${genero}/${producto.id}.jpg"></img>
 		<div class="c-detalle__info">
 			<h2 class="c-detalle__titulo">${producto.nombre}</h2>	
@@ -282,84 +281,84 @@ function detalleProducto(producto) {
 		</div>
 	`;
 
-  let btns = Array.from(detalle.getElementsByTagName("a"));
+	let btns = Array.from(detalle.getElementsByTagName("a"));
 
-  btns.forEach((b) => {
-    b.onclick = async () => {
-      if (b.id === "anyadirProducto") {
-        CARRITO.anyadeProducto({
-          id: producto.id,
-          nombre: producto.nombre,
-          descripcion: producto.descripcion,
-          precio: producto.precio,
-          idCategoria: producto.idCategoria,
-          unidades: 1,
-        });
-      } else {
-        let categoria = await peticion(
-          "GET",
-          "http://localhost:3000/categorias/" + producto.idCategoria
-        );
+	btns.forEach((b) => {
+		b.onclick = async () => {
+			if (b.id === "anyadirProducto") {
+				CARRITO.anyadeProducto({
+					id: producto.id,
+					nombre: producto.nombre,
+					descripcion: producto.descripcion,
+					precio: producto.precio,
+					idCategoria: producto.idCategoria,
+					unidades: 1,
+				});
+			} else {
+				let categoria = await peticion(
+					"GET",
+					"http://localhost:4000/api/categoria/" + producto.idCategoria
+				);
 
-        listProductos(producto.idCategoria, categoria.nombre);
-      }
-    };
-  });
+				listProductos(producto.idCategoria, categoria.nombre);
+			}
+		};
+	});
 
-  contenedor.appendChild(detalle);
+	contenedor.appendChild(detalle);
 
-  doScroll({
-    top: 50,
-    behavior: "smooth",
-  });
+	doScroll({
+		top: 50,
+		behavior: "smooth",
+	});
 }
 
 function doScroll(conf = null) {
-  let scroll = conf ?? {
-    top: 0,
-    behavior: "smooth",
-  };
-  window.scroll(scroll);
+	let scroll = conf ?? {
+		top: 0,
+		behavior: "smooth",
+	};
+	window.scroll(scroll);
 }
 
 async function checkUserLogged() {
-  let carrito = JSON.parse(localStorage.getItem("currentShop"));
+	let carrito = JSON.parse(localStorage.getItem("currentShop"));
 
-  if (carrito != null) {
-    CARRITO.setProductos(carrito);
-  }
+	if (carrito != null) {
+		CARRITO.setProductos(carrito);
+	}
 
-  let usuario = JSON.parse(localStorage.getItem("user"));
+	let usuario = JSON.parse(localStorage.getItem("user"));
 
-  if (usuario === null) {
-    return;
-  }
+	if (usuario === null) {
+		return;
+	}
 
-  User.active = true;
-  User.username = usuario.username;
-  User.id = usuario.id;
-  setUsername();
-  instantiateHISTORIAL();
-  await HISTORIAL.update();
+	User.active = true;
+	User.username = usuario.username;
+	User.id = usuario.id;
+	setUsername();
+	instantiateHISTORIAL();
+	await HISTORIAL.update();
 }
 
 window.onload = () => {
-  setNav();
-  setLogin();
-  confAlerta();
-  cargaInicio();
+	setNav();
+	setLogin();
+	confAlerta();
+	cargaInicio();
 
-  CARRITO = new Carrito();
+	CARRITO = new Carrito();
 
-  checkUserLogged();
-  // Login();
+	checkUserLogged();
+	// Login();
 
-  // let authLocal = JSON.parse(localStorage.getItem("Auth")).r;
-  // Auth.accessToken = authLocal.TokenAcceso;
-  // Auth.refreshToken = authLocal.TokenRefresco;
+	// let authLocal = JSON.parse(localStorage.getItem("Auth")).r;
+	// Auth.accessToken = authLocal.TokenAcceso;
+	// Auth.refreshToken = authLocal.TokenRefresco;
 
-  // peticion("GET", "http://localhost/ecosture/api/peliculas", true)
-  // 	.then((r) => console.log(r))
-  // 	.catch((r) => console.log(r));
+	// peticion("GET", "http://localhost/ecosture/api/peliculas", true)
+	// 	.then((r) => console.log(r))
+	// 	.catch((r) => console.log(r));
 };
 export { CARRITO, cargaInicio };
