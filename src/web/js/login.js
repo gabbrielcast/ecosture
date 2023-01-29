@@ -25,12 +25,12 @@ function setLogin() {
 				console.log("sesion iniciada", r);
 				User.id = r.userId;
 				// HISTORIAL = new Historial();
-				// instantiateHISTORIAL();
-				// await HISTORIAL.update();
+				instantiateHISTORIAL();
 				spanError.innerHTML = "";
 				loader.style.visibility = "hidden";
 				cerrarLogin();
 				setUsername();
+				// await HISTORIAL.update();
 			})
 			.catch((r) => {
 				spanError.innerHTML = r;
@@ -60,6 +60,7 @@ function Login(datos = null) {
 				localStorage.setItem("Auth", JSON.stringify(r));
 				Auth.accessToken = r.TokenAcceso;
 				Auth.refreshToken = r.TokenRefresco;
+
 				resolve(r);
 			})
 			.catch((r) => reject(r.datos ?? "Credenciales Incorrectas"));
@@ -86,7 +87,7 @@ function cerrarSesion() {
 
 	if (localStorage.getItem("currentShop")) {
 		localStorage.removeItem("currentShop");
-		localStorage.removeItem("idCarrito", JSON.stringify(idCarrito));
+		localStorage.removeItem("idCarrito");
 	}
 }
 

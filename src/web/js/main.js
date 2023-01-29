@@ -297,10 +297,10 @@ function detalleProducto(producto) {
 			} else {
 				let categoria = await peticion(
 					"GET",
-					"http://localhost:4000/api/categoria/" + producto.idCategoria
+					"http://localhost:4000/api/categoria/" + producto.id_categoria
 				);
 
-				listProductos(producto.idCategoria, categoria.nombre);
+				listProductos(producto.id_categoria, categoria.nombre);
 			}
 		};
 	});
@@ -350,7 +350,7 @@ async function checkUserLogged() {
 	User.id = usuario.id;
 	setUsername();
 	instantiateHISTORIAL();
-	await HISTORIAL.update();
+	// await HISTORIAL.update();
 }
 
 window.onload = () => {
