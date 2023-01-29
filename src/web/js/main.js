@@ -3,7 +3,7 @@ import { Historial } from "./historialCarrito.js";
 import { Carrito } from "./carrito.js";
 import { setLogin, Login, HISTORIAL, instantiateHISTORIAL } from "./login.js";
 import { peticion } from "./peticion.js";
-import { User, Auth } from "./auth.js";
+import { User, Auth, setIdCarrito, idCarrito } from "./auth.js";
 import { textos } from "./textos.js";
 import { confAlerta } from "./alerta.js";
 
@@ -322,9 +322,20 @@ function doScroll(conf = null) {
 }
 
 async function checkUserLogged() {
-	let carrito = JSON.parse(localStorage.getItem("currentShop"));
+	let carrito = JSON.parse(localStorage.getItem("currentShop") ?? null);
+	let autentificacion = JSON.parse(localStorage.getItem("Auth") ?? null);
+
+	if (autentificacion != null) {
+		Auth.accessToken = autentificacion.TokenAcceso;
+		Auth.refreshToken = autentificacion.TokenRefresco;
+	}
 
 	if (carrito != null) {
+		if (JSON.parse(localStorage.getItem("idCarrito"))) {
+			setIdCarrito(JSON.parse(localStorage.getItem("idCarrito")));
+		} else {
+			setIdCarrito(Math.floor(Date.now() / 1000));
+		}
 		CARRITO.setProductos(carrito);
 	}
 

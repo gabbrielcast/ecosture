@@ -14,121 +14,123 @@ let btnOpinion = null;
 let btnCategorias = null;
 
 function setNav() {
-  btnLogin = document.getElementById("btnLogin");
-  btnCarrito = document.getElementById("btnCarrito");
-  btnHistorial = document.getElementById("btnHistorial");
-  btnInicio = document.getElementById("btn-nav-Inicio");
+	btnLogin = document.getElementById("btnLogin");
+	btnCarrito = document.getElementById("btnCarrito");
+	btnHistorial = document.getElementById("btnHistorial");
+	btnInicio = document.getElementById("btn-nav-Inicio");
 
-  btnQuienesSomos = document.getElementById("btn-nav-quienes");
-  btnOpinion = document.getElementById("btn-nav-testimonio");
-  btnCategorias = document.getElementById("btn-nav-categorias");
+	btnQuienesSomos = document.getElementById("btn-nav-quienes");
+	btnOpinion = document.getElementById("btn-nav-testimonio");
+	btnCategorias = document.getElementById("btn-nav-categorias");
 
-  let spanError = document.getElementById("login-error");
+	let spanError = document.getElementById("login-error");
 
-  const modalLogin = document.getElementById("login");
-  const modalCarrito = document.getElementById("carrito");
-  const modalHistorial = document.getElementById("historialCarrito");
+	const modalLogin = document.getElementById("login");
+	const modalCarrito = document.getElementById("carrito");
+	const modalHistorial = document.getElementById("historialCarrito");
 
-  let topLogin = parseInt(modalLogin.offsetHeight) / 2;
-  let topCarrito = parseInt(modalCarrito.offsetHeight) / 2;
-  let topHistorial = parseInt(modalHistorial.offsetHeight) / 2;
-  window.onresize = () => {
-    topLogin = modalLogin.offsetHeight / 2;
-    topCarrito = modalCarrito.offsetHeight / 2;
-    topHistorial = modalHistorial.offsetHeight / 2;
+	let topLogin = parseInt(modalLogin.offsetHeight) / 2;
+	let topCarrito = parseInt(modalCarrito.offsetHeight) / 2;
+	let topHistorial = parseInt(modalHistorial.offsetHeight) / 2;
+	window.onresize = () => {
+		topLogin = modalLogin.offsetHeight / 2;
+		topCarrito = modalCarrito.offsetHeight / 2;
+		topHistorial = modalHistorial.offsetHeight / 2;
 
-    if (+window.getComputedStyle(modalLogin).top.slice(0, -2) > 0) {
-      modalLogin.style.top = "calc(52vh - (" + topLogin + "px))";
-    } else if (+window.getComputedStyle(modalCarrito).top.slice(0, -2) > 0) {
-      modalCarrito.style.top = "calc(52vh - (" + topCarrito + "px))";
-    } else if (+window.getComputedStyle(modalHistorial).top.slice(0, -2) > 0) {
-      modalHistorial.style.top = "calc(52vh - (" + topHistorial + " px))";
-    }
-  };
+		if (+window.getComputedStyle(modalLogin).top.slice(0, -2) > 0) {
+			modalLogin.style.top = "calc(52vh - (" + topLogin + "px))";
+		} else if (+window.getComputedStyle(modalCarrito).top.slice(0, -2) > 0) {
+			modalCarrito.style.top = "calc(52vh - (" + topCarrito + "px))";
+		} else if (+window.getComputedStyle(modalHistorial).top.slice(0, -2) > 0) {
+			modalHistorial.style.top = "calc(52vh - (" + topHistorial + " px))";
+		}
+	};
 
-  btnLogin.onclick = () => {
-    if (!User.active) {
-      modalLogin.style.top = "calc(52vh - (" + topLogin + "px))";
+	btnLogin.onclick = () => {
+		if (!User.active) {
+			modalLogin.style.top = "calc(52vh - (" + topLogin + "px))";
 
-      toggleBtnsNav();
-      spanError.innerHTML = "";
-    } else {
-      CerrarSesion = true;
-      showAlerta("¿Seguro que quieres cerrar sesión?", false);
-      displayBtnCancel();
-    }
-  };
+			toggleBtnsNav();
+			spanError.innerHTML = "";
+		} else {
+			CerrarSesion = true;
+			showAlerta("¿Seguro que quieres cerrar sesión?", false);
+			displayBtnCancel();
+		}
+	};
 
-  btnCarrito.onclick = () => {
-    if (CARRITO.hayProductos() == true) {
-      modalCarrito.style.top = "calc(52vh - (" + topCarrito + "px))";
-      modalCarrito.scrollTop = 0;
-      toggleBtnsNav();
-      CARRITO.pintaProductos();
-    } else {
-      showAlerta("Añade Productos al Carrito.");
-    }
-  };
+	btnCarrito.onclick = () => {
+		if (CARRITO.hayProductos() == true) {
+			modalCarrito.style.top = "calc(52vh - (" + topCarrito + "px))";
+			modalCarrito.scrollTop = 0;
+			toggleBtnsNav();
+			CARRITO.pintaProductos();
+		} else {
+			showAlerta("Añade Productos al Carrito.");
+		}
+	};
 
-  btnHistorial.onclick = () => {
-    if (!User.active) {
-      showAlerta("Es necesario iniciar sesión.");
-      return;
-    }
+	btnHistorial.onclick = async () => {
+		if (!User.active) {
+			showAlerta("Es necesario iniciar sesión.");
+			return;
+		}
 
-    if (!HISTORIAL.hayCarritos()) {
-      showAlerta("Todavía no has realizado un pedido.");
-      return;
-    }
+		await HISTORIAL.update();
 
-    HISTORIAL.pintarHistorial();
-    modalHistorial.style.top = "calc(" + 52 + "vh - (" + topHistorial + "px))";
-    modalHistorial.scrollTop = 0;
-    toggleBtnsNav("historial");
-  };
+		if (!HISTORIAL.hayCarritos()) {
+			showAlerta("No tienes Pedidos Por Pagar");
+			return;
+		}
 
-  btnInicio.onclick = () => {
-    cargaInicio();
-  };
+		HISTORIAL.pintarHistorial();
+		modalHistorial.style.top = "calc(" + 52 + "vh - (" + topHistorial + "px))";
+		modalHistorial.scrollTop = 0;
+		toggleBtnsNav("historial");
+	};
 
-  btnQuienesSomos.onclick = function () {
-    navSeccion(this);
-  };
-  btnOpinion.onclick = function () {
-    navSeccion(this);
-  };
-  btnCategorias.onclick = function () {
-    navSeccion(this);
-  };
+	btnInicio.onclick = () => {
+		cargaInicio();
+	};
+
+	btnQuienesSomos.onclick = function () {
+		navSeccion(this);
+	};
+	btnOpinion.onclick = function () {
+		navSeccion(this);
+	};
+	btnCategorias.onclick = function () {
+		navSeccion(this);
+	};
 }
 
 async function navSeccion(btn) {
-  await cargaInicio();
-  window.location.href = btn.href;
+	await cargaInicio();
+	window.location.href = btn.href;
 }
 
 function setUsername(login = true) {
-  if (login) {
-    btnLogin.innerHTML = User.username;
-  } else {
-    btnLogin.innerHTML = '<i class="fas fa-user c-nav__icono"></i>';
-  }
+	if (login) {
+		btnLogin.innerHTML = User.username;
+	} else {
+		btnLogin.innerHTML = '<i class="fas fa-user c-nav__icono"></i>';
+	}
 }
 
 function setCerrarSesionFalse() {
-  CerrarSesion = false;
+	CerrarSesion = false;
 }
 
 function toggleBtnsNav() {
-  btnCarrito.disabled = !btnCarrito.disabled;
-  btnHistorial.disabled = !btnHistorial.disabled;
-  btnLogin.disabled = !btnLogin.disabled;
+	btnCarrito.disabled = !btnCarrito.disabled;
+	btnHistorial.disabled = !btnHistorial.disabled;
+	btnLogin.disabled = !btnLogin.disabled;
 }
 
 export {
-  toggleBtnsNav,
-  setNav,
-  setUsername,
-  CerrarSesion,
-  setCerrarSesionFalse,
+	toggleBtnsNav,
+	setNav,
+	setUsername,
+	CerrarSesion,
+	setCerrarSesionFalse,
 };

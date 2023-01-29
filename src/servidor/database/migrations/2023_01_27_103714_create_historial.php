@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('historial', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('fecha');
+            $table->boolean('pagado');
             $table->unsignedBigInteger('id_usuario')->unsigned();
-            $table->unsignedBigInteger('id_carrito')->unsigned();
             $table->string('id_producto');
             $table->bigInteger('cantidad');
-            $table->timestamps();
         });
 
         Schema::table('historial', function($table)
@@ -28,8 +28,8 @@ return new class extends Migration
                 ->references('id')->on('users');
             $table->foreign('id_producto')
                 ->references('id')->on('productos');
-            $table->foreign('id_carrito')
-                ->references('id')->on('carrito');
+            // $table->foreign('id_carrito')
+            //     ->references('id')->on('carrito');
         });
     }
 

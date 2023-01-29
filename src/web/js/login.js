@@ -20,24 +20,23 @@ function setLogin() {
 		// console.log("iniciando sesion");
 		loader.style.visibility = "visible";
 
-		setTimeout(() => {
-			Login()
-				.then(async (r) => {
-					console.log("sesion iniciada", r);
-					// HISTORIAL = new Historial();
-					// instantiateHISTORIAL();
-					// await HISTORIAL.update();
-					spanError.innerHTML = "";
-					loader.style.visibility = "hidden";
-					cerrarLogin();
-					setUsername();
-				})
-				.catch((r) => {
-					spanError.innerHTML = r;
-					// console.log(r);
-					loader.style.visibility = "hidden";
-				});
-		}, 2000);
+		Login()
+			.then(async (r) => {
+				console.log("sesion iniciada", r);
+				User.id = r.userId;
+				// HISTORIAL = new Historial();
+				// instantiateHISTORIAL();
+				// await HISTORIAL.update();
+				spanError.innerHTML = "";
+				loader.style.visibility = "hidden";
+				cerrarLogin();
+				setUsername();
+			})
+			.catch((r) => {
+				spanError.innerHTML = r;
+				// console.log(r);
+				loader.style.visibility = "hidden";
+			});
 	};
 }
 
@@ -50,9 +49,12 @@ function Login(datos = null) {
 		peticion("POST", url, false, JSON.stringify(credenciales))
 			.then((r) => {
 				// console.log(r);
-				// localStorage.setItem("user", JSON.stringify(r[0]));
-				// User.id = r[0].id;
+				localStorage.setItem(
+					"user",
+					JSON.stringify({ username: r.user, id: r.userId })
+				);
 				// resolve(r);
+				User.id = r.id;
 				User.active = true;
 				User.username = r.user;
 				localStorage.setItem("Auth", JSON.stringify(r));
@@ -84,6 +86,7 @@ function cerrarSesion() {
 
 	if (localStorage.getItem("currentShop")) {
 		localStorage.removeItem("currentShop");
+		localStorage.removeItem("idCarrito", JSON.stringify(idCarrito));
 	}
 }
 

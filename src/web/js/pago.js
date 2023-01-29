@@ -1,6 +1,6 @@
 import { toggleBtnsNav } from "./nav.js";
 import { CARRITO } from "./main.js";
-import { User } from "./auth.js";
+import { User, Auth, idCarrito, setIdCarrito } from "./auth.js";
 import { peticion } from "./peticion.js";
 import { HISTORIAL } from "./login.js";
 export class Pago {
@@ -94,29 +94,61 @@ export class Pago {
 		return valid;
 	}
 
-	pagar() {
+	async pagar() {
 		if (!this.checkDatosPago()) {
 			return;
 		}
-		let compra = this.compra.map((p) => {
-			return { id: p.id, unidades: p.unidades };
+
+		let compra = {
+			fecha: idCarrito,
+			id_usuario: User.id,
+			productos: null,
+			pagado: 1,
+		};
+		compra.productos = this.compra.productos.map((p) => {
+			return { id_producto: p.id, cantidad: p.unidades };
 		});
-		let carro = { userId: User.id, productos: compra, precio: this.precio };
-		peticion(
+
+		await peticion(
 			"POST",
-			"http://localhost:4000/api/carrito",
+			"http://localhost:4000/api/historial",
 			true,
-			JSON.stringify(carro)
+			JSON.stringify(compra)
 		).then(async (r) => {
+			console.log(r);
 			await HISTORIAL.update();
 			CARRITO.vaciarProductos();
-			this.cerrarModal();
+
+			let modalPago = document.getElementById("pago");
+			modalPago.style.top = "-1000px";
+			toggleBtnsNav();
+
+			setIdCarrito(Math.floor(Date.now() / 1000));
 		});
 		// post a historial solo con el id de usuario y el id de los productos
 		// setTimeout(() => window.open("https://google.es"), 500);
 	}
 
-	cerrarModal() {
+	async cerrarModal() {
+		console.log(idCarrito);
+
+		let compraSinPagar = CARRITO.getCarrito();
+		let compra = {
+			fecha: idCarrito,
+			id_usuario: User.id,
+			productos: null,
+			pagado: 0,
+		};
+		compra.productos = compraSinPagar.productos.map((p) => {
+			return { id_producto: p.id, cantidad: p.unidades };
+		});
+		await peticion(
+			"POST",
+			"http://localhost:4000/api/carrito",
+			true,
+			JSON.stringify(compra)
+		);
+
 		let modalPago = document.getElementById("pago");
 		modalPago.style.top = "-1000px";
 		toggleBtnsNav();

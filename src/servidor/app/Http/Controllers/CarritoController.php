@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCarritoRequest;
 use App\Models\Carrito;
+use Ecosture\services\impl\CarritoServicio;
 use Illuminate\Http\Request;
 
 class CarritoController extends Controller
@@ -34,9 +35,9 @@ class CarritoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCarritoRequest $request)
+    public function store(Request $request)
     {
-        dd($request);
+        return response(CarritoServicio::store($request->input()),200);
     }
 
     /**

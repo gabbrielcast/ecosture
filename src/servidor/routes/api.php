@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\CategoriasController;
+use App\Http\Controllers\HistorialController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductosController;
 use App\Models\Producto;
@@ -39,7 +40,11 @@ Route::get("/categoria/{id}/producto",[ProductosController::class,'productosByCa
 Route::get("/categoria",[CategoriasController::class,'index'])->middleware('cors');
 Route::get("/categoria/{id}",[CategoriasController::class,'show'])->middleware('cors');
 
-Route::post("/carrito",[CarritoController::class,'store'])->middleware('cors');
+Route::post("/carrito",[CarritoController::class,'store'])->middleware(['cors','acceso']);
+
+Route::get("/historial/{id}",[HistorialController::class,'show'])->middleware(['cors','acceso']);
+Route::post("/historial",[HistorialController::class,'store'])->middleware(['cors','acceso']);
+
 
 
 

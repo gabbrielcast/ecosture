@@ -14,7 +14,7 @@ class TokenServicio implements ITokenServicio
     
     public function setToken(object $data,object $tokens,string $table){
         if ($table == "access_token") {
-            
+           
             try{
                 $at=AccesToken::find($data->id)??throw new Exception();
                 $at->update([
@@ -95,7 +95,8 @@ class TokenServicio implements ITokenServicio
         return [
             "TokenAcceso" => $tokens->access_token,
             "TokenRefresco" => $tokens->refresh_token,
-            "user"=>$data->username
+            "user"=>$data->username,
+            "userId"=>$data->id
         ];
         
     }
@@ -139,6 +140,7 @@ class TokenServicio implements ITokenServicio
         ];
 
         $tokens=$this->createTokens();
+        $this->setToken((object)$data,$tokens,"access_token");
         
         $this->setToken((object)$data,$tokens,"refresh_token");
 
